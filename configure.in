@@ -108,7 +108,6 @@ AC_SUBST(SELECTED_ICON_SETS)
 
 AC_OUTPUT(
 	Makefile
-	bin/Makefile
 	icons/Makefile
 	etc/Makefile
 	devel/Makefile
