@@ -1,0 +1,21 @@
+#! /bin/sh
+
+# This script is the complement to pack-symlinks script.
+#
+# GPL'ed by Mikhael Goikhman.
+
+ICONS_DIR=../../icons
+INFO_FILE=_symlinks.lst
+
+cd $ICONS_DIR
+for iconSet in *; do
+	[ -d "$iconSet" ] || continue
+	[ $iconSet = CVS ] && continue
+	echo -n "Processing $iconSet ... "
+	cd $iconSet || { echo failed; continue }
+	[ ! -f $INFO_FILE ] && { cd ..; echo skipped; continue }
+	cat $INFO_FILE | xargs -n 2 -r ln -sf
+	rm $INFO_FILE
+	cd ..
+	echo "done"
+done

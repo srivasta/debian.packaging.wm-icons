@@ -1,0 +1,124 @@
+###
+#  This file includes fvwm configuration for using with wm-icons.
+#  Optimized for the default fvwm-2.2.0 configuration.
+#  Using this file doesn't break your existing .fvwm2rc, just extends it.
+#  You probably need to edit it if you have a non-default configuration.
+#
+#  Instructions:
+#    1) Install wm-icons (configure & make install)
+#    2) Copy this file to the home directory (add leading dot) and put:
+#         Read .fvwm2rc-wm-icons
+#       as the last line of your .fvwm2rc
+#    3) (Re)Start fvwm2
+#
+#  NOTE: if you use fvwm-2.3.17 or better, put this file into ~/.fvwm/ instead.
+#  NOTE: to use menu wm-icons, you should define ImagePath before your menus.
+#
+#  The file is not perfect, it'll be better in the next versions.
+#  Send your comments to migo@homemail.com.
+###
+
+
+# This is to support old fvwm's (PixmapPath is obsolete after fvwm-2.2.4).
+# Change this to the real path of wm-icons and comment one of the two out.
+#PixmapPath $HOME/@userdir@:@icondir@:/usr/local/icons:/usr/share/icons:/usr/share/icons/mini:/usr/local/mini-icons:/usr/X11R6/lib/X11/mini-icons:/usr/X11R6/include/X11/pixmaps:/opt/kde/share/icons
+ImagePath $HOME/@userdir@:@icondir@:+
+
+# You can comment this in to get title-icon for any window a-la fvwm95.
+#ButtonStyle 1 MiniIcon
+#TitleStyle Height 19
+
+
+###
+#  Change Icon Set submenu
+###
+
+#
+# This defines the submenu for changing icon set online.
+# wm-icons-config must be in your path or put full path in Exec below.
+#
+
+DestroyMenu MenuIconSets
+AddToMenu MenuIconSets "Change Icon Set" Title
+{{MINI_ICON_SET_ITERATOR("
++ "%menu/item.xpm%menu	@ICON_SET@" @ADJUST@Exec wm-icons-config -q -p -f menu @ICON_SET@
+")}}
++ "" Nop
+{{MINI_ICON_SET_ITERATOR("
++ "%menu/item.xpm%mini	@ICON_SET@" @ADJUST@Exec wm-icons-config -q -p -f mini @ICON_SET@
+")}}
++ "" Nop
+{{NORM_ICON_SET_ITERATOR("
++ "%menu/item.xpm%norm	@ICON_SET@" @ADJUST@Exec wm-icons-config -q -p -f norm @ICON_SET@
+")}}
++ "" Nop
+{{SIZE_ICON_SET_ITERATOR("16x16", "
++ "%menu/item.xpm%16x16	@ICON_SET@" @ADJUST@Exec wm-icons-config -q -p -f 16x16 @ICON_SET@
+")}}
++ "" Nop
++ "%menu/restart.xpm%Restart	to activate" Restart
+
+# You can comment the following out or in.
+Mouse 3 R CM Menu MenuIconSets Nop
+#Style Eterm* IconOverride
+Style * IconOverride
+#AddToMenu "RootMenu" "&Icon Set%menu/themes.xpm" Popup MenuIconSets
+#AddToMenu "Modules" "&Icon Set%menu/themes.xpm" Popup MenuIconSets
+
+
+###
+#  Window operations
+###
+
+#
+# This defines the most common window operations.
+# Window-Ops historically was a most common name for this menu.
+#
+DestroyMenu "Window-Ops"
+AddToMenu   "Window-Ops" "Window Ops" Title
++ "&Move%menu/window-move.xpm%"                 Move
++ "&Resize%menu/window-resize.xpm"              Resize
++ "(De)Iconify%menu/window-iconify.xpm"         Iconify
++ "(Un)Maximize%menu/window-maximize.xpm"       Maximize
++ "(Un)Shade%menu/window-shade.xpm"             WindowShade
++ "(Un)Stick%menu/window-stick.xpm"             Stick
++ "R&aise%menu/window-raise.xpm%"               Raise
++ "&Lower%menu/window-lower.xpm%"               Lower
++ "" Nop
++ "&Delete%menu/window-delete.xpm%"             Delete  # may be commented out
++ "&Close%menu/window-close.xpm%"               Close
++ "Destroy%menu/window-destroy.xpm%"            Destroy
++ "" Nop
++ "Identify%menu/window-identify.xpm%"          Module FvwmIdent
++ "Switch to...%menu/windows.xpm%"              WindowList
++ "Arrange Icons%menu/refresh.xpm%" All (CurrentDesk Iconic) RecaptureWindow
++ "Refresh Screen%menu/refresh.xpm%"            Refresh
++ "Icon Set%menu/themes.xpm%"                   Popup MenuIconSets item +97 c
+
+# You can comment the following in if not bound yet.
+#Mouse 3 R A Menu "Window-Ops" Nop
+
+
+###
+#  Quit submenu
+###
+
+#
+# This defines (overrides) quit menu.
+#
+DestroyMenu "Quit-Verify"
+AddToMenu   "Quit-Verify" "Really Quit Fvwm?" Title
++ "Restart%menu/restart.xpm%"            Restart
++ "Refresh Screen%menu/refresh.xpm%"     Refresh
++ "" Nop
++ "Start dummy%menu/terminal.xpm%"       Restart xterm
++ "" Nop
++ "Yes, Really Quit%menu/choice-yes.xpm%" Quit
++ "No, Don't Quit%menu/choice-no.xpm%"    Nop
+
+
+###
+#  Known applications
+###
+
+{{STYLE_ICONS}}

@@ -1,0 +1,23 @@
+Begin3
+Title:		3dpixmaps for Fvwm
+Version:	1.21
+Entered-date:	27NOV99
+Description:	3d looking pixmaps for Professional look.
+		2 directories included, Directory 1 with color number
+		of all icons reduced to the same 100, Directory 2 
+		contains the plain pixmaps. All pixmaps have the 
+		same size 56x46 !
+Keywords:	pixmaps 3dpixmaps icons
+Author: 	smurphy@solsys.org (Joerg Mertin)
+		smurphy@net2000.ch  (Joerg Mertin)
+Maintained-by:	
+Primary-site:	www.solsys.org /linux/projects/3dpixmaps
+		1405 Kb 3d_pixmaps_1.21.tar.gz
+		861   3d_pixmaps_1.21.lsm
+Alternate-site: sunsite.unc.edu /pub/Linux/X11/icons
+Original-site:  http://www.solsys.org/linux
+		1405 Kb 3d_pixmaps_1.21.tar.gz
+Platforms:	Linux and all Plattforms that have an X-Windows System 
+		running
+Copying-policy:	GNU Public license
+End

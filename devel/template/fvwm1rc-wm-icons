@@ -1,0 +1,52 @@
+###
+#  This file includes fvwm1 configuration for using with wm-icons.
+#  Optimized for the default fvwm-1.24r configuration.
+#  Using this file doesn't break your existing .fvwmrc, just extends it.
+#  You probably need to edit it if you have a non-default configuration.
+#
+#  Instructions:
+#    1) Install wm-icons (configure & make install)
+#    2) Prepend this file to your .fvwmrc. The Style lines must be appended.
+#       There is no a simple way to include other files in fvwm1 without
+#       a preprocessing. Am I wrong?
+#    3) (Re)Start fvwm
+#
+#  The file is not perfect, it'll be better in the next versions.
+#  Send your comments to migo@homemail.com.
+###
+
+
+# You can change this to the real path of wm-icons.
+PixmapPath $HOME/@userdir@:@icondir@:/usr/local/icons:/usr/share/icons:/usr/share/icons/mini::/usr/local/mini-icons:/usr/X11R6/lib/X11/mini-icons:/usr/X11R6/include/X11/pixmaps:/usr/include/X11/pixmaps
+
+# NOTE: fvwm1 does not support titlebar icon button, upgrade fvwm.
+# It does not support mini-icons and menu-icons as well, just normal icons.
+
+
+###
+#  Change Icon Set submenu
+###
+
+#
+# This defines the submenu for changing icon set online.
+# wm-icons-config must be in your path or put full path in Exec below.
+#
+
+Popup MenuIconSets
+	Title   "Change Icon Set"
+{{NORM_ICON_SET_ITERATOR("
+	Exec    "norm	@ICON_SET@" @ADJUST@exec wm-icons-config -q -p -f norm @ICON_SET@ &
+")}}
+	Nop     ""
+	Restart "Restart	to activate"       fvwm
+EndPopup
+
+# You can comment the following out or in.
+Mouse 3 R SCM Popup MenuIconSets Nop
+
+
+###
+#  Known applications
+###
+
+{{STYLE_ICONS}}

@@ -1,0 +1,139 @@
+dnl Process this file with autoconf to produce a configure script.
+dnl This file is based on the configure.in's of the Debian
+dnl autoconf and gettext packages
+AC_PREREQ(2.12)
+AC_REVISION(0.2.3)
+AC_INIT(icons/01x01-template)
+AM_INIT_AUTOMAKE(wm-icons, 0.3.0)
+
+dnl Checks for programs.
+AC_PATH_PROG(PERL, perl, no)
+if test "$PERL" = no; then
+	AC_MSG_WARN(Perl was not found; it is not really needed for a user)
+	PERL=/usr/bin/perl
+fi
+AC_SUBST(PERL)dnl
+
+AC_PATH_PROG(AWK, gawk, no)
+if test "$AWK" = no; then
+	AC_PATH_PROG(AWK, nawk, no)
+fi
+if test "$AWK" = no; then
+	AC_PATH_PROG(AWK, mawk, no)
+fi
+if test "$AWK" = no; then
+	AWK=awk
+fi
+AC_SUBST(AWK)dnl
+
+dnl It would be a good idea to make this a substitutable variable
+AC_ARG_ENABLE(icondir,
+[  --enable-icondir=DIR    icon installation directory
+                             [PREFIX/share/icons/wm-icons]])
+icondir=${datadir}/icons/wm-icons
+test -n "$enable_icondir" &&
+	test "$enable_icondir" != yes && test "$enable_icondir" != no &&
+		icondir=$enable_icondir
+AC_SUBST(icondir)
+
+dnl It would be a good idea to make this a substitutable variable
+AC_ARG_ENABLE(userdir,
+[  --enable-userdir=DIR    user directory for icon aliases
+                             [.wm-icons]])
+userdir=.wm-icons
+test -n "$enable_userdir" &&
+	test "$enable_userdir" != yes && test "$enable_userdir" != no &&
+		icondir=$enable_userdir
+AC_SUBST(userdir)
+
+ICON_SET_BASE="14x14-general 16x16-general 48x48-general"
+ICON_SET_PENGUINS="44x52-penguins"
+ICON_SET_KDE="16x16-kde 32x32-kde 32x32-kde2 48x48-kde2"
+ICON_SET_3DPIXMAPS="17x14-3dpixmaps 21x18-3dpixmaps 56x46-3dpixmaps"
+ICON_SET_MARTYS="20x20-martys 20x20-martys2 56x56-martys 56x56-martys2"
+ICON_SET_GNOME="16x16-gnome 48x48-gnome"
+
+ALL_ICON_SETS="$ICON_SET_BASE $ICON_SET_PENGUINS $ICON_SET_KDE $ICON_SET_3DPIXMAPS $ICON_SET_MARTYS $ICON_SET_GNOME"
+SELECTED_ICON_SETS="$ICON_SET_BASE"
+
+AC_ARG_ENABLE(martys,
+[  --enable-all-sets       include all icon sets (15, default is 3)])
+
+AC_ARG_ENABLE(penguins,
+[  --enable-penguins       include the penguin icon set    (1)])
+if test "$enable_penguins" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_penguins" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_PENGUINS"
+fi
+
+AC_ARG_ENABLE(kde,
+[  --enable-kde            include the KDE icon sets       (4)])
+if test "$enable_kde" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_kde" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_KDE"
+fi
+
+AC_ARG_ENABLE(3dpixmaps,
+[  --enable-3dpixmaps      include the 3dpixmaps icon sets (3)])
+if test "$enable_3dpixmaps" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_3dpixmaps" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_3DPIXMAPS"
+fi
+
+AC_ARG_ENABLE(martys,
+[  --enable-martys         include the martys icon sets    (4)])
+if test "$enable_martys" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_martys" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_MARTYS"
+fi
+
+AC_ARG_ENABLE(gnome,
+[  --enable-gnome         include the gnome icon sets    (2)])
+if test "$enable_gnome" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_gnome" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_GNOME"
+fi
+
+
+
+AC_SUBST(ICON_SET_BASE)
+AC_SUBST(ICON_SET_PENGUINS)
+AC_SUBST(ICON_SET_KDE)
+AC_SUBST(ICON_SET_3DPIXMAPS)
+AC_SUBST(ICON_SET_MARTYS)
+AC_SUBST(ICON_SET_GNOME)
+
+AC_SUBST(ALL_ICON_SETS)
+AC_SUBST(SELECTED_ICON_SETS)
+
+AC_OUTPUT(
+	Makefile
+	bin/Makefile
+	icons/Makefile
+	etc/Makefile
+	devel/Makefile
+	devel/bin/Makefile
+	bin/Makefile
+	bin/wm-icons-config
+	doc/Makefile
+	doc/wm-icons.lsm
+	rpm/Makefile
+	rpm/wm-icons.spec
+)
+
+echo "
+-----------------------------------------------------------------------------
+Window Manager Icons Version:	$VERSION
+
+Available icon sets:
+	$ALL_ICON_SETS
+
+Enabled icon sets:
+	$SELECTED_ICON_SETS
+=============================================================================
+"
+if test "$SELECTED_ICON_SETS" = "$ICON_SET_BASE"; then
+	echo "To enable more icon sets, rerun ./configure --enable-*, see --help"
+	echo ""
+fi
+

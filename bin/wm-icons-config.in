@@ -1,0 +1,351 @@
+#! /bin/sh
+
+# work around too old /bin/sh on some systems
+test -f /bin/sh5 && test -z "$RUNNING_SH5" \
+	&& { UNAMES=`uname -s`; test "x$UNAMES" = xULTRIX; } 2>/dev/null \
+	&& { RUNNING_SH5=true; export RUNNING_SH5; exec /bin/sh5 $0 ${1+"$@"}; }
+unset RUNNING_SH5
+
+test -f /bin/bsh && test -z "$RUNNING_BSH" \
+	&& { UNAMES=`uname -s`; test "x$UNAMES" = xAIX; } 2>/dev/null \
+	&& { RUNNING_BSH=true; export RUNNING_BSH; exec /bin/bsh $0 ${1+"$@"}; }
+unset RUNNING_BSH
+
+test -f /bin/ksh && test -z "$RUNNING_KSH" \
+	&& { UNAMES=`uname -s`; test "x$UNAMES" = xSunOS; } 2>/dev/null \
+	&& { RUNNING_KSH=true; export RUNNING_KSH; exec /bin/ksh $0 ${1+"$@"}; }
+unset RUNNING_KSH
+
+###
+#  Shows wm-icons package configuration.
+#  Sets icon links (aliases) to icon-sets in system-wide or user space.
+#
+#  This program is Copyright 1999, Julian Gilbey <jdg@debian.org>
+#  based on an original Perl program by Mikhael Goikhman <migo@homemail.com>
+#  This program comes with ABSOLUTELY NO WARRANTY.
+#  You are free to redistribute this code under the terms of the
+#  GNU General Public License, version 2 or later.
+#
+###
+
+SCRIPT_NAME=`basename $0`
+
+usage() {
+	cat <<EOF
+Usage: $SCRIPT_NAME OPTIONS [NAME ICON_SET] ...
+   or: $SCRIPT_NAME --remove OPTIONS [NAME] ...
+   or: $SCRIPT_NAME --which  OPTIONS [NAME] ...
+
+Options:
+  Informational options: display info and exit
+    --help           Show this message and exit
+    --version        Show version number and copyright information and exit
+    --inst-dir       Show wm-icons installed icon directory and exit
+    --user-dir       Show wm-icons user icon directory and exit
+    --show-defaults  Show default aliases and exit
+    --show-aliases   Show the aliases currently present
+                     One of --global, --personal, --user-dir must be given
+    --show-sets      Show a list of installed icon sets
+
+  Directory selection options: precisely one of these must be used
+    --global         Set up global (system-wide) links in the base dir
+    --personal       Set up personal links in ~/@userdir@
+    --user-dir=USER_DIR   Set up links in USER_DIR
+
+  Choice of links: at least one of these must be given  
+    --defaults   Set up default aliases, as shown by --show-defaults
+    NAME ICON_SET pairs
+                 NAME is icon alias name, ICON_SET is icon set directory
+                 for example: mini 16x16-default
+                 If NAME already exists as an alias, it is not overwritten
+                 Explicit NAMEs override --defaults
+    NAME         Just the alias names are given for --remove or --which
+
+  Extra options:
+    --remove     Remove the symlinks rather than creating them, return (0, 1)
+    --which      Show the icon set for the given alias(es), return (0, 1)
+    --quiet      Do not output results of alias manipulating to stdout
+    --force      Force overwriting of existing symlinks
+EOF
+}
+
+version() {
+	echo 'wm-icons-config (Window Manager Icons) @VERSION@'
+}
+
+if [ $# -eq 0 ]; then usage; exit 0; fi
+
+prefix="@prefix@"
+INST_DIR="@icondir@"
+USER_DIR="$HOME/@userdir@"
+IS_GLOBAL=
+IS_PERSONAL=
+IS_NEW_USER_DIR=
+USE_DEFAULTS=
+FORCE=
+SHOW_ALIASES=
+REMOVE=
+WHICH=
+ECHO=echo
+AWK=@AWK@
+
+# Let's find out about the icon sets in this package
+ALL_ICON_SETS="@ALL_ICON_SETS@"
+SELECTED_ICON_SETS="@SELECTED_ICON_SETS@"
+
+show_installed_sets() {
+	# We can't rely on the currently installed sets to be the same
+	# as the compile-time list, but they can be assumed to be a subset
+	# of the full list
+	set -- $ALL_ICON_SETS
+	while [ $# -gt 0 ]; do
+		if [ -d "$INST_DIR/$1" ]; then echo $1; fi
+		shift
+	done
+}
+
+show_installed_aliases() {
+	if [ ! -d "$WORK_DIR" ]; then
+		echo "$WORK_DIR not a directory" >&2
+		exit 1
+	fi
+
+	cd $WORK_DIR || {
+		echo "Can't cd to $WORK_DIR; aborting" >&2;
+		exit 1;
+	}
+
+	ls -l | $AWK '
+		BEGIN {
+			split("'"$ALL_ICON_SETS"'", icon_list);
+			workdir = "'"$WORK_DIR"'";
+			instdir = "'"$INST_DIR"'";
+			for (i in icon_list) icons[icon_list[i]] = "";
+		}
+		/ -> [^ ]*$/ {
+			source = $(NF-2); dest = $NF;
+			destbase = dest; sub(".*/", "", destbase);
+			if (destbase in icons) {
+				if (destbase == dest && workdir == instdir) {
+					print source " -> " destbase
+				}
+				if (dest == (instdir "/" destbase)) {
+					print source " -> " destbase
+				}
+			}
+		}
+	'
+}
+
+# If an icon-set is not absolute, the inst-dir is prepended.
+STD_LINK_NAMES="menu mini norm"
+STD_LINK_PAIRS="menu 16x16-general mini 14x14-general norm 48x48-general"
+
+while [ $# -gt 0 ]; do
+	case $1 in
+		--help|-help|-h)
+			usage; exit 0 ;;
+		--version|-version|-v)
+			version; exit 0 ;;
+		--inst-dir|-inst-dir|-i)
+			echo $INST_DIR; exit 0 ;;
+		--user-dir|-user-dir|-u)
+			IS_NEW_USER_DIR=yes
+			shift
+			if [ $# -eq 0 -o "`echo '$1' | cut -c1`" = - ]; then
+				echo $USER_DIR; exit 0
+			fi
+			NEW_USER_DIR=$1 ;;
+		--user-dir=*|-user-dir=*|-u=*)
+			IS_NEW_USER_DIR=yes
+			USER_DIR=`expr "$1" : '[^=]*=\(.*\)'` ;;
+		--global|-global|-g)
+			IS_GLOBAL=yes ;;
+		--personal|-personal|-p)
+			IS_PERSONAL=yes ;;
+		--defaults|-defaults|-d)
+			USE_DEFAULTS=yes ;;
+		--show-defaults|-show-defaults)
+			set -- $STD_LINK_PAIRS
+			while [ $# -gt 0 ]; do echo "$1 -> $2"; shift; shift; done
+			exit 0 ;;
+		--quiet|-quiet|-q)
+			ECHO=: ;;
+		--force|-force|-f)
+			FORCE=yes ;;
+		--which|-which|-w)
+			WHICH=yes ;;
+		--remove|-remove|-r)
+			REMOVE=yes ;;
+		--show-aliases|-show-aliases)
+			SHOW_ALIASES=yes ;;
+		--show-sets|-show-sets)
+			show_installed_sets; exit 0 ;;
+		-s)
+			echo "$SCRIPT_NAME: -s is ambiguous option; please use full name instead" >&2;
+			exit 1 ;;
+		--)
+			break ;;
+		-*)
+			usage >&2; exit 1 ;;
+		*)
+			break ;;
+	esac
+	shift
+done
+
+# Check combination of options supplied
+if [ "$IS_GLOBAL$IS_PERSONAL$IS_NEW_USER_DIR" != yes ]; then
+	echo "Must use precisely one of --global, --personal and --user-dir options!" >&2
+	exit 1
+fi
+
+if [ -n "$IS_GLOBAL" ]; then
+	WORK_DIR="$INST_DIR"
+elif [ -n "$IS_PERSONAL" -a -z "$HOME" ]; then
+	echo "Your \$HOME variable is not set to something meaningful; aborting" >&2
+	exit 1
+else
+	case "$USER_DIR" in
+	\~/*)
+		if [ -z "$HOME" ]; then
+			echo "Your \$HOME variable is not set to something meaningful; aborting" >&2
+			exit 1
+		fi
+		USER_DIR=`echo "$USER_DIR" | sed -e "s,^~,$HOME,"`
+		;;
+	esac
+	WORK_DIR="$USER_DIR"
+fi
+
+if [ -n "$SHOW_ALIASES" ]; then show_installed_aliases; exit 0; fi
+
+if [ -z "$REMOVE$WHICH" -a `expr $# % 2` -gt 0 ]; then
+	echo "Every 'name' parameter needs an 'icon-set' parameter following it" >&2
+	exit 1
+fi
+
+if [ -z "$USE_DEFAULTS" -a $# -eq 0 ]; then
+	echo "Either --defaults or explicit NAME/ICON-SET pairs must be specified" >&2
+	exit 1
+fi
+
+if [ -n "$REMOVE" -a -n "$WHICH" ]; then
+	echo "Either --remove or --which must be specified, not both" >&2
+	exit 1
+fi
+
+if [ -n "$REMOVE$WHICH" -a -n "$FORCE" ]; then
+	echo "Ignoring --force in presence of --remove or --which" >&2
+fi
+
+# Now, is the working directory writable or creatable?
+if [ ! -d "$WORK_DIR" ]; then
+	if [ -n "$REMOVE$WHICH" ]; then
+		$ECHO "$WORK_DIR does not exist; exiting"
+		exit 1
+	fi
+
+	WORK_DIR_PARENT=`dirname "$WORK_DIR"`
+	if [ ! -d "$WORK_DIR_PARENT" ]; then
+		echo "Neither $WORK_DIR nor $WORK_DIR_PARENT exist; aborting" >&2
+		exit 1
+	fi
+
+	if [ ! -w "$WORK_DIR_PARENT" ]; then
+		echo "$WORK_DIR does not exist and $WORK_DIR_PARENT is unwritable; aborting" >&2
+		exit 1
+	fi
+
+	mkdir "$WORK_DIR" || {
+		echo "$WORK_DIR does not exist and couldn't create; aborting" >&2;
+		exit 1;
+	}
+
+elif [ ! -w "$WORK_DIR" ]; then
+	echo "$WORK_DIR is unwritable; aborting" >&2
+	exit 1
+fi
+
+cd $WORK_DIR || {
+	echo "Can't cd to $WORK_DIR; aborting" >&2;
+	exit 1;
+}
+$ECHO Handling symlinks in $WORK_DIR
+
+# Ensure explicit choices override defaults
+if [ -z "$REMOVE$WHICH" ]; then
+	LINK_PAIRS=`{
+		if [ "$USE_DEFAULTS" = yes ]; then echo "$STD_LINK_PAIRS"; fi;
+		echo $*;
+	} | $AWK '
+		{ for (i=2; i<=NF; i+=2) link[$(i-1)] = $i }
+		END { for (i in link) print i, link[i] }
+	'`
+
+	set -- $LINK_PAIRS
+
+	while [ $# -gt 0 ]; do
+		name=$1
+		case $2 in
+			/*)
+				iconset=$2 ;;
+			*)
+				if [ -n "$IS_GLOBAL" ]
+					then iconset=$2
+					else iconset=$INST_DIR/$2
+				fi ;;
+		esac
+		if [ -L $1 ]; then
+			if [ -n "$FORCE" ]; then
+				$ECHO "Replacing existing link $name to point to $iconset"
+				rm -f $name
+				ln -s $iconset $name ||
+				echo "Failed to setup symlink $name to $iconset" >&2
+			else
+				$ECHO "Symlink $name already exists, use --force; skipping"
+			fi
+		elif [ -e $1 ]; then
+			echo "$name already exists but is not a symlink; skipping" >&2
+		else
+			$ECHO "Setting link $name to point to $iconset"
+			ln -s $iconset $name ||
+			echo "Failed to setup symlink $name to $iconset" >&2
+		fi
+		shift; shift
+	done
+else # Removing or querying symlinks
+	STATUS=0
+	LINKS=`{
+		if [ "$USE_DEFAULTS" = yes ]; then echo "$STD_LINK_NAMES"; fi;
+		echo $*;
+	} | $AWK '
+		{ for (i=1; i<=NF; i++) link[$i] = "" }
+		END { delete link[""]; for (i in link) print i }
+	'`
+
+	set -- $LINKS
+
+	while [ $# -gt 0 ]; do
+		name=$1
+		if [ -L $1 ]; then
+			if [ -n "$REMOVE" ]; then
+				$ECHO "Removing existing link $name"
+				rm -f $name
+			else # $WHICH
+				LS_LINE=`ls -l $1`
+				ICON_SET=`expr "$LS_LINE" : '.* -> \(.*\)'`
+				$ECHO "$ICON_SET"
+			fi
+		else
+			if [ -e $1 ]; then
+				echo "$name already exists but is not a symlink; skipping" >&2
+			else
+				$ECHO "$name does not exist"
+			fi
+			STATUS=`expr $STATUS + 1`
+		fi
+		shift
+	done
+	exit $STATUS
+fi

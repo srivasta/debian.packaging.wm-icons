@@ -1,0 +1,33 @@
+Martin's Icons
+==============
+
+A collection of pixmaps that (mostly) use a single 16 colour pallete.
+
+As I did the original design for most of them using a W*ndows application
+the file names are a little shorter than you might like.
+
+Anything that ends in _ico.xpm
+                       _but.xpm
+                       _fac.xpm
+Is a 56x56 pixel (don't ask me why) image suitable for buttons, icons,
+biffs, etc.
+
+The _fac.xpm's are the pixmaps I use for xfaces BTW.
+
+Anything that ends in _mico.xpm 
+
+is around 20x20 or smaller and more suitable for menus or title-bars.
+
+Do what you want with them except make any money out of them.
+
+Some of the smaller ones were created by Jarl Totland.
+
+------------------------------------------------------------------------------
+
+Addition
+========
+
+The authors of wm-icons have my permission to freely distribute the icons in
+this project, provided due credit is given to myself as the original creator.
+
+Martin Cartwright.
