@@ -1,10 +1,11 @@
-#!/usr/sbin/install-menu
+#!/usr/bin/install-menu
 compat="menu-1"
+!include lang.h
 !include menu.h
 # you may/should edit/check the systemFindIcon in wm-icons.h
 !include wm-icons.h
 
-function ltitle()=translate(lang(),title())
+function ltitle()=translate($lang,title())
 
 # if you want wm-icons only:
 #	replace "wmIconsFindIcon" by wmIconsFindIconWmOnly
@@ -21,6 +22,9 @@ supported
   fvwm2module=  "+ \"" escfirst(ltitle(), $hotkey,"&") \
     	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
 	"\" Module " $command "\n"
+  fvwm=  "+ \"" escfirst(ltitle() ,$hotkey,"&") \
+    	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
+	"\" " $command "\n"
   fvwm2=  "+ \"" escfirst(ltitle() ,$hotkey,"&") \
     	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
 	"\" " $command "\n"
@@ -46,8 +50,8 @@ submenutitle= "+ \"" escfirst(ltitle() ,$hotkey,"&") \
 	cond_surr(wmIconsFindSectionIcon($section,$icon,"menu/"),"%","%") \
 	"\" PopUp \"" replacewith($section, " ", "_") "\"\n"
 
-rootprefix="/usr/local/share/fvwm/debian-menu-system/"
-userprefix="/.fvwm/debian-menu-system/"
+rootprefix="/etc/X11/fvwm/wm-icons/"
+userprefix="/.fvwm/wm-icons/"
 treewalk="c(m)"
-genmenu="wm-icons-menu"
-rootsection="MenuFvwmDebianMenuSystem"
+genmenu="menudefs.hook"
+rootsection="/DebianWmIcons"
