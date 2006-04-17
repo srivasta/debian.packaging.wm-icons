@@ -10,23 +10,7 @@ AUTOMAKE_OPTIONS = foreign
 
 EXTRA_DIST = \
 	01x01-template   \
-	14x14-general    \
-	16x16-general    \
-	16x16-kde        \
-	17x14-3dpixmaps  \
-	20x20-martys     \
-	20x20-martys2    \
-	21x18-3dpixmaps  \
-	32x32-kde        \
-	32x32-kde2       \
-	44x52-penguins   \
-	48x48-general    \
-	48x48-kde2       \
-	56x46-3dpixmaps  \
-	56x56-martys     \
-	56x56-martys2    \
-	16x16-gnome      \
-	48x48-gnome      \
+	$(ALL_ICON_SETS) \
 	names.lst
 
 SYMLINKS_LST = _symlinks.lst
@@ -41,7 +25,7 @@ install-data-local:
 			| (cd "$(icondir)" && tar xfBp -); \
 		find "$(icondir)/$$iconset" -name CVS \
 			-exec rm -r {} \; 2>/dev/null; \
-		(cd "$(icondir)/$$iconset" && [ -s $(SYMLINKS_LST) ] \
+		(cd "$(icondir)/$$iconset" && [ -f $(SYMLINKS_LST) ] \
 			&& $(AWK) '{ system("ln -sf " $$1 " " $$2) }' \
 				< $(SYMLINKS_LST) \
 			&& rm $(SYMLINKS_LST) || true \

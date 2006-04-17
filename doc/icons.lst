@@ -9,7 +9,7 @@ choice-yes        dialog
 clock             software category
 colors            internal
 configuration     internal
-developement      software category
+development       software category
 disk              hardware
 disk-cd           hardware
 disk-floppy       hardware
@@ -144,7 +144,7 @@ choice-no        - [link -> window-delete]
 clock            - mini-clock
 colors           - mini.colors
 configuration    - mini.desktop
-developement     - mini-bug2 (mini-bug1 for 14x14-general)
+development      - mini-bug2 (mini-bug1 for 14x14-general)
 disk             - mini-hdisk
 disk-cd          - mini-cd
 disk-floppy      - mini-diskette
@@ -239,7 +239,7 @@ choice-no        - Stoplight (from kiwi)
 clock            - time (from vferr, tiff, must be reduced or replaced)
 colors           - Colormap
 configuration    - CylinderWrenchSpreadsheet
-developement     - Ladybug (from jimr)
+development      - Ladybug (from jimr)
 disk             - DiskHardDrive (from kiwi)
 disk-cd          - cdromplayer2 (must be reduced)
 disk-floppy      - DiskFloppy (from kiwi) (floppydisk better?)
@@ -319,7 +319,7 @@ xv               - XV (from kiwi) (xv.color or xv.tif@isiconpack3 better?)
 | 56x46-3dpixmaps/ - from 3dpixmaps, normal/
 | Authors: Joerg Mertin <smurphy@dspecialists.de>
 | LSM: http://www.boutell.com/lsm/lsmbyid.cgi/000284
-| License: freely distributable, see README.3dpixmaps
+| License: GPL, see README.3dpixmaps
 `----------------
 amusement        - face_happy_3d
 calculator       - Calculator
@@ -330,7 +330,7 @@ choice-no        - no_drag_3d
 clock            - clock_3d
 colors           - color_wheel_3d
 configuration    - install_3d
-developement     - xdbx_3d
+development      - xdbx_3d
 disk             - disk_HD_3d (bad)
 disk-cd          - cdrom2_3d
 disk-floppy      - disk_3d
@@ -430,7 +430,7 @@ choice-no        - [link -> window-destroy] (?)
 clock            - PenguinWithTimer (rearranged)
 colors           - PenguinWithPaletteAndBrush (rearranged)
 configuration    - [link -> todo]
-developement     - PenguinWithBug
+development      - PenguinWithBug
 disk             - PenguinUnderHardDisk
 disk-cd          - PenguinUnderCDRom
 disk-floppy      - PenguinUnderDiskFloppy
@@ -515,13 +515,13 @@ xv               - PenguinWithRedFish
 amusement        - package_toys (KDE2) (ksokoban for 16x16-kde)
 calculator       - kcalc (xcalc from kappfinder better?)
 cd-player        - kscd
-chat             - kuser (KDE2) (toolbar/mini-ktalk for 16x16-kde)
+chat             - kuser (KDE2) (new for 16x16-kde by Maciej)
 choice-yes       - [new] (yes (KDE2) for 16x16-kde)
 choice-no        - error (KDE2)
 clock            - xclock (from kappfinder) (karm better?)
 colors           - colors
 configuration    - ?
-developement     - configure (KDE2)
+development      - configure (KDE2)
 disk             - harddrive_unmount
 disk-cd          - cdrom_unmount
 disk-floppy      - 3floppy_unmount
@@ -534,8 +534,8 @@ folder           - folder
 folder-open      - folder_open
 font             - fonts (font better?)
 game             - ksmiletris
-game-action      - proxy (KDE2)
-game-board       - kreversi
+game-action      - proxy (KDE2) (new for 16x16-kde by Maciej)
+game-board       - kreversi (new for 16x16-kde by Maciej)
 game-cards       - kpoker
 game-logic       - ksirtet (KDE2)
 ghostview        - gv (from kappfinder, grown) (kghostview better?)
@@ -548,12 +548,12 @@ home             - gohome (KDE2)
 image-processor  - kpaint (KDE2)
 image-viewer     - kviewer(KDE2)
 information      - info (from kde-1.1.2 reduced for 16x16-kde)
-item             - kit (KDE2)
+item             - [new]
 kde              - go (KDE2)
 keyboard         - keyboard
 linux            - penguin (KDE2)
 lock             - kscreensaver (mini-key from kpanel better?)
-mail             - kmail (email from kappfinder better?)
+mail             - kmail (email better?) (new for 16x16-kde by Maciej)
 modules          - blockdevice
 monitoring       - kpm (from kde-1.1.2 for 16x16-kde)
 mouse            - mouse
@@ -567,7 +567,7 @@ programs         - pakcage_applications (KDE2)
 quit             - stop (KDE2)
 refresh          - kfm_refresh (adapted for 16x16-kde)
 restart          - reload (KDE2)
-science          - kfract
+science          - kfract (new for 16x16-kde by Maciej)
 sound            - kmixdocked (from kmix) (grown, redrawn for 16x16-kde)
 system           - kcmsystem
 terminal         - terminal
@@ -584,17 +584,17 @@ window-close     - error (s/red/black)
 window-delete    - new (exit for 16x16-kde)
 window-destroy   - bomb (colors edited) (from 16x16-general for 16x16-kde)
 window-iconify   - [link -> window] (edited from 16x16-general for 16x16-kde)
-window-identify  - help (KDE2)
+window-identify  - help (KDE2) (new for 16x16-kde by Maciej)
 window-lower     - down (KDE2)
 window-maximize  - [link -> window] (edited from 16x16-general for 16x16-kde)
 window-move      - [link -> window] (edited from 16x16-general for 16x16-kde)
 window-raise     - up (KDE2)
 window-resize    - [link -> window] (edited from 16x16-general for 16x16-kde)
 window-shade     - [link -> window] (edited from 16x16-general for 16x16-kde)
-window-stick     - [link -> window] (edited from 16x16-general for 16x16-kde)
+window-stick     - [link -> window] (new for 16x16-kde)
 windows          - kcmkwm
 word-processor   - kwrite
-www              - www
+www              - konqueror (new for 16x16-kde by Maciej)
 xv               - xv (from kappfinder)
 
 .----------------
@@ -618,7 +618,7 @@ choice-no        - error ([link -> todo] for 48x48-kde2)
 clock            - karm (xclock from kappfinder better?)
 colors           - colors
 configuration    - desktop (KDE2)
-developement     - configure (KDE2)
+development      - configure (KDE2)
 disk             - harddrive_unmount (hd_unmount for 48x48-kde2)
 disk-cd          - cdrom_unmount
 disk-floppy      - 3floppy_unmount
@@ -715,7 +715,7 @@ choice-no        - [link -> todo]
 clock            - cldr_ico
 colors           - colw_ico
 configuration    - reps_ico
-developement     - [link -> utility]
+development      - [link -> utility]
 disk             - [link -> todo]
 disk-cd          - [link -> disk]
 disk-floppy      - [link -> disk]
@@ -804,7 +804,7 @@ choice-no        - cross_mini
 clock            - [link -> utility]
 colors           - [link -> todo]
 configuration    - [link -> todo]
-developement     - [link -> utility]
+development      - [link -> utility]
 disk             - [link -> todo]
 disk-cd          - [link -> disk]
 disk-floppy      - [link -> disk]
@@ -893,7 +893,7 @@ choice-no        - cross (reduced)
 clock            - [link -> utility]
 colors           - smaug (?)
 configuration    - graph
-developement     - [link -> utility]
+development      - [link -> utility]
 disk             - [link -> todo]
 disk-cd          - [link -> disk]
 disk-floppy      - [link -> disk]
@@ -982,7 +982,7 @@ choice-no        - cross_mini
 clock            - [link -> utility]
 colors           - [link -> todo]
 configuration    - [link -> todo]
-developement     - [link -> utility]
+development      - [link -> utility]
 disk             - [link -> todo]
 disk-cd          - [link -> disk]
 disk-floppy      - [link -> disk]
@@ -1076,7 +1076,7 @@ choice-no        - no.xpm
 clock            - gnome-clock.png
 colors           - gnome-color-browser.png
 configuration    - control-center.png
-developement     - gnome-devel.png
+development      - gnome-devel.png
 disk             - mc/i-blockdev.png
 disk-cd          - mc/i-cdrom.png
 disk-floppy      - mc/i-floppy.png
@@ -1155,11 +1155,353 @@ xv               - from 16x16-general
 .----------------
 | 48x48-gnome/ - see 16x16-gnome/
 | License: GPL
-| 72 icons and 12 symlink, need some works ... I am not very happy with
+| 72 icons and 12 symlinks, needs some works... I am not very happy with
 | the interior size of certains icons
 `----------------
 
 see 16x16-gnome/
+
+.----------------
+| 24x24-infox/ - a completely new icon set made especially for wm-icons.
+| Authors: Maciej Szymanski <ms@asor.com.pl>
+| License: GPL, see README.infox
+| 65 icons and 19 symlinks.
+`----------------
+
+All names and symlinks are preserved from the original submission.
+
+.----------------
+| 48x48-infox/ - a completely new icon set made especially for wm-icons.
+| Authors: Maciej Szymanski <ms@asor.com.pl>
+| License: GPL, see README.infox
+| 65 icons and 19 symlinks.
+`----------------
+
+All names and symlinks are preserved from the original submission.
+
+.----------------
+| 16x16-aquafusion/
+| 22x22-aquafusion/
+| 32x32-aquafusion/
+| 48x48-aquafusion/
+| 64x64-aquafusion/
+| Authors: Daniel Flax (design & artwork) and Markus Mueller (adoptation)
+| License: Design Science License (DSL, compatible with GPL)
+| Format:  PNG
+| 70 icons and 14 symlinks, missing icons needed.
+`----------------
+
+amusement        - amor
+calculator       - xcalc
+cd-player        - kscd
+chat             - ksirc
+choice-no        - [link -> $dir/todo]
+choice-yes       - [link -> $dir/amusement]
+clock            - clock
+colors           - colors
+configuration    - configure
+development      - core
+disk             - kcmdevices
+disk-cd          - ../devices/cd_audio
+disk-floppy      - ../devices/3floppy_mount
+display          - ../devices/screen
+editor           - kwrite
+empty            - fallback
+file             - ../mimetypes/mime
+file-manager     - kfm
+folder           - ../filesystems/folder
+folder-open      - ../filesystems/folder_open
+font             - fonts
+game             - package_games
+game-action      - package_games_arcade
+game-board       - package_games_board
+game-cards       - package_games_card
+game-logic       - package_games_strategy
+ghostview        - kghostview
+gimp             - gimp
+gnome            - gnome-apps
+gnu              - ark
+graphics         - package_graphics
+help             - khelpcenter
+home             - ../filesystems/folder_home
+image-processor  - kpaint
+image-viewer     - kview
+information      - knotify
+item             - fallback
+kde              - go
+keyboard         - keyboard
+linux            - penguin
+lock             - password
+mail             - email
+modules          - kgeo
+monitoring       - kviewshell
+mouse            - mouse
+multimedia       - mplayer
+music            - bell
+netscape         - netscape
+network          - kppp
+news             - kworldclock
+printing         - ../devices/printer
+programs         - package
+quit             - kmoon
+refresh          - energy
+restart          - linuxconfig
+science          - kspread
+sound            - kmix
+system           - package_system
+terminal         - terminal
+terminal-remote  - [new]
+terminal-special - xconsole
+themes           - kthememgr
+todo             - error
+unknown          - xapp
+utility          - misc
+video            - camera
+viewer           - kjobviewer
+window           - kwin
+window-close     - [link -> window]
+window-delete    - [link -> window]
+window-destroy   - [link -> window]
+window-iconify   - [link -> window]
+window-identify  - [link -> window]
+window-lower     - [link -> window]
+window-maximize  - [link -> window]
+window-move      - [link -> window]
+window-raise     - [link -> window]
+window-resize    - [link -> window]
+window-shade     - [link -> window]
+window-stick     - [link -> window]
+windows          - kpager
+word-processor   - kword
+www              - browser
+xv               - xv
+
+.----------------
+| 16x16-crystalclear/
+| Author: Everaldo Coelho http://www.everaldo.com
+| License: LGPL
+| Format: PNG
+| 84 icons
+`----------------
+amusement        - apps/package_toys
+calculator       - apps/calc
+cd-player        - apps/kscd
+chat             - apps/messenger
+choice-no        - actions/button_cancel
+choice-yes       - actions/button_ok
+clock            - apps/clock
+colors           - apps/colors
+configuration    - apps/package_settings
+development      - apps/bug
+disk             - devices/hdd_unmount
+disk-cd          - devices/cdrom_unmount
+disk-floppy      - devices/floppy_unmount
+display          - apps/display
+editor           - apps/xedit
+empty            - [new]
+file             - mimetypes/empty
+file-manager     - apps/file-manager
+folder           - filesystems/folder_grey
+folder-open      - filesystems/folder_open
+font             - apps/fonts
+game             - apps/package_games
+game-action      - apps/package_games_arcade
+game-board       - apps/package_games_board
+game-cards       - apps/package_games_card
+game-logic       - apps/ksirtet
+ghostview        - apps/kdvi
+gimp             - apps/gimp
+gnome            - apps/gnome
+gnu              - [new] (resized from 48x48/apps/xemacs)
+graphics         - apps/kpaint
+help             - apps/khelpcenter
+home             - filesystems/folder_home
+image-processor  - apps/looknfeel
+image-viewer     - apps/demo
+information      - actions/info
+item             - filesystems/favorites
+kde              - apps/go
+keyboard         - apps/keyboard
+linux            - apps/penguin
+lock             - apps/kgpg
+mail             - mimetypes/message2
+modules          - apps/kdf
+monitoring       - apps/ksysguard
+mouse            - devices/mouse
+multimedia       - apps/package_multimedia
+music            - apps/lsongs
+netscape         - apps/netscape
+network          - apps/network
+news             - apps/knewsticker
+printing         - devices/printer1
+programs         - apps/package
+quit             - actions/exit
+refresh          - actions/gg_connecting
+restart          - actions/reload
+science          - apps/katomic
+sound            - apps/kaboodle
+system           - apps/package_utilities
+terminal         - apps/konsole
+terminal-remote  - filesystems/chardevice
+terminal-special - [new] (convert -flop kservices; composite kservices konsole)
+themes           - apps/iconthemes
+todo             - actions/todo
+unknown          - apps/x
+utility          - apps/kded
+video            - apps/aktion
+viewer           - apps/xmag
+window           - apps/kpersonalizer
+window-close     - actions/icq_dnd
+window-delete    - actions/clear_left
+window-destroy   - apps/clanbomber
+window-iconify   - actions/window_nofullscreen
+window-identify  - apps/winprops
+window-lower     - actions/1downarrow
+window-maximize  - actions/window_fullscreen
+window-move      - actions/translate
+window-raise     - actions/1uparrow
+window-resize    - actions/transform (needed to be resized)
+window-shade     - actions/cap_square
+window-stick     - actions/attach
+windows          - apps/windowlist
+word-processor   - apps/package_wordprocessing
+www              - apps/internet
+xv               - actions/14_layer_novisible
+
+.----------------
+| 48x48-crystalclear/ - see 16x16-crystalclear/
+| License: LGPL
+| 83 icons and 1 symlink
+`----------------
+folder-open      - filesystems/folder
+gnu              - apps/xemacs
+lock             - actions/encrypted
+refresh          - apps/cache
+themes           - apps/iconthemes (needed to be resized)
+terminal-special - [new] (convert -flop kservices; composite kservices konsole)
+todo             - apps/cal
+window-close     - actions/agt_stop
+window-delete    - actions/fileclose
+window-move      - actions/desktop_enhancements
+window-resize    - actions/window_new
+window-shade     - actions/2uparrow
+window-stick     - actions/agt_virus
+xv               - [link -> graphics]
+
+.----------------
+| 22x22-gartoon/
+| 48x48-gartoon/
+| Authors: Original Gnome icons: zeussama@yahoo.com http://www.zeusbox.org
+|   KDE conversion & additions: Patrick Yavitz <pyavitz@gmail.com>
+|   Co-designer: La Mula Francis <MULAFRANCIS@terra.com>
+| License: Design Science License
+| Format: PNG
+| 76 icons and 8 symlinks
+`----------------
+amusement           apps/package_toys
+calculator          filesystems/chardevice
+cd-player           apps/gnome-cd
+chat                apps/kopete_all_away
+choice-no           actions/button_cancel
+choice-yes          actions/button_accept
+clock               actions/tool_timer
+colors              apps/looknfeel
+configuration       actions/configure
+development         apps/package_development
+disk-cd             devices/cdrom_mount
+disk-floppy         devices/3floppy_mount
+disk                devices/hdd_mount
+display             apps/display
+editor              apps/gedit
+empty               [new]
+file-manager        apps/file-manager
+file                filesystems/file
+folder-open         apps/package_favourite
+folder              filesystems/folder
+font                mimetypes/font
+game-action         [link -> game]
+game-board          [link -> game]
+game-cards          [link -> game]
+game-logic          [link -> game]
+game                apps/joystick
+ghostview           apps/cbrpager
+gimp                apps/gimp
+gnome               apps/gnome
+gnu                 apps/kfilereplace
+graphics            apps/kpaint
+help                apps/help_index
+home                filesystems/folder_home
+image-processor     apps/kpaint
+image-viewer        apps/gthumb
+information         actions/messagebox_info
+item                filesystems/services
+kde                 apps/go
+keyboard            devices/kxkb
+linux               [link -> unknown]
+lock                apps/lock
+mail                apps/email
+modules             filesystems/blockdevice
+monitoring          apps/ksysv
+mouse               devices/mouse
+multimedia          apps/gxine
+music               apps/juk
+netscape            [link -> www]
+network             apps/kinternet
+news                apps/ftp
+printing            devices/printer1
+programs            apps/package_applications
+quit                actions/exit
+refresh             actions/button_ok
+restart             actions/reset
+science             actions/convert
+sound               apps/arts
+system              apps/kcmsystem
+terminal-remote     apps/fileshare
+terminal-special    apps/gksu-terminal
+terminal            apps/gnome-terminal
+themes              actions/locationbar_erase
+todo                apps/korganizer
+unknown             apps/kuser
+utility             apps/package_utilities
+video               [link -> multimedia]
+viewer              apps/kfind
+window-close        actions/no
+window-delete       actions/messagebox_critical
+window-destroy      apps/clanbomber
+window-iconify      actions/window_nofullscreen
+window-identify     actions/colorpicker
+window-lower        actions/1downarrow
+window-maximize     actions/window_fullscreen
+window-move         apps/ksnapshot
+window-raise        actions/1uparrow
+window-resize       apps/display-capplet
+window-shade        actions/view_remove
+window-stick        actions/attach
+window              actions/tool_normal
+windows             apps/kstyle
+word-processor      apps/package_wordprocessing
+www                 apps/browser
+xv                  apps/lilo
+
+.----------------
+| 32x32-gant/
+| 64x64-gant/
+| Authors: Original Gant icons: Paul Davey http://mattahan.devianart.com
+| Gnome Gant icons conversion (GNANT): Tomislav Markovski
+| License: GPL
+| Format: PNG
+| 32x32: 80 icons, 4 symlinks 64x64: 79 icons, 5 symlinks
+`----------------
+game-logic        - [link -> modules]
+linux             - [new]
+netscape          - [link -> www]
+restart           - [new]
+terminal-special  - [new]
+window-close      - [link -> choice-no] (64x64 only)
+window-lower      - [new] (64x64 only)
+window-raise      - [new] (64x64 only)
+window-stick      - [link -> lock]
+xv                - [link -> image-viewer]
 
 .----------------
 | 01x01-template/
@@ -1173,7 +1515,7 @@ choice-no        - [link -> todo]
 clock            - [link -> utility]
 colors           - [link -> todo]
 configuration    - [link -> todo]
-developement     - [link -> utility]
+development      - [link -> utility]
 disk             - [link -> todo]
 disk-cd          - [link -> disk]
 disk-floppy      - [link -> disk]

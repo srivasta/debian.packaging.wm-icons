@@ -10,11 +10,13 @@ Description:    The Window Manager Icons is an efficient icon distribution
 Keywords:       window manager, icons, X11, fvwm, fvwm1, fvwm2, fvwm95, scwm,
                 wm-icons
 Author:         migo@homemail.com (Mikhael Goikhman)
+                olivier.chapuis@free.fr (Olivier Chapuis)
                 and many others, see included AUTHORS file
 Maintained-by:  migo@homemail.com (Mikhael Goikhman)
-Primary-site:   http://wm-icons.dhs.org/
+                fvwm-themes-devel@lists.sourceforge.net (FVWM Themes Developers)
+Primary-site:   http://wm-icons.sourceforge.net/
 Alternate-site: metalab.unc.edu /pub/Linux/X11/icons
-                800000 wm-icons-@VERSION@.tar.gz
+                1Mb wm-icons-@VERSION@.tar.gz
 Original-site:  
 Platforms:      GNU or Unix, X11
 Copying-policy: GPL

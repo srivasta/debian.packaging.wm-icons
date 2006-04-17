@@ -1,0 +1,12 @@
+.----------------------------
+| TODO in some coming version (possibly 1.0.0)
+`----------------------------
+
+* Rework 3dpixmaps icon sets (add plain 32x32 icon set).
+* Remove bad icon sets?
+* Scripts for auto-creating of new icon sets from existing ones.
+* Setup deb packages?
+* wm-icons-fix-old-rc script to replace old fvwm-icons names with new ones.
+* Dynamical icon set menu generation.
+* Auto applying changes in standard icon sets from menu without Restart.
+
