@@ -46,8 +46,8 @@ submenutitle= "+ \"" escfirst(ltitle() ,$hotkey,"&") \
 	cond_surr(wmIconsFindSectionIcon($section,$icon,"menu/"),"%","%") \
 	"\" PopUp \"" replacewith($section, " ", "_") "\"\n"
 
-rootprefix="/usr/local/share/fvwm/debian-menu-system/"
-userprefix="/.fvwm/debian-menu-system/"
+rootprefix="/etc/X11/fvwm/wm-icons/"
+userprefix="/.fvwm/wm-icons/"
 treewalk="c(m)"
 genmenu="wm-icons-menu"
-rootsection="MenuFvwmDebianMenuSystem"
+rootsection="MenuWmIcons"

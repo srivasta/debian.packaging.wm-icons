@@ -10,20 +10,14 @@ as a simple user.
   the "standard sections" and wm-icons icons and a map from packages name
   to wm-icons icons.
 
-* wm-icons-fvwm2rc-menu is a menu-method script for FVWM. You should edit
-  the lines:
-	rootprefix="/usr/local/share/fvwm/debian-menu-system/"
-	userprefix="/.fvwm/debian-menu-system/"
-  replace "/usr/local/share/fvwm/" by the FVWM configuration directory
-  and ".fvwm" by the FVWM user directory. Then, you should add
-	Read  debian-menu-system/wm-icons-menu
+* wm-icons-fvwm2rc-menu is a menu-method script for FVWM. You should add
+	Read  wm-icons/wm-icons-menu
   in the configuration file and bind it in some ways e.g.:
   add:
-	+ "menu system%menu/programs.xpm" Popup MenuFvwmDebianMenuSystem
+	+ "menu system%menu/programs.xpm" Popup MenuWmIcons
   in your root menu 
   or add say:
-	Mouse 1 R A Menu MenuFvwmDebianMenuSystem
-  You should also use the configuration file "this dir"/../fvwm2rc
+	Mouse 1 R A Menu MenuWmIcons
 
 * Other window managers: just (copy and rename and) edit the correponding
   menu methods script; you should add "!include wm-icons.h" and then you
