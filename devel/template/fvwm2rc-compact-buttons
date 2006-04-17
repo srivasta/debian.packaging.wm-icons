@@ -1,12 +1,10 @@
 ###
 #  FvwmCompactButtons, a nice theme-able example to use with wm-icons.
-#  Optimized for the default fvwm-2.2 configuration.
+#  Optimized for the default fvwm-2.4.x configuration.
 #
-#  Copy this file to the home directory (add leading dot) and put:
-#    Read .fvwm2rc-compact-buttons
-#  as the last line of your .fvwm2rc after the line 'Read .fvwm2rc-wm-icons'.
-#
-#  NOTE: if you use fvwm-2.3.17 or better, put this file into ~/.fvwm/ instead.
+#  Copy this file to ~/.fvwm and put:
+#    Read fvwm2rc-compact-buttons
+#  as the last line of your fvwm config, after 'Read fvwm2rc-wm-icons'.
 #
 #  You can customize this file by editing Action's, specifying diferent
 #  colors etc. You can also play with or remove the string "Size 80x80".
@@ -15,14 +13,9 @@
 
 
 # You can comment the following out or in.
-AddToMenu "Modules" "Compact Buttons%menu/utility.xpm%" FuncRestartFvwmCompactButtons
+AddToMenu MenuFvwmModules "Compact Buttons%menu/utility.xpm%" FuncRestartFvwmCompactButtons
 
-AddToFunc SessionInitFunction I Module FvwmButtons FvwmCompactButtons
-AddToFunc SessionRestartFunction I Module FvwmButtons FvwmCompactButtons
-AddToFunc InitFunction I Module FvwmButtons FvwmCompactButtons
-AddToFunc RestartFunction I Module FvwmButtons FvwmCompactButtons
-# The next line substitutes the previous 4 lines in fvwm-2.2.4 or better.
-#AddToFunc StartFunction I Module FvwmButtons FvwmCompactButtons
+AddToFunc StartFunction I Module FvwmButtons FvwmCompactButtons
 
 Mouse 3 R SCM Menu "MenuBarIconSet" Nop
 
@@ -61,82 +54,82 @@ AddToMenu "Window-Ops" "&Bar Icon Set%menu/themes.xpm" Popup MenuBarIconSet item
 
 Style "FvwmCompactButtons" NoTitle, NoHandles, Sticky, WindowListSkip, NeverFocus
 
-*FvwmCompactButtonsBack rgb:E4/D2/C0
+*FvwmCompactButtons: Back rgb:E4/D2/C0
 # Geometry - really likes to pick its own size, but giving a position is OK
-*FvwmCompactButtonsGeometry -0+0
+*FvwmCompactButtons: Geometry -0+0
 # Layout: specify rows or columns, not both
-*FvwmCompactButtonsColumns 2
+*FvwmCompactButtons: Columns 2
 
 # Define the buttons to use. Customize this for your taste.
 
-#*FvwmCompactButtons(2x2, Padding 0 0, Swallow(UseOld,NoClose) "Desktop" 'FvwmPager 0 0')
-*FvwmCompactButtons(2x2, Padding 0 0, Size 80 80, Swallow(UseOld,NoClose) "xclock" `Exec xclock -bg rgb:E4/D2/C0 -padding 2 -geometry 86x86-0+0`)
-*FvwmCompactButtons(2x1, Padding 0 0, Swallow(UseOld,NoClose) "xload" `Exec xload -nolabel -bg rgb:E4/D2/C0 -update 3 -geometry 86x43-0+99`)
-*FvwmCompactButtons(2x2, Padding 0 0, Container(Padding 0 0, Columns 4))
-*FvwmCompactButtons(Icon bar/terminal.xpm, Action `Exec xterm`, \
+#*FvwmCompactButtons: (2x2, Padding 0 0, Swallow(UseOld,NoClose) "Desktop" 'FvwmPager 0 0')
+*FvwmCompactButtons: (2x2, Padding 0 0, Size 80 80, Swallow(UseOld,NoClose) "xclock" `Exec xclock -bg rgb:E4/D2/C0 -padding 2 -geometry 86x86-0+0`)
+*FvwmCompactButtons: (2x1, Padding 0 0, Swallow(UseOld,NoClose) "xload" `Exec xload -nolabel -bg rgb:E4/D2/C0 -update 3 -geometry 86x43-0+99`)
+*FvwmCompactButtons: (2x2, Padding 0 0, Container(Padding 0 0, Columns 4))
+*FvwmCompactButtons: (Icon bar/terminal.xpm, Action `Exec xterm`, \
 	Action(Mouse 1) `Exec xterm -g 80x40 -sb +sk -si -sl 500 -j -ls -fn 7x14 -fb 7x14bold`, \
 	Action(Mouse 2) `Exec xterm -g 80x40 -sb +sk -si -sl 500 -j -ls -fn 7x14 -fb 7x14bold -n root -T root -e su -l`, \
 	Action(Mouse 3) `Exec Eterm -n dream -e rlogin -l dream $HOST`, \
 )
-*FvwmCompactButtons(Icon bar/file-manager.xpm, Action `Exec xfm -title "File Manager"`, \
+*FvwmCompactButtons: (Icon bar/file-manager.xpm, Action `Exec xfm -title "File Manager"`, \
 	Action(Mouse 1) `Exec xterm-color -g 80x40 -sb +sk -si -sl 500 -j -ls -fn 7x14 -fb 7x14bold -n Midnight-Commander -T Midnight-Commander -e mc -x`, \
 	Action(Mouse 2) `Exec gmc`, \
 	Action(Mouse 3) `Exec fr`, \
 )
-*FvwmCompactButtons(Icon bar/monitor.xpm, Action `Exec xterm -e top`, \
+*FvwmCompactButtons: (Icon bar/monitoring.xpm, Action `Exec xterm -e top`, \
 	Action(Mouse 1) `Exec xterm -fn 7x14 -fb 7x14bold +sb -ut -name xxterm -T Top -n Top -e top`, \
 )
-*FvwmCompactButtons(Icon bar/calculator.xpm, Action `Exec xcalc`, \
+*FvwmCompactButtons: (Icon bar/calculator.xpm, Action `Exec xcalc`, \
 	Action(Mouse 1) `Exec gcalc`, \
 	Action(Mouse 2) `Exec kcalc`, \
 )
-*FvwmCompactButtons(Icon bar/chat.xpm, Action `Exec xterm -e irc`, \
+*FvwmCompactButtons: (Icon bar/chat.xpm, Action `Exec xterm -e irc`, \
 	Action(Mouse 1) `Exec xterm -g 80x40 -sb +sk -si -sl 500 -j -ls -fn 7x14 -fb 7x14bold -n irc -T irc -e irc`, \
 	Action(Mouse 2) `Exec tkirc`, \
 	Action(Mouse 3) `Exec licq`, \
 )
-*FvwmCompactButtons(Icon bar/game.xpm, Action `Exec xbill`, \
+*FvwmCompactButtons: (Icon bar/game.xpm, Action `Exec xbill`, \
 	Action(Mouse 1) `Exec gnomine`, \
 	Action(Mouse 2) `Exec xmahjongg`, \
 	Action(Mouse 3) `Exec xpat2`, \
 )
-*FvwmCompactButtons(Icon bar/cd-player.xpm, Action `Exec workman`, \
+*FvwmCompactButtons: (Icon bar/cd-player.xpm, Action `Exec workman`, \
 	Action(Mouse 1) `Exec gtcd`, \
 	Action(Mouse 2) `Exec kscd`, \
 	Action(Mouse 3) `Exec kmid`, \
 )
-*FvwmCompactButtons(Icon bar/sound.xpm, Action `Exec xmixer`, \
+*FvwmCompactButtons: (Icon bar/sound.xpm, Action `Exec xmixer`, \
 	Action(Mouse 1) `Exec gmix`, \
 	Action(Mouse 2) `Exec freeamp`, \
 	Action(Mouse 3) `Exec x11amp`, \
 )
-*FvwmCompactButtons(Icon bar/editor.xpm, Action `Exec xterm -e jpico`, \
+*FvwmCompactButtons: (Icon bar/editor.xpm, Action `Exec xterm -e jpico`, \
 	Action(Mouse 1) `Exec emacs`, \
 	Action(Mouse 2) `Exec gvim`, \
 	Action(Mouse 3) `Exec xwp`, \
 )
-*FvwmCompactButtons(Icon bar/keyboard.xpm, Action `Exec xkeycaps`, \
+*FvwmCompactButtons: (Icon bar/keyboard.xpm, Action `Exec xkeycaps`, \
 	Action(Mouse 2) `Exec xrus`, \
 )
-*FvwmCompactButtons(Icon bar/xv.xpm, Action `Exec xv`, \
+*FvwmCompactButtons: (Icon bar/xv.xpm, Action `Exec xv`, \
 	Action(Mouse 2) `Exec gimp`, \
 	Action(Mouse 3) `Exec ee`, \
 )
-*FvwmCompactButtons(Icon bar/ghostview.xpm, Action `Exec ghostview`, \
+*FvwmCompactButtons: (Icon bar/ghostview.xpm, Action `Exec ghostview`, \
 	Action(Mouse 2) `Exec xpdf`, \
 )
-*FvwmCompactButtons(Icon bar/netscape.xpm, Action `Exec netscape -geometry 654x742`, \
+*FvwmCompactButtons: (Icon bar/netscape.xpm, Action `Exec netscape -geometry 654x742`, \
 	Action(Mouse 2) `Exec arena`, \
 )
-*FvwmCompactButtons(Icon bar/lock.xpm, Action `Exec xlock -nice 20 -mode random`, \
+*FvwmCompactButtons: (Icon bar/lock.xpm, Action `Exec xlock -nice 20 -mode random`, \
 	Action(Mouse 2) `Exec xlock -nolock -nice 20 -mode random`, \
 )
-*FvwmCompactButtons(Icon bar/window-close.xpm, Action Close, \
+*FvwmCompactButtons: (Icon bar/window-close.xpm, Action Close, \
 	Action(Mouse 2) Iconify, \
 	Action(Mouse 3) Destroy, \
 )
-*FvwmCompactButtons(Icon bar/restart.xpm, Action `Restart`, \
+*FvwmCompactButtons: (Icon bar/restart.xpm, Action `Restart`, \
 	Action(Mouse 2) Refresh, \
 	Action(Mouse 3) Quit, \
 )
-*FvwmCompactButtons(End)
+*FvwmCompactButtons: (End)

@@ -1,7 +1,7 @@
 #%define prefix %{_prefix}
 %define prefix /usr
 
-%define ver 0.3.0
+%define ver 0.4.0
 %define rel 1
 %define c_p --enable-all-sets
 %define m_p CFLAGS="-O2"
@@ -12,7 +12,7 @@ Summary:   Window Manager Icons, themable icon distribution
 Name:      wm-icons
 Version:   %{ver}
 Release:   %{rel}
-Copyright: GPL
+License:   GPL
 Group:     X11/Window Managers
 Source:    %{name}-%{version}.tar.gz
 URL:       http://wm-icons.sourceforge.org/
@@ -34,7 +34,7 @@ scripts and configurations for several window managers.
 %setup
 
 %build
-./configure --prefix=%{prefix} %{c_p}
+./configure --prefix=%{prefix} --mandir='${prefix}'/share/man %{c_p}
 make %{m_p}
 
 %install
@@ -54,13 +54,11 @@ rm -rf $RPM_BUILD_ROOT
 %{prefix}/bin/*
 %{prefix}/share/wm-icons
 %{prefix}/share/icons/wm-icons
-#%{prefix}/man/*/*
+%{prefix}/share/man/*/*
 
-## TODO: how to specify the current date in .spec? Or how to run a `command`?
-#%changelog
-#
-#* Thu 07 Sep 2000 20:00:00 IDT  Window Manager Icons Developers  <wm-icons-devel@lists.sourceforge.net>
-#- Auto building %{PACKAGE_VERSION}
-#
-#* Thu 07 Sep 2000 20:00:00 IDT  Mikhael Goikhman  <migo@homemail.com>
-#- First try at making the package
+%define date%(env LC_ALL=C date +"%a %b %d %Y")
+%changelog
+* %{date} Window Manager Icons Developers <wm-icons-devel@lists.sourceforge.net>
+  - Auto building %{PACKAGE_VERSION}
+* Sat Sep 07 2000 Mikhael Goikhman <migo@cpan.org>
+  - First try at making the package

@@ -1,5 +1,5 @@
 Welcome to Window Manager Icons
-Version 0.3.0
+Version 0.4.0
 
 The Window Manager Icons is an efficient icon distribution designed to
 be standardized and configurable.  Includes several themed icon sets,
@@ -21,7 +21,7 @@ All included icon sets have one-sized icons and are named by the
 scheme <size>-<theme>, like 44x52-penguins.  Absent icons (if any) are
 linked to the most relevant one present in the same icon set.
 
-There are currently 17 themed icon sets, which can be switched from
+There are currently 30 themed icon sets, which can be switched from
 within a menu.  There is also template icon set included for those who
 want to start their own wm-icons based icon sets.
 
@@ -32,14 +32,12 @@ Installation instructions can be found in the INSTALL file.
 Each user can run wm-icons-config for personal (not global)
 settings, like:
   wm-icons-config -p -d   # creates ~/.wm-icons with default links
-This is optional, the ~/.wm-icons directory will be created (if
-needed) on the first wm-icons-set-links -p call.  See the
-(forthcoming) documentation for wm-icons-config for more details.
+See the (forthcoming) documentation for wm-icons-config for more details.
 
 There are configurations for various window managers (fvwm1, fvwm2, fvwm95,
 scwm for now) in the etc/ directory.
 
-Read files in doc/ directory for more help.
-icons.lst contains the information about the icon list and used icons.
+For additional information, read files in doc/ directory.
+icons.lst contains all info about the icon list and used icons.
 
 Visit the project's home page at http://wm-icons.sourceforge.net/ .

@@ -1,3 +1,59 @@
+2006-01-18  morbusg <mikko@medusa.tutka.fi>
+
+	* added new icon sets 32x32-gant and 64x64-gant
+
+2006-01-16  morbusg <mikko@medusa.tutka.fi>
+
+	* added new icon sets 22x22-gartoon, 48x48-gartoon, 76 icons 8 symlinks
+
+2006-01-13  morbusg <mikko@medusa.tutka.fi>
+
+	* added new icon sets 16x16-crystalclear, and 48x48-crystalclear
+
+2006-01-13  migo  <migo@homemail.com>
+
+	* add new icon set 24x24-infox, 65 icons, 19 symlinks
+
+2006-01-13  migo  <migo@homemail.com>
+
+	* actually commit the last change (after many years)
+
+2002-12-25  migo  <migo@homemail.com>
+
+	* renamed developement to development in all icon sets
+
+2002-09-22  migo  <migo@homemail.com>
+
+	* added new nice AquaFusion icon sets: 16x16-aquafusion,
+	22x22-aquafusion, 32x32-aquafusion, 48x48-aquafusion, 64x64-aquafusion
+
+2002-06-31  migo  <migo@homemail.com>
+
+	* Replaced icons chat, game-action, game-board, lock, science,
+	window-identify, www in 16x16-kde, mostly from Maciej
+
+2002-06-20  migo  <migo@homemail.com>
+
+	* added new icon set 48x48-infox, 65 icons, 19 symlinks
+
+2002-06-18  migo  <migo@homemail.com>
+
+	* replaced www in 16x16-kde and 32x32-kde
+
+	* improved 16x16-kde/window-stick and 16x16-general/network
+
+2001-10-22  migo  <migo@homemail.com>
+
+	* remove 49-th line in 48x48-general/graphics
+
+2001-04-06  migo  <migo@homemail.com>
+
+	* convert forgotten 14x14-general/window from 16x16-general
+
+2001-03-26  migo
+
+	* drawn new 16x16-kde and 32x32-kde icon: item
+
 # ==== wm-icons-0.3.0 ====
 
 # Icon sets:

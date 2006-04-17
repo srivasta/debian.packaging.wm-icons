@@ -14,9 +14,13 @@ cd $ICONS_DIR
 for iconSet in *; do
 	[ -d "$iconSet" ] || continue
 	[ $iconSet = CVS ] && continue
-        echo -n "Processing $iconSet ... "
-	cd $iconSet || { echo failed; continue }
-	[ -f $INFO_FILE ] && { cd ..; echo skipped; continue }
+	echo -n "Processing $iconSet ... "
+	if ! cd $iconSet; then
+		echo failed; continue
+	fi
+	if [ -f $INFO_FILE ]; then
+		cd ..; echo skipped; continue
+	fi
 	# Note, this will, probably, not work with non-GNU sed.
 	find . -type l -print | cut -c3- | xargs -n 1 -r ls -l | \
 		sed 's/^.* \([^ ]*\) -> \(.*\)$/\2 \1/' | \

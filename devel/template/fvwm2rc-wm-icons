@@ -1,27 +1,21 @@
 ###
 #  This file includes fvwm configuration for using with wm-icons.
-#  Optimized for the default fvwm-2.2.0 configuration.
-#  Using this file doesn't break your existing .fvwm2rc, just extends it.
+#  Optimized for the default fvwm-2.4.x configuration.
+#  Using this file doesn't break your existing fvwm config, just extends it.
 #  You probably need to edit it if you have a non-default configuration.
 #
 #  Instructions:
-#    1) Install wm-icons (configure & make install)
-#    2) Copy this file to the home directory (add leading dot) and put:
-#         Read .fvwm2rc-wm-icons
-#       as the last line of your .fvwm2rc
-#    3) (Re)Start fvwm2
-#
-#  NOTE: if you use fvwm-2.3.17 or better, put this file into ~/.fvwm/ instead.
-#  NOTE: to use menu wm-icons, you should define ImagePath before your menus.
+#    1) Install wm-icons (configure && make install)
+#    2) Copy this file to ~/.fvwm directory and put:
+#         Read fvwm2rc-wm-icons
+#       somewhere in your fvwm config
+#    3) (Re)Start fvwm
 #
 #  The file is not perfect, it'll be better in the next versions.
 #  Send your comments to migo@homemail.com.
 ###
 
 
-# This is to support old fvwm's (PixmapPath is obsolete after fvwm-2.2.4).
-# Change this to the real path of wm-icons and comment one of the two out.
-#PixmapPath $HOME/@userdir@:@icondir@:/usr/local/icons:/usr/share/icons:/usr/share/icons/mini:/usr/local/mini-icons:/usr/X11R6/lib/X11/mini-icons:/usr/X11R6/include/X11/pixmaps:/opt/kde/share/icons
 ImagePath $HOME/@userdir@:@icondir@:+
 
 # You can comment this in to get title-icon for any window a-la fvwm95.
@@ -62,8 +56,7 @@ AddToMenu MenuIconSets "Change Icon Set" Title
 Mouse 3 R CM Menu MenuIconSets Nop
 #Style Eterm* IconOverride
 Style * IconOverride
-#AddToMenu "RootMenu" "&Icon Set%menu/themes.xpm" Popup MenuIconSets
-#AddToMenu "Modules" "&Icon Set%menu/themes.xpm" Popup MenuIconSets
+AddToMenu "MenuFvwmRoot" "&Icon Set%menu/themes.xpm" Popup MenuIconSets
 
 
 ###
