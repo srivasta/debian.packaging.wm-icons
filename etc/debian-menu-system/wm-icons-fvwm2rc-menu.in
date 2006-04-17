@@ -1,10 +1,11 @@
 #!/usr/bin/install-menu
 compat="menu-1"
+!include lang.h
 !include menu.h
 # you may/should edit/check the systemFindIcon in wm-icons.h
 !include wm-icons.h
 
-#function ltitle()=translate(lang(),title())
+function ltitle()=translate($lang,title())
 
 # if you want wm-icons only:
 #	replace "wmIconsFindIcon" by wmIconsFindIconWmOnly
@@ -15,26 +16,29 @@ compat="menu-1"
 # Do not forget to edit/check the systemFindIcon function in wm-icons.h
 #
 supported
-  wm=  "+ \"" escfirst(title(), $hotkey,"&") \
+  wm=  "+ \"" escfirst(ltitle(), $hotkey,"&") \
 	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
 	"\" Restart " $command "\n"
-  fvwm2module=  "+ \"" escfirst(title(), $hotkey,"&") \
+  fvwm2module=  "+ \"" escfirst(ltitle(), $hotkey,"&") \
     	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
 	"\" Module " $command "\n"
-  fvwm2=  "+ \"" escfirst(title() ,$hotkey,"&") \
+  fvwm=  "+ \"" escfirst(ltitle() ,$hotkey,"&") \
     	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
 	"\" " $command "\n"
-  x11= "+ \"" escfirst(title() ,$hotkey,"&") \
+  fvwm2=  "+ \"" escfirst(ltitle() ,$hotkey,"&") \
+    	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
+	"\" " $command "\n"
+  x11= "+ \"" escfirst(ltitle() ,$hotkey,"&") \
     	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
 	"\" Exec    " $command  "\n"
-  text= "+ \"" escfirst(title() ,$hotkey,"&") \
+  text= "+ \"" escfirst(ltitle() ,$hotkey,"&") \
     cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") "\""  \
-    " Exec /usr/bin/X11/xterm -T \"" title() "\" -e " $command "\n"
+    " Exec /usr/bin/X11/xterm -T \"" ltitle() "\" -e " $command "\n"
 endsupported
 
 startmenu=   "DestroyMenu \"" replacewith($section, " ", "_") "\"" "\n" \
              "AddToMenu \"" replacewith($section, " ", "_") "\"" \
-	     " \"" title() "\" Title" "\n"
+	     " \"" ltitle() "\" Title" "\n"
 endmenu=     "\n"
 
 # if you want wm-icons only:
@@ -42,12 +46,12 @@ endmenu=     "\n"
 # in both case wm-icons are used for standard sections
 # Do not forget to edit/check the systemFindIcon function in wm-icons.h
 #
-submenutitle= "+ \"" escfirst(title() ,$hotkey,"&") \
+submenutitle= "+ \"" escfirst(ltitle() ,$hotkey,"&") \
 	cond_surr(wmIconsFindSectionIcon($section,$icon,"menu/"),"%","%") \
 	"\" PopUp \"" replacewith($section, " ", "_") "\"\n"
 
 rootprefix="/etc/X11/fvwm/wm-icons/"
 userprefix="/.fvwm/wm-icons/"
 treewalk="c(m)"
-genmenu="wm-icons-menu"
-rootsection="MenuWmIcons"
+genmenu="menudefs.hook"
+rootsection="/DebianWmIcons"
