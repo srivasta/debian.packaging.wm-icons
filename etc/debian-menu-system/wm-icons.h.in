@@ -13,13 +13,24 @@
 # need to replace /urs/local/share/fvwm by "fvwm-themes @datadir@"/fvwm
 function systemFindIcon($filename)= \
     ifeqelse($filename, "", "", \
+    ifelsefile("/usr/share/icons/wm-icons/mini/" $filename, \
+        "/usr/share/icons/wm-icons/mini/" $filename, \
     ifelsefile("/usr/share/icons/mini/" $filename, \
-	"/usr/share/icons/mini/" $filename, \
+        "/usr/share/icons/mini/" $filename, \
+    ifelsefile("/usr/share/icons/wm-icons/16x16-general/" $filename, \
+        "/usr/share/icons/wm-icons/16x16-general/" $filename, \
+    ifelsefile("/usr/share/icons/wm-icons/16x16-gnome/" $filename, \
+        "/usr/share/icons/wm-icons/16x16-gnome/" $filename, \
+    ifelsefile("/usr/share/icons/wm-icons/16x16-kde/" $filename, \
+        "/usr/share/icons/wm-icons/16x16-kde/" $filename, \
+    ifelsefile("/usr/share/fvwm-crystal/fvwm/icons/Default/" $filename, \
+        "/usr/share/fvwm-crystal/fvwm/icons/Default/" $filename, \
     ifelsefile("/usr/local/share/fvwm/tr-images/16x16-gnome/" $filename, \
-	"/usr/local/share/fvwm/tr-images/16x16-gnome/" $filename, \
+        "/usr/local/share/fvwm/tr-images/16x16-gnome/" $filename, \
     ifelsefile("/usr/local/share/fvwm/tr-images/16x16-kde2/" $filename, \
-	"/usr/local/share/fvwm/tr-images/16x16-kde2/" $filename,\
-    ""))))
+        "/usr/local/share/fvwm/tr-images/16x16-kde2/" $filename, \
+    "")))))))))
+
 
 # return the wm-icons associated to a standard section. If the section is
 # not standard return the "system/user" icons for this section and if not
@@ -30,7 +41,7 @@ function wmIconsFindSectionIcon($s,$i,$t)= \
   ifeqelse(systemFindIcon($i),"",\
   ifeqelse(wmIconsGetSectionIcon(parent($s)),"",\
   ifeqelse(wmIconsGetSectionIcon(parent(parent($s))),"",\
-	   $t "folder.xpm",\ 
+	   $t "folder.xpm",\
 	   $t wmIconsGetSectionIcon(parent(parent($s)))),\
 	   $t wmIconsGetSectionIcon(parent($s))),\
 	   systemFindIcon($i)),\
@@ -41,7 +52,7 @@ function wmIconsFindSectionIconWmOnly($s,$i,$t)= \
   ifeqelse(wmIconsGetSectionIcon($s),"",\
   ifeqelse(wmIconsGetSectionIcon(parent($s)),"",\
   ifeqelse(wmIconsGetSectionIcon(parent(parent($s))),"",\
-	   $t "folder.xpm",\ 
+	   $t "folder.xpm",\
 	   $t wmIconsGetSectionIcon(parent(parent($s)))),\
 	   $t wmIconsGetSectionIcon(parent($s))),\
 	   $t wmIconsGetSectionIcon($s))
