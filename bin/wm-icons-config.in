@@ -70,7 +70,7 @@ EOF
 }
 
 version() {
-	echo 'wm-icons-config (Window Manager Icons) @VERSION@'
+	echo '@VERSION@'
 }
 
 if [ $# -eq 0 ]; then usage; exit 0; fi

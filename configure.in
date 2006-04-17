@@ -4,7 +4,7 @@ dnl autoconf and gettext packages
 AC_PREREQ(2.12)
 AC_REVISION(0.2.3)
 AC_INIT(icons/01x01-template)
-AM_INIT_AUTOMAKE(wm-icons, 0.3.0)
+AM_INIT_AUTOMAKE(wm-icons, 0.4.0)
 
 dnl Checks for programs.
 AC_PATH_PROG(PERL, perl, no)
@@ -52,15 +52,20 @@ ICON_SET_KDE="16x16-kde 32x32-kde 32x32-kde2 48x48-kde2"
 ICON_SET_3DPIXMAPS="17x14-3dpixmaps 21x18-3dpixmaps 56x46-3dpixmaps"
 ICON_SET_MARTYS="20x20-martys 20x20-martys2 56x56-martys 56x56-martys2"
 ICON_SET_GNOME="16x16-gnome 48x48-gnome"
+ICON_SET_INFOX="24x24-infox 48x48-infox"
+ICON_SET_AQUAFUSION="16x16-aquafusion 22x22-aquafusion 32x32-aquafusion 48x48-aquafusion 64x64-aquafusion"
+ICON_SET_CRYSTALCLEAR="16x16-crystalclear 48x48-crystalclear"
+ICON_SET_GARTOON="22x22-gartoon 48x48-gartoon"
+ICON_SET_GANT="32x32-gant 64x64-gant"
 
-ALL_ICON_SETS="$ICON_SET_BASE $ICON_SET_PENGUINS $ICON_SET_KDE $ICON_SET_3DPIXMAPS $ICON_SET_MARTYS $ICON_SET_GNOME"
+ALL_ICON_SETS="$ICON_SET_BASE $ICON_SET_PENGUINS $ICON_SET_KDE $ICON_SET_3DPIXMAPS $ICON_SET_MARTYS $ICON_SET_GNOME $ICON_SET_INFOX $ICON_SET_AQUAFUSION $ICON_SET_CRYSTALCLEAR $ICON_SET_GARTOON $ICON_SET_GANT"
 SELECTED_ICON_SETS="$ICON_SET_BASE"
 
 AC_ARG_ENABLE(martys,
-[  --enable-all-sets       include all icon sets (15, default is 3)])
+[  --enable-all-sets       include all icon sets (27, default is 3)])
 
 AC_ARG_ENABLE(penguins,
-[  --enable-penguins       include the penguin icon set    (1)])
+[  --enable-penguins       include 44x52-penguins icon set (1)])
 if test "$enable_penguins" = "yes" ||
 	test "$enable_all_sets" = "yes" -a "$enable_penguins" != "no"; then
 		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_PENGUINS"
@@ -88,12 +93,46 @@ if test "$enable_martys" = "yes" ||
 fi
 
 AC_ARG_ENABLE(gnome,
-[  --enable-gnome         include the gnome icon sets    (2)])
+[  --enable-gnome          include the gnome icon sets     (2)])
 if test "$enable_gnome" = "yes" ||
 	test "$enable_all_sets" = "yes" -a "$enable_gnome" != "no"; then
 		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_GNOME"
 fi
 
+AC_ARG_ENABLE(infox,
+[  --enable-infox          include the infox icon sets     (2)])
+if test "$enable_infox" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_infox" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_INFOX"
+fi
+
+AC_ARG_ENABLE(aquafusion,
+[  --enable-aquafusion     include aquafusion icon sets    (5)])
+if test "$enable_aquafusion" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_aquafusion" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_AQUAFUSION"
+fi
+
+AC_ARG_ENABLE(crystalclear,
+[  --enable-crystalclear   include crystalclear icon sets  (2)])
+if test "$enable_crystalclear" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_crystalclear" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_CRYSTALCLEAR"
+fi
+
+AC_ARG_ENABLE(gartoon,
+[  --enable-gartoon        include gartoon icon sets       (2)])
+if test "$enable_gartoon" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_gartoon" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_GARTOON"
+fi
+
+AC_ARG_ENABLE(gant,
+[  --enable-gant           include gant icon sets          (2)])
+if test "$enable_gant" = "yes" ||
+	test "$enable_all_sets" = "yes" -a "$enable_gant" != "no"; then
+		SELECTED_ICON_SETS="$SELECTED_ICON_SETS $ICON_SET_GANT"
+fi
 
 
 AC_SUBST(ICON_SET_BASE)
@@ -102,14 +141,19 @@ AC_SUBST(ICON_SET_KDE)
 AC_SUBST(ICON_SET_3DPIXMAPS)
 AC_SUBST(ICON_SET_MARTYS)
 AC_SUBST(ICON_SET_GNOME)
+AC_SUBST(ICON_SET_INFOX)
+AC_SUBST(ICON_SET_AQUAFUSION)
+AC_SUBST(ICON_SET_CRYSTALCLEAR)
+AC_SUBST(ICON_SET_GARTOON)
+AC_SUBST(ICON_SET_GANT)
 
 AC_SUBST(ALL_ICON_SETS)
 AC_SUBST(SELECTED_ICON_SETS)
 
 AC_OUTPUT(
 	Makefile
-	icons/Makefile
 	etc/Makefile
+	etc/debian-menu-system/Makefile
 	devel/Makefile
 	devel/bin/Makefile
 	bin/Makefile
@@ -118,17 +162,25 @@ AC_OUTPUT(
 	doc/wm-icons.lsm
 	rpm/Makefile
 	rpm/wm-icons.spec
+	icons/Makefile
 )
+
+FMT_ALL_ICON_SETS="$ALL_ICON_SETS"
+FMT_SELECTED_ICON_SETS="$SELECTED_ICON_SETS"
+if test -x /usr/bin/fmt; then
+	FMT_ALL_ICON_SETS="`echo '   ' $ALL_ICON_SETS | fmt -c`"
+	FMT_SELECTED_ICON_SETS="`echo '   ' $SELECTED_ICON_SETS | fmt -c`"
+fi
 
 echo "
 -----------------------------------------------------------------------------
 Window Manager Icons Version:	$VERSION
 
 Available icon sets:
-	$ALL_ICON_SETS
+$FMT_ALL_ICON_SETS
 
 Enabled icon sets:
-	$SELECTED_ICON_SETS
+$FMT_SELECTED_ICON_SETS
 =============================================================================
 "
 if test "$SELECTED_ICON_SETS" = "$ICON_SET_BASE"; then

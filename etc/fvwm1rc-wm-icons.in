@@ -34,15 +34,23 @@ PixmapPath $HOME/@userdir@:@icondir@:/usr/local/icons:/usr/share/icons:/usr/shar
 
 Popup MenuIconSets
 	Title   "Change Icon Set"
-	Exec    "norm	32x32-kde"       exec wm-icons-config -q -p -f norm 32x32-kde &
-	Exec    "norm	32x32-kde2"      exec wm-icons-config -q -p -f norm 32x32-kde2 &
-	Exec    "norm	44x52-penguins"  exec wm-icons-config -q -p -f norm 44x52-penguins &
-	Exec    "norm	48x48-general"   exec wm-icons-config -q -p -f norm 48x48-general &
-	Exec    "norm	48x48-gnome"     exec wm-icons-config -q -p -f norm 48x48-gnome &
-	Exec    "norm	48x48-kde2"      exec wm-icons-config -q -p -f norm 48x48-kde2 &
-	Exec    "norm	56x46-3dpixmaps" exec wm-icons-config -q -p -f norm 56x46-3dpixmaps &
-	Exec    "norm	56x56-martys"    exec wm-icons-config -q -p -f norm 56x56-martys &
-	Exec    "norm	56x56-martys2"   exec wm-icons-config -q -p -f norm 56x56-martys2 &
+	Exec    "norm	32x32-aquafusion"   exec wm-icons-config -q -p -f norm 32x32-aquafusion &
+	Exec    "norm	32x32-gant"         exec wm-icons-config -q -p -f norm 32x32-gant &
+	Exec    "norm	32x32-kde"          exec wm-icons-config -q -p -f norm 32x32-kde &
+	Exec    "norm	32x32-kde2"         exec wm-icons-config -q -p -f norm 32x32-kde2 &
+	Exec    "norm	44x52-penguins"     exec wm-icons-config -q -p -f norm 44x52-penguins &
+	Exec    "norm	48x48-aquafusion"   exec wm-icons-config -q -p -f norm 48x48-aquafusion &
+	Exec    "norm	48x48-crystalclear" exec wm-icons-config -q -p -f norm 48x48-crystalclear &
+	Exec    "norm	48x48-gartoon"      exec wm-icons-config -q -p -f norm 48x48-gartoon &
+	Exec    "norm	48x48-general"      exec wm-icons-config -q -p -f norm 48x48-general &
+	Exec    "norm	48x48-gnome"        exec wm-icons-config -q -p -f norm 48x48-gnome &
+	Exec    "norm	48x48-infox"        exec wm-icons-config -q -p -f norm 48x48-infox &
+	Exec    "norm	48x48-kde2"         exec wm-icons-config -q -p -f norm 48x48-kde2 &
+	Exec    "norm	56x46-3dpixmaps"    exec wm-icons-config -q -p -f norm 56x46-3dpixmaps &
+	Exec    "norm	56x56-martys"       exec wm-icons-config -q -p -f norm 56x56-martys &
+	Exec    "norm	56x56-martys2"      exec wm-icons-config -q -p -f norm 56x56-martys2 &
+	Exec    "norm	64x64-aquafusion"   exec wm-icons-config -q -p -f norm 64x64-aquafusion &
+	Exec    "norm	64x64-gant"         exec wm-icons-config -q -p -f norm 64x64-gant &
 	Nop     ""
 	Restart "Restart	to activate"       fvwm
 EndPopup
@@ -66,9 +74,10 @@ Style "NoResource"             Icon norm/unknown.xpm
 Style "Eterm*"                 Icon norm/terminal.xpm
 Style "rxvt"                   Icon norm/terminal.xpm
 Style "XTerm"                  Icon norm/terminal.xpm
+Style "rxterm"                 Icon norm/terminal-remote.xpm
 
 # These are not all mine, most of globs must be removed.
-Style "DDD*"                   Icon norm/developement.xpm
+Style "DDD*"                   Icon norm/development.xpm
 Style "GRASP*"                 Icon norm/file-manager.xpm
 Style "HyTeX*"                 Icon norm/viewer.xpm
 Style "ImageMagic*"            Icon norm/image-processor.xpm
@@ -81,8 +90,9 @@ Style "SystemInfo*"            Icon norm/information.xpm
 Style "Tk man"                 Icon norm/help.xpm
 Style "Visual Tcl"             Icon norm/todo.xpm
 
-Style "amaya*"                 Icon norm/www.xpm
 Style "AcroRead"               Icon norm/viewer.xpm
+Style "adsl-config"            Icon norm/network.xpm
+Style "amaya*"                 Icon norm/www.xpm
 Style "Appointment"            Icon norm/clock.xpm
 Style "asWedit*"               Icon norm/editor.xpm
 Style "bitmap*"                Icon norm/image-processor.xpm
@@ -94,21 +104,25 @@ Style "Dayview"                Icon norm/clock.xpm
 Style "Dialogue"               Icon norm/www.xpm
 Style "Display"                Icon norm/image-viewer.xpm
 Style "dosemu*"                Icon norm/todo.xpm
-Style "Image Viewer*"          Icon norm/image-viewer.xpm
 Style "emacs"                  Icon norm/gnu.xpm
 Style "Explorer"               Icon norm/file-manager.xpm
 Style "Fractine"               Icon norm/science.xpm
 Style "fr"                     Icon norm/file-manager.xpm
 Style "freeamp"                Icon norm/music.xpm
+Style "FreeAmp*"               Icon norm/music.xpm
 Style "File Viewer*"           Icon norm/viewer.xpm
 Style "Fvwm*"                  Icon norm/utility.xpm
 Style "ghostview"              Icon norm/ghostview.xpm
 Style "ghostscript"            Icon norm/ghostview.xpm
 Style "gifview"                Icon norm/image-viewer.xpm
+Style "gkrellm"                Icon norm/monitoring.xpm
 Style "GNUplot"                Icon norm/science.xpm
 Style "GV"                     Icon norm/ghostview.xpm
 Style "Help_popup"             Icon norm/help.xpm
+Style "Image Viewer*"          Icon norm/image-viewer.xpm
+Style "isdn-config"            Icon norm/network.xpm
 Style "ixset"                  Icon norm/todo.xpm
+Style "licq-bin"               Icon norm/chat.xpm
 Style "Lynx"                   Icon norm/www.xpm
 Style "Manual Page*"           Icon norm/help.xpm
 Style "matlab"                 Icon norm/science.xpm
@@ -116,6 +130,7 @@ Style "matlab"                 Icon norm/science.xpm
 Style "Midnight-Commander"     Icon norm/file-manager.xpm
 Style "mgv*"                   Icon norm/ghostview.xpm
 Style "moxfm*"                 Icon norm/file-manager.xpm
+Style "mldonkey*"              Icon norm/network.xpm
 Style "mtools*"                Icon norm/disk.xpm
 Style "mxaudio"                Icon norm/music.xpm
 Style "NEdit*"                 Icon norm/editor.xpm
@@ -128,6 +143,7 @@ Style "Composition"            Icon norm/mail.xpm
 Style "NcFtp"                  Icon norm/network.xpm
 Style "nscal*"                 Icon norm/clock.xpm
 Style "News"                   Icon norm/news.xpm
+Style "opera"                  Icon norm/www.xpm
 Style "panel"                  Icon norm/home.xpm
 Style "pine"                   Icon norm/mail.xpm
 Style "pixmap*"                Icon norm/image-processor.xpm
@@ -198,8 +214,8 @@ Style "xv"                     Icon norm/xv.xpm
 Style "xvgr"                   Icon norm/image-viewer.xpm
 Style "xvmount"                Icon norm/disk.xpm
 Style "xwp"                    Icon norm/word-processor.xpm
-Style "xwpe"                   Icon norm/developement.xpm
-Style "xxgdb"                  Icon norm/developement.xpm
+Style "xwpe"                   Icon norm/development.xpm
+Style "xxgdb"                  Icon norm/development.xpm
 
 # Open File dialog
 Style "Browse * Select a File" Icon norm/folder.xpm
@@ -231,7 +247,7 @@ Style "about"                  Icon norm/information.xpm
 Style "Fvwm*"                  Icon norm/utility.xpm
 Style "FvwmConsole"            Icon norm/terminal-special.xpm
 Style "FVWM Themes*"           Icon norm/themes.xpm
-Style "FVWM Themes Config*"    Icon norm/configuration.xpm
+Style "FVWM Themes Global Feel" Icon norm/configuration.xpm
 Style "FVWM Themes Doc*"       Icon norm/help.xpm
 Style "FVWM Themes Menu*"      Icon norm/editor.xpm
 Style "Color Selector"         Icon norm/colors.xpm
@@ -250,7 +266,7 @@ Style "FvwmScript-PointerSetup" Icon norm/mouse.xpm
 
 # GNOME/Gtk Apps
 Style "AbiWord*"               Icon norm/word-processor.xpm
-Style "bug-buddy"              Icon norm/developement.xpm
+Style "bug-buddy"              Icon norm/development.xpm
 Style "Dia"                    Icon norm/science.xpm
 Style "eog"                    Icon norm/image-viewer.xpm
 Style "Galeon-bin"             Icon norm/www.xpm
@@ -287,11 +303,13 @@ Style "gnumeric"               Icon norm/calculator.xpm
 Style "gnp"                    Icon norm/editor.xpm
 Style "gnp+"                   Icon norm/editor.xpm
 Style "GQview"                 Icon norm/image-viewer.xpm
+Style "GQmpeg"                 Icon norm/video.xpm
 Style "grecord"                Icon norm/sound.xpm
 Style "grip"                   Icon norm/cd-player.xpm
 Style "gsearchtool"            Icon norm/file.xpm
 Style "gtalk"                  Icon norm/chat.xpm
 Style "gtcd"                   Icon norm/cd-player.xpm
+Style "gtk-gnutella"           Icon norm/network.xpm
 Style "gtk-shell"              Icon norm/information.xpm
 Style "gtkicq"                 Icon norm/chat.xpm
 Style "gtop"                   Icon norm/monitoring.xpm
@@ -302,6 +320,8 @@ Style "gxedit"                 Icon norm/editor.xpm
 Style "helix-update"           Icon norm/network.xpm
 Style "idetool"                Icon norm/disk.xpm
 Style "logview"                Icon norm/viewer.xpm
+Style "MPlayer"                Icon norm/video.xpm
+Style "nautilus"               Icon norm/file-manager.xpm
 Style "pan"                    Icon norm/news.xpm
 Style "vumeter"                Icon norm/sound.xpm
 Style "X-Chat"                 Icon norm/chat.xpm
@@ -330,7 +350,7 @@ Style "kchart"                 Icon norm/information.xpm
 Style "kcron"                  Icon norm/system.xpm
 Style "kdehelp"                Icon norm/help.xpm
 Style "kdepasswd"              Icon norm/terminal-special.xpm
-Style "kdevelop"               Icon norm/developement.xpm
+Style "kdevelop"               Icon norm/development.xpm
 Style "kdesu"                  Icon norm/terminal-special.xpm
 Style "kdf"                    Icon norm/disk.xpm
 Style "kdvi"                   Icon norm/viewer.xpm
@@ -357,7 +377,7 @@ Style "artsbuilder"            Icon norm/music.xpm
 Style "artscontrol"            Icon norm/sound.xpm
 Style "kmoon"                  Icon norm/science.xpm
 Style "kodo"                   Icon norm/mouse.xpm
-Style "kpackage"               Icon norm/program.xpm
+Style "kpackage"               Icon norm/programs.xpm
 Style "kppp"                   Icon norm/network.xpm
 Style "kppplogview"            Icon norm/information.xpm
 Style "kghostview"             Icon norm/viewer.xpm
@@ -397,15 +417,17 @@ Style "Dtcalc"                 Icon norm/calculator.xpm
 Style "Dticon*"                Icon norm/image-processor.xpm
 Style "Dtprint*"               Icon norm/printing.xpm
 Style "Dtstyle*"               Icon norm/configuration.xpm
-Style "Applications Manager"   Icon norm/program.xpm
+Style "Applications Manager"   Icon norm/programs.xpm
 Style "Trash Can"              Icon norm/file.xpm
 
 # Games
 Style "SDL_App"                Icon norm/game.xpm
 Style "*angband"               Icon norm/game.xpm
 Style "gcfclient"              Icon norm/game.xpm
+Style "Heroes ?.*"             Icon norm/game-action.xpm
 Style "Maelstrom"              Icon norm/game-action.xpm
 Style "MirrorMagic"            Icon norm/game-logic.xpm
+Style "PowerManga*"            Icon norm/game-action.xpm
 Style "PySol"                  Icon norm/game-cards.xpm
 Style "Rocks'n'Diamonds"       Icon norm/game-action.xpm
 Style "XGammon"                Icon norm/game.xpm

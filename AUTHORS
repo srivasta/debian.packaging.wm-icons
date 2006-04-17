@@ -1,8 +1,17 @@
 Mikhael Goikhman <migo@homemail.com>:
 The maintainer. Icon manipulations, scripts and packaging.
 
+Mikko Heiskanen <mikko@medusa.tutka.fi>:
+Contributor and developer.
+
 Olivier Chapuis <olivier.chapuis@free.fr>:
 One of the main developers.
+
+Maciej Szymanski <ms@asor.com.pl>:
+The author of the infox icon set, some improvements in 16x16-kde icons.
+
+Manoj Srivastava <srivasta@debian.org>:
+Man page and debian packages.
 
 Julian Gilbey <J.D.Gilbey@qmw.ac.uk>,
 Ideas and autoconfiguring.
@@ -45,6 +54,9 @@ The authors of the icons from kde packages.
 Martin Cartwright <martycart@yahoo.co.uk>,
 Jarl Totland (some of the smaller icons):
 The authors of the icons from martys_icons and martys_new_icons packages.
+
+Markus Mueller <markus@flauta.de>, Daniel Flax <d.flax@attbi.com>:
+The authors of the AquaFussion icon package.
 
 ------------------------------------------------------------------------------
 

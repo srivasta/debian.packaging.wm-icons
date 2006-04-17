@@ -1,3 +1,116 @@
+2006-04-09  migo  <migo@homemail.com>
+
+	* NEWS:
+	* README:
+	* TODO:
+	* doc/FAQ:
+	update documentation (prepare for 0.4.0)
+
+	* rpm/Makefile.am:
+	* rpm/wm-icons.spec.in:
+	minor rpmbuild updates
+
+	* devel/conf/style-icons.cfg:
+	* devel/template/fvwm2rc-compact-buttons:
+	* devel/template/fvwm2rc-wm-icons:
+	several updates
+
+	* etc/fvwm1rc-wm-icons.in:
+	* etc/fvwm2rc-compact-buttons.in:
+	* etc/fvwm2rc-wm-icons.in:
+	* etc/fvwm95rc-wm-icons.in:
+	* etc/scwmrc-wm-icons.in:
+	regenerate wm-configs
+
+	* AUTHORS:
+	* bin/Makefile.am:
+	* bin/wm-icons-config.1:
+	* rpm/wm-icons.spec.in:
+	add man page from Debian
+
+	* configure.in:
+	add missing 24x24-infox set
+
+	* icons/Makefile.am:
+	fix installing empty _symlinks.lst
+
+2006-01-18  migo  <migo@homemail.com>
+
+	* configure.in:
+	* icons/Makefile.am:
+	add support for new gant icons sets
+
+2006-01-16  migo  <migo@homemail.com>
+
+	* configure.in:
+	* icons/Makefile.am:
+	add support for new gartoon icons sets
+
+2006-01-14  migo  <migo@homemail.com>
+
+	* devel/web/create-preview:
+	* devel/web/view-icon-set:
+	update scripts creating preview screenshots to handle png icon sets
+
+2006-01-14  migo  <migo@homemail.com>
+
+	* configure.in:
+	* icons/Makefile.am:
+	add support for new crystalclear icons sets from Mikko Heiskanen
+
+2003-11-01  migo  <migo@homemail.com>
+
+	* configure.in:
+	* Makefile.am:
+	fixed 2 problems causing errors with newer autoconf/automake
+
+2002-06-20  migo  <migo@homemail.com>
+
+	* configure.in:
+	* doc/icons.lst:
+	* icons/Makefile.am:
+	* doc/README.infox:
+	added a completely new icon set infox by Maciej Szymanski
+
+	* devel/bin/*pack-symlinks:
+	* devel/web/view-icon-set:
+	fixed for some shells
+
+2001-10-22  migo  <migo@homemail.com>
+
+	* devel/conf/style-icons.cfg:
+	* etc/*-wm-icons.in:
+	small updates
+
+2001-04-11  migo  <migo@homemail.com>
+
+	* devel/web/create-preview:
+	updated to use wm-icons-web repository
+
+2001-04-06  migo  <migo@homemail.com>
+
+	* README:
+	small updates
+
+2001-03-24  olicha
+
+	* etc/debian-menu-system/*:
+	* NEWS:
+	* FAQ:
+	 Added some Debian menu system configuration files
+
+2001-03-20  migo
+
+	* configure.in:
+	increased version to 0.3.1 after setting cvs tag version-0_3_0
+
+	* devel/data/cmap-kde.xpm:
+	a new file
+
+# .----------------------------
+# | 19 Mar 2001, wm-icons-0.3.0
+# `----------------------------
+
 2001-03-19  migo
 
 	* icons/Makefile.am: small fix
@@ -7,11 +120,21 @@
 	* configure.in:
 	* NEWS:
 	* README:
+	* doc/FAQ:
 	prepare to 0.3.0 release
 
 	* icons/01x01-template/_symlinks.lst:
 	* icons/20x20-martys{,2}/_symlinks.lst:
 	reduce number of nested symlinks (workaround for linux misfeature)
+
+	* devel/Makefile.am:
+	* doc/wm-icons.lsm.in:
+	fixes
+
+	* devel/template/fvwm2rc-compact-buttons:
+	* etc/fvwm2rc-compact-buttons.in:
+	* etc/scwmrc-wm-icons.in:
+	last minute minor fixes (they are not in tarballs)
 
 2001-03-18  olicha
 	

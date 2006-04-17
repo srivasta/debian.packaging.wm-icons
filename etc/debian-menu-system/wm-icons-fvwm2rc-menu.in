@@ -1,0 +1,53 @@
+#!/usr/sbin/install-menu
+compat="menu-1"
+!include menu.h
+# you may/should edit/check the systemFindIcon in wm-icons.h
+!include wm-icons.h
+
+function ltitle()=translate(lang(),title())
+
+# if you want wm-icons only:
+#	replace "wmIconsFindIcon" by wmIconsFindIconWmOnly
+# if you want that your system icons be prioritary for applications
+# icons:
+#	replace "wmIconsFindIcon" by wmIconsSystemFindIcon"
+#
+# Do not forget to edit/check the systemFindIcon function in wm-icons.h
+#
+supported
+  wm=  "+ \"" escfirst(ltitle(), $hotkey,"&") \
+	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
+	"\" Restart " $command "\n"
+  fvwm2module=  "+ \"" escfirst(ltitle(), $hotkey,"&") \
+    	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
+	"\" Module " $command "\n"
+  fvwm2=  "+ \"" escfirst(ltitle() ,$hotkey,"&") \
+    	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
+	"\" " $command "\n"
+  x11= "+ \"" escfirst(ltitle() ,$hotkey,"&") \
+    	cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") \
+	"\" Exec    " $command  "\n"
+  text= "+ \"" escfirst(ltitle() ,$hotkey,"&") \
+    cond_surr(wmIconsFindIcon($icon,$package,$section,"menu/"),"%","%") "\""  \
+    " Exec /usr/bin/X11/xterm -T \"" ltitle() "\" -e " $command "\n"
+endsupported
+
+startmenu=   "DestroyMenu \"" replacewith($section, " ", "_") "\"" "\n" \
+             "AddToMenu \"" replacewith($section, " ", "_") "\"" \
+	     " \"" ltitle() "\" Title" "\n"
+endmenu=     "\n"
+
+# if you want wm-icons only:
+#	replace "wmIconsFindSectionIcon" by wmIconsFindSectionIconWmOnly
+# in both case wm-icons are used for standard sections
+# Do not forget to edit/check the systemFindIcon function in wm-icons.h
+#
+submenutitle= "+ \"" escfirst(ltitle() ,$hotkey,"&") \
+	cond_surr(wmIconsFindSectionIcon($section,$icon,"menu/"),"%","%") \
+	"\" PopUp \"" replacewith($section, " ", "_") "\"\n"
+
+rootprefix="/usr/local/share/fvwm/debian-menu-system/"
+userprefix="/.fvwm/debian-menu-system/"
+treewalk="c(m)"
+genmenu="wm-icons-menu"
+rootsection="MenuFvwmDebianMenuSystem"

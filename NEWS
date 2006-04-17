@@ -1,14 +1,18 @@
 .----------------------------
-| TODO in some coming version (probably 1.0.0)
+| 09 Mar 2006, wm-icons-0.4.0
 `----------------------------
 
-* Rework 3dpixmaps icon sets (add plain 32x32 icon set).
-* Remove bad icon sets?
-* Scripts for auto-creating of new icon sets from existing ones.
-* Setup deb packages?
-* wm-icons-fix-old-rc script to replace old fvwm-icons names with new ones.
-* Dynamical icon set menu generation.
-* Auto applying changes in standard icon sets from menu without Restart.
+* New icon sets: 16x16-crystalclear, 48x48-crystalclear, 22x22-gartoon,
+  48x48-gartoon, 32x32-gant, 64x64-gant. These are png icon sets.
+
+* New icon sets: 24x24-infox, 48x48-infox. These are xpm icon sets.
+
+* New icon sets: 16x16-aquafusion, 22x22-aquafusion, 32x32-aquafusion,
+  48x48-aquafusion, 64x64-aquafusion. These are png icon sets.
+
+* Added some Debian menu system configuration files.
+
+* Renamed "developement" icon name to "development" in all icon sets.
 
 .----------------------------
 | 19 Mar 2001, wm-icons-0.3.0

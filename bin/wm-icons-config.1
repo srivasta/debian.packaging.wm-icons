@@ -1,0 +1,86 @@
+.TH WM-ICONS-CONFIG 1 "09-Apr-2006"
+.SH NAME
+wm-icons-config \- show and set configuration for wm-icons
+.SH SYNOPSIS
+.B wm-icons-config
+.I [options]
+.I NAME [ICON_SET]
+.I ...
+.SH DESCRIPTION
+This show
+.B wm-icons
+package configuration, and the list of installed icon sets. It also is
+used to set aliases to icon-sets in system or user space. In the
+synopsis above, NAME is icon alias name, ICON_SET is icon set
+directory (for example: mini 16x16-default). If NAME already exists as
+an alias, it is not overwritten, unless the
+.I --force
+option is given. Explicit NAMEs override
+.IR --defaults .
+Just the alias
+names are given for
+.I --which
+and
+.I --remove
+options.
+.SH OPTIONS
+.SS "Informational options: display info and exit"
+.TP
+.B "--help"
+Print a short usage message
+.TP
+.B "--version"
+Show version number and exit
+.TP
+.B "--inst-dir"
+Show wm-icons installed icon directory and exit
+.TP
+.B "--user-dir"
+Show wm-icons user icon directory and exit
+.TP
+.B "--show-defaults"
+Show default aliases and exit
+.TP
+.B "--show-aliases"
+Show the aliases currently present. One of
+.B "--global, --personal, --user-dir"
+must be given
+.TP
+.B "--show-sets"
+Show a list of installed icon sets
+.SS "Directory selection options: precisely one of these must be given"
+.TP
+.B "--global"
+Set up global (system-wide) links in the base dir
+.TP
+.B "--personal"
+Set up personal links in
+.I ~/.wm-icons
+.TP
+.B "--user-dir=USER_DIR"
+Set up links in USER_DIR
+.SS "Choice of links: at least one of these must be given"
+.TP
+.B "--defaults"
+Set up default aliases, as shown by
+.B "--show-defaults"
+.SS "Extra options"
+.TP
+.B "--remove"
+Remove the symlinks rather than creating them, return (0, 1)
+.TP
+.B "--which"
+Show the icon set for the given alias(es), return (0, 1)
+.TP
+.B "--quiet"
+Do not output results of alias manipulating to stdout
+.TP
+.B "--force"
+Force overwriting of existing symlinks
+.SH BUGS
+None known.
+.SH AUTHORS
+Mikhael Goikhman <migo (at) cpan.org> and others (see file AUTHORS).
+
+This manual page was initially written by Manoj Srivastava <srivasta@debian.org>,
+for the Debian GNU/Linux system.

@@ -12,8 +12,12 @@ for iconSet in *; do
 	[ -d "$iconSet" ] || continue
 	[ $iconSet = CVS ] && continue
 	echo -n "Processing $iconSet ... "
-	cd $iconSet || { echo failed; continue }
-	[ ! -f $INFO_FILE ] && { cd ..; echo skipped; continue }
+	if ! cd $iconSet; then
+		echo failed; continue
+	fi
+	if [ ! -f $INFO_FILE ]; then
+		cd ..; echo skipped; continue
+	fi
 	cat $INFO_FILE | xargs -n 2 -r ln -sf
 	rm $INFO_FILE
 	cd ..

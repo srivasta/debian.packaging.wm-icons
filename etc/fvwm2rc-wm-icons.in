@@ -1,27 +1,21 @@
 ###
 #  This file includes fvwm configuration for using with wm-icons.
-#  Optimized for the default fvwm-2.2.0 configuration.
-#  Using this file doesn't break your existing .fvwm2rc, just extends it.
+#  Optimized for the default fvwm-2.4.x configuration.
+#  Using this file doesn't break your existing fvwm config, just extends it.
 #  You probably need to edit it if you have a non-default configuration.
 #
 #  Instructions:
-#    1) Install wm-icons (configure & make install)
-#    2) Copy this file to the home directory (add leading dot) and put:
-#         Read .fvwm2rc-wm-icons
-#       as the last line of your .fvwm2rc
-#    3) (Re)Start fvwm2
-#
-#  NOTE: if you use fvwm-2.3.17 or better, put this file into ~/.fvwm/ instead.
-#  NOTE: to use menu wm-icons, you should define ImagePath before your menus.
+#    1) Install wm-icons (configure && make install)
+#    2) Copy this file to ~/.fvwm directory and put:
+#         Read fvwm2rc-wm-icons
+#       somewhere in your fvwm config
+#    3) (Re)Start fvwm
 #
 #  The file is not perfect, it'll be better in the next versions.
 #  Send your comments to migo@homemail.com.
 ###
 
 
-# This is to support old fvwm's (PixmapPath is obsolete after fvwm-2.2.4).
-# Change this to the real path of wm-icons and comment one of the two out.
-#PixmapPath $HOME/@userdir@:@icondir@:/usr/local/icons:/usr/share/icons:/usr/share/icons/mini:/usr/local/mini-icons:/usr/X11R6/lib/X11/mini-icons:/usr/X11R6/include/X11/pixmaps:/opt/kde/share/icons
 ImagePath $HOME/@userdir@:@icondir@:+
 
 # You can comment this in to get title-icon for any window a-la fvwm95.
@@ -40,37 +34,57 @@ ImagePath $HOME/@userdir@:@icondir@:+
 
 DestroyMenu MenuIconSets
 AddToMenu MenuIconSets "Change Icon Set" Title
-+ "%menu/item.xpm%menu	14x14-general"   Exec wm-icons-config -q -p -f menu 14x14-general
-+ "%menu/item.xpm%menu	16x16-general"   Exec wm-icons-config -q -p -f menu 16x16-general
-+ "%menu/item.xpm%menu	16x16-gnome"     Exec wm-icons-config -q -p -f menu 16x16-gnome
-+ "%menu/item.xpm%menu	16x16-kde"       Exec wm-icons-config -q -p -f menu 16x16-kde
-+ "%menu/item.xpm%menu	17x14-3dpixmaps" Exec wm-icons-config -q -p -f menu 17x14-3dpixmaps
-+ "%menu/item.xpm%menu	20x20-martys"    Exec wm-icons-config -q -p -f menu 20x20-martys
-+ "%menu/item.xpm%menu	20x20-martys2"   Exec wm-icons-config -q -p -f menu 20x20-martys2
-+ "%menu/item.xpm%menu	21x18-3dpixmaps" Exec wm-icons-config -q -p -f menu 21x18-3dpixmaps
++ "%menu/item.xpm%menu	14x14-general"      Exec wm-icons-config -q -p -f menu 14x14-general
++ "%menu/item.xpm%menu	16x16-aquafusion"   Exec wm-icons-config -q -p -f menu 16x16-aquafusion
++ "%menu/item.xpm%menu	16x16-crystalclear" Exec wm-icons-config -q -p -f menu 16x16-crystalclear
++ "%menu/item.xpm%menu	16x16-general"      Exec wm-icons-config -q -p -f menu 16x16-general
++ "%menu/item.xpm%menu	16x16-gnome"        Exec wm-icons-config -q -p -f menu 16x16-gnome
++ "%menu/item.xpm%menu	16x16-kde"          Exec wm-icons-config -q -p -f menu 16x16-kde
++ "%menu/item.xpm%menu	17x14-3dpixmaps"    Exec wm-icons-config -q -p -f menu 17x14-3dpixmaps
++ "%menu/item.xpm%menu	20x20-martys"       Exec wm-icons-config -q -p -f menu 20x20-martys
++ "%menu/item.xpm%menu	20x20-martys2"      Exec wm-icons-config -q -p -f menu 20x20-martys2
++ "%menu/item.xpm%menu	21x18-3dpixmaps"    Exec wm-icons-config -q -p -f menu 21x18-3dpixmaps
++ "%menu/item.xpm%menu	22x22-aquafusion"   Exec wm-icons-config -q -p -f menu 22x22-aquafusion
++ "%menu/item.xpm%menu	22x22-gartoon"      Exec wm-icons-config -q -p -f menu 22x22-gartoon
++ "%menu/item.xpm%menu	24x24-infox"        Exec wm-icons-config -q -p -f menu 24x24-infox
 + "" Nop
-+ "%menu/item.xpm%mini	14x14-general"   Exec wm-icons-config -q -p -f mini 14x14-general
-+ "%menu/item.xpm%mini	16x16-general"   Exec wm-icons-config -q -p -f mini 16x16-general
-+ "%menu/item.xpm%mini	16x16-gnome"     Exec wm-icons-config -q -p -f mini 16x16-gnome
-+ "%menu/item.xpm%mini	16x16-kde"       Exec wm-icons-config -q -p -f mini 16x16-kde
-+ "%menu/item.xpm%mini	17x14-3dpixmaps" Exec wm-icons-config -q -p -f mini 17x14-3dpixmaps
-+ "%menu/item.xpm%mini	20x20-martys"    Exec wm-icons-config -q -p -f mini 20x20-martys
-+ "%menu/item.xpm%mini	20x20-martys2"   Exec wm-icons-config -q -p -f mini 20x20-martys2
-+ "%menu/item.xpm%mini	21x18-3dpixmaps" Exec wm-icons-config -q -p -f mini 21x18-3dpixmaps
++ "%menu/item.xpm%mini	14x14-general"      Exec wm-icons-config -q -p -f mini 14x14-general
++ "%menu/item.xpm%mini	16x16-aquafusion"   Exec wm-icons-config -q -p -f mini 16x16-aquafusion
++ "%menu/item.xpm%mini	16x16-crystalclear" Exec wm-icons-config -q -p -f mini 16x16-crystalclear
++ "%menu/item.xpm%mini	16x16-general"      Exec wm-icons-config -q -p -f mini 16x16-general
++ "%menu/item.xpm%mini	16x16-gnome"        Exec wm-icons-config -q -p -f mini 16x16-gnome
++ "%menu/item.xpm%mini	16x16-kde"          Exec wm-icons-config -q -p -f mini 16x16-kde
++ "%menu/item.xpm%mini	17x14-3dpixmaps"    Exec wm-icons-config -q -p -f mini 17x14-3dpixmaps
++ "%menu/item.xpm%mini	20x20-martys"       Exec wm-icons-config -q -p -f mini 20x20-martys
++ "%menu/item.xpm%mini	20x20-martys2"      Exec wm-icons-config -q -p -f mini 20x20-martys2
++ "%menu/item.xpm%mini	21x18-3dpixmaps"    Exec wm-icons-config -q -p -f mini 21x18-3dpixmaps
++ "%menu/item.xpm%mini	22x22-aquafusion"   Exec wm-icons-config -q -p -f mini 22x22-aquafusion
++ "%menu/item.xpm%mini	22x22-gartoon"      Exec wm-icons-config -q -p -f mini 22x22-gartoon
++ "%menu/item.xpm%mini	24x24-infox"        Exec wm-icons-config -q -p -f mini 24x24-infox
 + "" Nop
-+ "%menu/item.xpm%norm	32x32-kde"       Exec wm-icons-config -q -p -f norm 32x32-kde
-+ "%menu/item.xpm%norm	32x32-kde2"      Exec wm-icons-config -q -p -f norm 32x32-kde2
-+ "%menu/item.xpm%norm	44x52-penguins"  Exec wm-icons-config -q -p -f norm 44x52-penguins
-+ "%menu/item.xpm%norm	48x48-general"   Exec wm-icons-config -q -p -f norm 48x48-general
-+ "%menu/item.xpm%norm	48x48-gnome"     Exec wm-icons-config -q -p -f norm 48x48-gnome
-+ "%menu/item.xpm%norm	48x48-kde2"      Exec wm-icons-config -q -p -f norm 48x48-kde2
-+ "%menu/item.xpm%norm	56x46-3dpixmaps" Exec wm-icons-config -q -p -f norm 56x46-3dpixmaps
-+ "%menu/item.xpm%norm	56x56-martys"    Exec wm-icons-config -q -p -f norm 56x56-martys
-+ "%menu/item.xpm%norm	56x56-martys2"   Exec wm-icons-config -q -p -f norm 56x56-martys2
++ "%menu/item.xpm%norm	32x32-aquafusion"   Exec wm-icons-config -q -p -f norm 32x32-aquafusion
++ "%menu/item.xpm%norm	32x32-gant"         Exec wm-icons-config -q -p -f norm 32x32-gant
++ "%menu/item.xpm%norm	32x32-kde"          Exec wm-icons-config -q -p -f norm 32x32-kde
++ "%menu/item.xpm%norm	32x32-kde2"         Exec wm-icons-config -q -p -f norm 32x32-kde2
++ "%menu/item.xpm%norm	44x52-penguins"     Exec wm-icons-config -q -p -f norm 44x52-penguins
++ "%menu/item.xpm%norm	48x48-aquafusion"   Exec wm-icons-config -q -p -f norm 48x48-aquafusion
++ "%menu/item.xpm%norm	48x48-crystalclear" Exec wm-icons-config -q -p -f norm 48x48-crystalclear
++ "%menu/item.xpm%norm	48x48-gartoon"      Exec wm-icons-config -q -p -f norm 48x48-gartoon
++ "%menu/item.xpm%norm	48x48-general"      Exec wm-icons-config -q -p -f norm 48x48-general
++ "%menu/item.xpm%norm	48x48-gnome"        Exec wm-icons-config -q -p -f norm 48x48-gnome
++ "%menu/item.xpm%norm	48x48-infox"        Exec wm-icons-config -q -p -f norm 48x48-infox
++ "%menu/item.xpm%norm	48x48-kde2"         Exec wm-icons-config -q -p -f norm 48x48-kde2
++ "%menu/item.xpm%norm	56x46-3dpixmaps"    Exec wm-icons-config -q -p -f norm 56x46-3dpixmaps
++ "%menu/item.xpm%norm	56x56-martys"       Exec wm-icons-config -q -p -f norm 56x56-martys
++ "%menu/item.xpm%norm	56x56-martys2"      Exec wm-icons-config -q -p -f norm 56x56-martys2
++ "%menu/item.xpm%norm	64x64-aquafusion"   Exec wm-icons-config -q -p -f norm 64x64-aquafusion
++ "%menu/item.xpm%norm	64x64-gant"         Exec wm-icons-config -q -p -f norm 64x64-gant
 + "" Nop
-+ "%menu/item.xpm%16x16	16x16-general"   Exec wm-icons-config -q -p -f 16x16 16x16-general
-+ "%menu/item.xpm%16x16	16x16-gnome"     Exec wm-icons-config -q -p -f 16x16 16x16-gnome
-+ "%menu/item.xpm%16x16	16x16-kde"       Exec wm-icons-config -q -p -f 16x16 16x16-kde
++ "%menu/item.xpm%16x16	16x16-aquafusion"   Exec wm-icons-config -q -p -f 16x16 16x16-aquafusion
++ "%menu/item.xpm%16x16	16x16-crystalclear" Exec wm-icons-config -q -p -f 16x16 16x16-crystalclear
++ "%menu/item.xpm%16x16	16x16-general"      Exec wm-icons-config -q -p -f 16x16 16x16-general
++ "%menu/item.xpm%16x16	16x16-gnome"        Exec wm-icons-config -q -p -f 16x16 16x16-gnome
++ "%menu/item.xpm%16x16	16x16-kde"          Exec wm-icons-config -q -p -f 16x16 16x16-kde
 + "" Nop
 + "%menu/restart.xpm%Restart	to activate" Restart
 
@@ -78,8 +92,7 @@ AddToMenu MenuIconSets "Change Icon Set" Title
 Mouse 3 R CM Menu MenuIconSets Nop
 #Style Eterm* IconOverride
 Style * IconOverride
-#AddToMenu "RootMenu" "&Icon Set%menu/themes.xpm" Popup MenuIconSets
-#AddToMenu "Modules" "&Icon Set%menu/themes.xpm" Popup MenuIconSets
+AddToMenu "MenuFvwmRoot" "&Icon Set%menu/themes.xpm" Popup MenuIconSets
 
 
 ###
@@ -148,9 +161,10 @@ Style "NoResource"             Icon norm/unknown.xpm,          MiniIcon mini/unk
 Style "Eterm*"                 Icon norm/terminal.xpm,         MiniIcon mini/terminal.xpm
 Style "rxvt"                   Icon norm/terminal.xpm,         MiniIcon mini/terminal.xpm
 Style "XTerm"                  Icon norm/terminal.xpm,         MiniIcon mini/terminal.xpm
+Style "rxterm"                 Icon norm/terminal-remote.xpm,  MiniIcon mini/terminal-remote.xpm
 
 # These are not all mine, most of globs must be removed.
-Style "DDD*"                   Icon norm/developement.xpm,     MiniIcon mini/developement.xpm
+Style "DDD*"                   Icon norm/development.xpm,      MiniIcon mini/development.xpm
 Style "GRASP*"                 Icon norm/file-manager.xpm,     MiniIcon mini/file-manager.xpm
 Style "HyTeX*"                 Icon norm/viewer.xpm,           MiniIcon mini/viewer.xpm
 Style "ImageMagic*"            Icon norm/image-processor.xpm,  MiniIcon mini/image-processor.xpm
@@ -163,8 +177,9 @@ Style "SystemInfo*"            Icon norm/information.xpm,      MiniIcon mini/inf
 Style "Tk man"                 Icon norm/help.xpm,             MiniIcon mini/help.xpm
 Style "Visual Tcl"             Icon norm/todo.xpm,             MiniIcon mini/todo.xpm
 
-Style "amaya*"                 Icon norm/www.xpm,              MiniIcon mini/www.xpm
 Style "AcroRead"               Icon norm/viewer.xpm,           MiniIcon mini/viewer.xpm
+Style "adsl-config"            Icon norm/network.xpm,          MiniIcon mini/network.xpm
+Style "amaya*"                 Icon norm/www.xpm,              MiniIcon mini/www.xpm
 Style "Appointment"            Icon norm/clock.xpm,            MiniIcon mini/clock.xpm
 Style "asWedit*"               Icon norm/editor.xpm,           MiniIcon mini/editor.xpm
 Style "bitmap*"                Icon norm/image-processor.xpm,  MiniIcon mini/image-processor.xpm
@@ -176,21 +191,25 @@ Style "Dayview"                Icon norm/clock.xpm,            MiniIcon mini/clo
 Style "Dialogue"               Icon norm/www.xpm,              MiniIcon mini/www.xpm
 Style "Display"                Icon norm/image-viewer.xpm,     MiniIcon mini/image-viewer.xpm
 Style "dosemu*"                Icon norm/todo.xpm,             MiniIcon mini/todo.xpm
-Style "Image Viewer*"          Icon norm/image-viewer.xpm,     MiniIcon mini/image-viewer.xpm
 Style "emacs"                  Icon norm/gnu.xpm,              MiniIcon mini/gnu.xpm
 Style "Explorer"               Icon norm/file-manager.xpm,     MiniIcon mini/file-manager.xpm
 Style "Fractine"               Icon norm/science.xpm,          MiniIcon mini/science.xpm
 Style "fr"                     Icon norm/file-manager.xpm,     MiniIcon mini/file-manager.xpm
 Style "freeamp"                Icon norm/music.xpm,            MiniIcon mini/music.xpm
+Style "FreeAmp*"               Icon norm/music.xpm,            MiniIcon mini/music.xpm
 Style "File Viewer*"           Icon norm/viewer.xpm,           MiniIcon mini/viewer.xpm
 Style "Fvwm*"                  Icon norm/utility.xpm,          MiniIcon mini/utility.xpm
 Style "ghostview"              Icon norm/ghostview.xpm,        MiniIcon mini/ghostview.xpm
 Style "ghostscript"            Icon norm/ghostview.xpm,        MiniIcon mini/ghostview.xpm
 Style "gifview"                Icon norm/image-viewer.xpm,     MiniIcon mini/image-viewer.xpm
+Style "gkrellm"                Icon norm/monitoring.xpm,       MiniIcon mini/monitoring.xpm
 Style "GNUplot"                Icon norm/science.xpm,          MiniIcon mini/science.xpm
 Style "GV"                     Icon norm/ghostview.xpm,        MiniIcon mini/ghostview.xpm
 Style "Help_popup"             Icon norm/help.xpm,             MiniIcon mini/help.xpm
+Style "Image Viewer*"          Icon norm/image-viewer.xpm,     MiniIcon mini/image-viewer.xpm
+Style "isdn-config"            Icon norm/network.xpm,          MiniIcon mini/network.xpm
 Style "ixset"                  Icon norm/todo.xpm,             MiniIcon mini/todo.xpm
+Style "licq-bin"               Icon norm/chat.xpm,             MiniIcon mini/chat.xpm
 Style "Lynx"                   Icon norm/www.xpm,              MiniIcon mini/www.xpm
 Style "Manual Page*"           Icon norm/help.xpm,             MiniIcon mini/help.xpm
 Style "matlab"                 Icon norm/science.xpm,          MiniIcon mini/science.xpm
@@ -198,6 +217,7 @@ Style "matlab"                 Icon norm/science.xpm,          MiniIcon mini/sci
 Style "Midnight-Commander"     Icon norm/file-manager.xpm,     MiniIcon mini/file-manager.xpm
 Style "mgv*"                   Icon norm/ghostview.xpm,        MiniIcon mini/ghostview.xpm
 Style "moxfm*"                 Icon norm/file-manager.xpm,     MiniIcon mini/file-manager.xpm
+Style "mldonkey*"              Icon norm/network.xpm,          MiniIcon mini/network.xpm
 Style "mtools*"                Icon norm/disk.xpm,             MiniIcon mini/disk.xpm
 Style "mxaudio"                Icon norm/music.xpm,            MiniIcon mini/music.xpm
 Style "NEdit*"                 Icon norm/editor.xpm,           MiniIcon mini/editor.xpm
@@ -210,6 +230,7 @@ Style "Composition"            Icon norm/mail.xpm,             MiniIcon mini/mai
 Style "NcFtp"                  Icon norm/network.xpm,          MiniIcon mini/network.xpm
 Style "nscal*"                 Icon norm/clock.xpm,            MiniIcon mini/clock.xpm
 Style "News"                   Icon norm/news.xpm,             MiniIcon mini/news.xpm
+Style "opera"                  Icon norm/www.xpm,              MiniIcon mini/www.xpm
 Style "panel"                  Icon norm/home.xpm,             MiniIcon mini/home.xpm
 Style "pine"                   Icon norm/mail.xpm,             MiniIcon mini/mail.xpm
 Style "pixmap*"                Icon norm/image-processor.xpm,  MiniIcon mini/image-processor.xpm
@@ -280,8 +301,8 @@ Style "xv"                     Icon norm/xv.xpm,               MiniIcon mini/xv.
 Style "xvgr"                   Icon norm/image-viewer.xpm,     MiniIcon mini/image-viewer.xpm
 Style "xvmount"                Icon norm/disk.xpm,             MiniIcon mini/disk.xpm
 Style "xwp"                    Icon norm/word-processor.xpm,   MiniIcon mini/word-processor.xpm
-Style "xwpe"                   Icon norm/developement.xpm,     MiniIcon mini/developement.xpm
-Style "xxgdb"                  Icon norm/developement.xpm,     MiniIcon mini/developement.xpm
+Style "xwpe"                   Icon norm/development.xpm,      MiniIcon mini/development.xpm
+Style "xxgdb"                  Icon norm/development.xpm,      MiniIcon mini/development.xpm
 
 # Open File dialog
 Style "Browse * Select a File" Icon norm/folder.xpm,           MiniIcon mini/folder.xpm
@@ -313,7 +334,7 @@ Style "about"                  Icon norm/information.xpm,      MiniIcon mini/inf
 Style "Fvwm*"                  Icon norm/utility.xpm,          MiniIcon mini/utility.xpm
 Style "FvwmConsole"            Icon norm/terminal-special.xpm, MiniIcon mini/terminal-special.xpm
 Style "FVWM Themes*"           Icon norm/themes.xpm,           MiniIcon mini/themes.xpm
-Style "FVWM Themes Config*"    Icon norm/configuration.xpm,    MiniIcon mini/configuration.xpm
+Style "FVWM Themes Global Feel" Icon norm/configuration.xpm,    MiniIcon mini/configuration.xpm
 Style "FVWM Themes Doc*"       Icon norm/help.xpm,             MiniIcon mini/help.xpm
 Style "FVWM Themes Menu*"      Icon norm/editor.xpm,           MiniIcon mini/editor.xpm
 Style "Color Selector"         Icon norm/colors.xpm,           MiniIcon mini/colors.xpm
@@ -332,7 +353,7 @@ Style "FvwmScript-PointerSetup" Icon norm/mouse.xpm,            MiniIcon mini/mo
 
 # GNOME/Gtk Apps
 Style "AbiWord*"               Icon norm/word-processor.xpm,   MiniIcon mini/word-processor.xpm
-Style "bug-buddy"              Icon norm/developement.xpm,     MiniIcon mini/developement.xpm
+Style "bug-buddy"              Icon norm/development.xpm,      MiniIcon mini/development.xpm
 Style "Dia"                    Icon norm/science.xpm,          MiniIcon mini/science.xpm
 Style "eog"                    Icon norm/image-viewer.xpm,     MiniIcon mini/image-viewer.xpm
 Style "Galeon-bin"             Icon norm/www.xpm,              MiniIcon mini/www.xpm
@@ -369,11 +390,13 @@ Style "gnumeric"               Icon norm/calculator.xpm,       MiniIcon mini/cal
 Style "gnp"                    Icon norm/editor.xpm,           MiniIcon mini/editor.xpm
 Style "gnp+"                   Icon norm/editor.xpm,           MiniIcon mini/editor.xpm
 Style "GQview"                 Icon norm/image-viewer.xpm,     MiniIcon mini/image-viewer.xpm
+Style "GQmpeg"                 Icon norm/video.xpm,            MiniIcon mini/video.xpm
 Style "grecord"                Icon norm/sound.xpm,            MiniIcon mini/sound.xpm
 Style "grip"                   Icon norm/cd-player.xpm,        MiniIcon mini/cd-player.xpm
 Style "gsearchtool"            Icon norm/file.xpm,             MiniIcon mini/file.xpm
 Style "gtalk"                  Icon norm/chat.xpm,             MiniIcon mini/chat.xpm
 Style "gtcd"                   Icon norm/cd-player.xpm,        MiniIcon mini/cd-player.xpm
+Style "gtk-gnutella"           Icon norm/network.xpm,          MiniIcon mini/network.xpm
 Style "gtk-shell"              Icon norm/information.xpm,      MiniIcon mini/information.xpm
 Style "gtkicq"                 Icon norm/chat.xpm,             MiniIcon mini/chat.xpm
 Style "gtop"                   Icon norm/monitoring.xpm,       MiniIcon mini/monitoring.xpm
@@ -384,6 +407,8 @@ Style "gxedit"                 Icon norm/editor.xpm,           MiniIcon mini/edi
 Style "helix-update"           Icon norm/network.xpm,          MiniIcon mini/network.xpm
 Style "idetool"                Icon norm/disk.xpm,             MiniIcon mini/disk.xpm
 Style "logview"                Icon norm/viewer.xpm,           MiniIcon mini/viewer.xpm
+Style "MPlayer"                Icon norm/video.xpm,            MiniIcon mini/video.xpm
+Style "nautilus"               Icon norm/file-manager.xpm,     MiniIcon mini/file-manager.xpm
 Style "pan"                    Icon norm/news.xpm,             MiniIcon mini/news.xpm
 Style "vumeter"                Icon norm/sound.xpm,            MiniIcon mini/sound.xpm
 Style "X-Chat"                 Icon norm/chat.xpm,             MiniIcon mini/chat.xpm
@@ -412,7 +437,7 @@ Style "kchart"                 Icon norm/information.xpm,      MiniIcon mini/inf
 Style "kcron"                  Icon norm/system.xpm,           MiniIcon mini/system.xpm
 Style "kdehelp"                Icon norm/help.xpm,             MiniIcon mini/help.xpm
 Style "kdepasswd"              Icon norm/terminal-special.xpm, MiniIcon mini/terminal-special.xpm
-Style "kdevelop"               Icon norm/developement.xpm,     MiniIcon mini/developement.xpm
+Style "kdevelop"               Icon norm/development.xpm,      MiniIcon mini/development.xpm
 Style "kdesu"                  Icon norm/terminal-special.xpm, MiniIcon mini/terminal-special.xpm
 Style "kdf"                    Icon norm/disk.xpm,             MiniIcon mini/disk.xpm
 Style "kdvi"                   Icon norm/viewer.xpm,           MiniIcon mini/viewer.xpm
@@ -439,7 +464,7 @@ Style "artsbuilder"            Icon norm/music.xpm,            MiniIcon mini/mus
 Style "artscontrol"            Icon norm/sound.xpm,            MiniIcon mini/sound.xpm
 Style "kmoon"                  Icon norm/science.xpm,          MiniIcon mini/science.xpm
 Style "kodo"                   Icon norm/mouse.xpm,            MiniIcon mini/mouse.xpm
-Style "kpackage"               Icon norm/program.xpm,          MiniIcon mini/program.xpm
+Style "kpackage"               Icon norm/programs.xpm,         MiniIcon mini/programs.xpm
 Style "kppp"                   Icon norm/network.xpm,          MiniIcon mini/network.xpm
 Style "kppplogview"            Icon norm/information.xpm,      MiniIcon mini/information.xpm
 Style "kghostview"             Icon norm/viewer.xpm,           MiniIcon mini/viewer.xpm
@@ -479,15 +504,17 @@ Style "Dtcalc"                 Icon norm/calculator.xpm,       MiniIcon mini/cal
 Style "Dticon*"                Icon norm/image-processor.xpm,  MiniIcon mini/image-processor.xpm
 Style "Dtprint*"               Icon norm/printing.xpm,         MiniIcon mini/printing.xpm
 Style "Dtstyle*"               Icon norm/configuration.xpm,    MiniIcon mini/configuration.xpm
-Style "Applications Manager"   Icon norm/program.xpm,          MiniIcon mini/program.xpm
+Style "Applications Manager"   Icon norm/programs.xpm,         MiniIcon mini/programs.xpm
 Style "Trash Can"              Icon norm/file.xpm,             MiniIcon mini/file.xpm
 
 # Games
 Style "SDL_App"                Icon norm/game.xpm,             MiniIcon mini/game.xpm
 Style "*angband"               Icon norm/game.xpm,             MiniIcon mini/game.xpm
 Style "gcfclient"              Icon norm/game.xpm,             MiniIcon mini/game.xpm
+Style "Heroes ?.*"             Icon norm/game-action.xpm,      MiniIcon mini/game-action.xpm
 Style "Maelstrom"              Icon norm/game-action.xpm,      MiniIcon mini/game-action.xpm
 Style "MirrorMagic"            Icon norm/game-logic.xpm,       MiniIcon mini/game-logic.xpm
+Style "PowerManga*"            Icon norm/game-action.xpm,      MiniIcon mini/game-action.xpm
 Style "PySol"                  Icon norm/game-cards.xpm,       MiniIcon mini/game-cards.xpm
 Style "Rocks'n'Diamonds"       Icon norm/game-action.xpm,      MiniIcon mini/game-action.xpm
 Style "XGammon"                Icon norm/game.xpm,             MiniIcon mini/game.xpm
