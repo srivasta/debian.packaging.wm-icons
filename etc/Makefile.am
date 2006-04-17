@@ -8,6 +8,8 @@
 
 AUTOMAKE_OPTIONS = foreign
 
+SUBDIRS = debian-menu-system
+
 configdir = @datadir@/wm-icons
 
 config_DATA = fvwm2rc-compact-buttons fvwm95rc-wm-icons \

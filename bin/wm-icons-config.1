@@ -1,60 +1,26 @@
-.\"                             -*- Mode: Nroff -*- 
-.\" wm-icons-config.1 --- 
-.\" Author           : Manoj Srivastava ( srivasta@green-gryphon.com ) 
-.\" Created On       : Fri Feb  1 11:17:32 2002
-.\" Created On Node  : glaurung.green-gryphon.com
-.\" Last Modified By : Manoj Srivastava
-.\" Last Modified On : Mon Feb 25 02:41:10 2002
-.\" Last Machine Used: glaurung.green-gryphon.com
-.\" Update Count     : 30
-.\" Status           : Unknown, Use with caution!
-.\" HISTORY          : 
-.\" Description      : 
-.\" 
-.\" Copyright (c) 2002 Manoj Srivastava <srivasta@debian.org>
-.\"
-.\" This is free documentation; you can redistribute it and/or
-.\" modify it under the terms of the GNU General Public License as
-.\" published by the Free Software Foundation; either version 2 of
-.\" the License, or (at your option) any later version.
-.\"
-.\" The GNU General Public License's references to "object code"
-.\" and "executables" are to be interpreted as the output of any
-.\" document formatting or typesetting system, including
-.\" intermediate and printed output.
-.\"
-.\" This manual is distributed in the hope that it will be useful,
-.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
-.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-.\" GNU General Public License for more details.
-.\"
-.\" You should have received a copy of the GNU General Public
-.\" License along with this manual; if not, write to the Free
-.\" Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
-.\" 02111-1307, USA.
-.\"
-.\" $Id: wm-icons-config.1,v 1.1 2002/02/25 08:43:44 srivasta Exp $
-.TH WM-ICONS-CONFIG 1 "Feb 25 2002" "Debian" "Debian GNU/Linux manual"
+.TH WM-ICONS-CONFIG 1 "09-Apr-2006"
 .SH NAME
-wm-icons-config \- show and set confguration for wm-icons
+wm-icons-config \- show and set configuration for wm-icons
 .SH SYNOPSIS
-.B wm-icons-config 
+.B wm-icons-config
 .I [options]
 .I NAME [ICON_SET]
 .I ...
 .SH DESCRIPTION
-This show 
+This show
 .B wm-icons
-package configuration, and the list of installed font sets. It also is
+package configuration, and the list of installed icon sets. It also is
 used to set aliases to icon-sets in system or user space. In the
 synopsis above, NAME is icon alias name, ICON_SET is icon set
 directory (for example: mini 16x16-default). If NAME already exists as
-an alias, it is not overwritten, unless the 
+an alias, it is not overwritten, unless the
 .I --force
-option is given. Explicit NAMEs override --defaults.  Just the alias
-names are given for 
+option is given. Explicit NAMEs override
+.IR --defaults .
+Just the alias
+names are given for
 .I --which
-and 
+and
 .I --remove
 options.
 .SH OPTIONS
@@ -64,7 +30,7 @@ options.
 Print a short usage message
 .TP
 .B "--version"
-Show version number and copyright information and exit
+Show version number and exit
 .TP
 .B "--inst-dir"
 Show wm-icons installed icon directory and exit
@@ -76,19 +42,19 @@ Show wm-icons user icon directory and exit
 Show default aliases and exit
 .TP
 .B "--show-aliases"
-Show the aliases currently present. One of 
+Show the aliases currently present. One of
 .B "--global, --personal, --user-dir"
 must be given
 .TP
 .B "--show-sets"
 Show a list of installed icon sets
-.SS "Directory selection options: precisely one of these must be used"
+.SS "Directory selection options: precisely one of these must be given"
 .TP
 .B "--global"
 Set up global (system-wide) links in the base dir
 .TP
 .B "--personal"
-Set up personal links in 
+Set up personal links in
 .I ~/.wm-icons
 .TP
 .B "--user-dir=USER_DIR"
@@ -96,8 +62,8 @@ Set up links in USER_DIR
 .SS "Choice of links: at least one of these must be given"
 .TP
 .B "--defaults"
-Set up default aliases, as shown by 
-.B "--show-defaults".
+Set up default aliases, as shown by
+.B "--show-defaults"
 .SS "Extra options"
 .TP
 .B "--remove"
@@ -113,6 +79,8 @@ Do not output results of alias manipulating to stdout
 Force overwriting of existing symlinks
 .SH BUGS
 None known.
-.SH AUTHOR
-This manual page was written Manoj Srivastava <srivasta@debian.org>,
+.SH AUTHORS
+Mikhael Goikhman <migo (at) cpan.org> and others (see file AUTHORS).
+
+This manual page was initially written by Manoj Srivastava <srivasta@debian.org>,
 for the Debian GNU/Linux system.

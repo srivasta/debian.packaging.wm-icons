@@ -12,8 +12,8 @@ SUBDIRS = bin doc icons etc devel rpm
 # We need to specify --user-dir here in case the prefix (=> datadir
 # => icondir) is different for the build and install phases, as it
 # is for a distribution package building.
+# Set the default icon set aliases (symlinks).
 install-data-local:
-	# set the default icon set aliases (symlinks)
 	$(bindir)/wm-icons-config --user-dir="$(icondir)" --defaults --quiet
 
 wm-configs _pack-symlinks _unpack-symlinks:
