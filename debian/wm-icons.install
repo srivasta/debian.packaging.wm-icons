@@ -1,0 +1,9 @@
+etc/debian-menu-system/wm-icons        etc/menu-methods/
+etc/debian-menu-system/wm-icons.h      etc/menu-methods/
+etc/debian-menu-system/wm-icons-data.h etc/menu-methods/
+doc/FAQ               usr/share/doc/wm-icons
+doc/icons.lst         usr/share/doc/wm-icons
+doc/README.3dpixmaps  usr/share/doc/wm-icons
+doc/README.martys     usr/share/doc/wm-icons
+doc/README.penguins   usr/share/doc/wm-icons
+doc/wm-icons.lsm      usr/share/doc/wm-icons

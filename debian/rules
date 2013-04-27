@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+TMPTOP=debian/wm-icons
+
+%:
+	dh $@  --with autoreconf
+
+override_dh_auto_configure:
+	ac_cv_lib_util_getloadavg=no dh_auto_configure --    \
+	   --sysconfdir=/etc --enable-all-sets
+
+override_dh_install:
+	dh_install
+	(cd $(TMPTOP)/usr/share/icons/wm-icons/;   \
+	 rm -f menu mini norm;                     \
+	 ln -s               16x16-general menu;   \
+	 ln -s               14x14-general mini;   \
+	 ln -s               48x48-general norm;)
+	mv $(TMPTOP)/usr/share/wm-icons        \
+           $(TMPTOP)/usr/share/doc/wm-icons/examples/
+	rm -rf $(TMPTOP)/usr/share/doc/wm-icons/examples/debian-menu-system
