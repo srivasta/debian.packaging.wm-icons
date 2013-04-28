@@ -16,16 +16,16 @@ EXTRA_DIST = \
 SYMLINKS_LST = _symlinks.lst
 
 install-data-local:
-	$(mkinstalldirs) $(icondir)
+	$(mkinstalldirs) $(DESTDIR)$(icondir)
 	chmod -R o-w,go+rX *
 	cd $(top_srcdir)/icons; \
 	for iconset in $(SELECTED_ICON_SETS); do \
-		rm -rf $(icondir)/$$iconset; \
+		rm -rf $(DESTDIR)$(icondir)/$$iconset; \
 		tar cpf - "$$iconset" \
-			| (cd "$(icondir)" && tar xfBp -); \
-		find "$(icondir)/$$iconset" -name CVS \
+			| (cd "$(DESTDIR)$(icondir)" && tar xfBp -); \
+		find "$(DESTDIR)$(icondir)/$$iconset" -name CVS \
 			-exec rm -r {} \; 2>/dev/null; \
-		(cd "$(icondir)/$$iconset" && [ -f $(SYMLINKS_LST) ] \
+		(cd "$(DESTDIR)$(icondir)/$$iconset" && [ -f $(SYMLINKS_LST) ] \
 			&& $(AWK) '{ system("ln -sf " $$1 " " $$2) }' \
 				< $(SYMLINKS_LST) \
 			&& rm $(SYMLINKS_LST) || true \
@@ -34,9 +34,9 @@ install-data-local:
 
 uninstall-local:
 	for iconset in $(SELECTED_ICON_SETS); do \
-		rm -rf $(icondir)/$$iconset; \
+		rm -rf $(DESTDIR)$(icondir)/$$iconset; \
 	done
-	for i in $(icondir)/*; do \
+	for i in $(DESTDIR)$(icondir)/*; do \
 		if [ -L "$$i" ] && [ ! -e "$$i" ]; then rm -f "$$i"; fi; \
 	done
-	-rmdir $(icondir)
+	-rmdir $(DESTDIR)$(icondir)
