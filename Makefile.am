@@ -14,7 +14,7 @@ SUBDIRS = bin doc icons etc devel rpm
 # is for a distribution package building.
 # Set the default icon set aliases (symlinks).
 install-data-local:
-	$(bindir)/wm-icons-config --user-dir="$(icondir)" --defaults --quiet
+	$(DESTDIR)$(bindir)/wm-icons-config --user-dir="$(DESTDIR)$(icondir)" --defaults --quiet
 
 wm-configs _pack-symlinks _unpack-symlinks:
 	cd devel/bin && $(MAKE) $(AM_MAKEFLAGS) $@
