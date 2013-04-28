@@ -4,7 +4,7 @@ wm-icons (0.4.0-6) experimental; urgency=low
   * Bug fix: "wrong code in postrm update-menu hook", thanks to Ian
     Zimmerman (Closes: #618434).
 
- -- Manoj Srivastava <srivasta@debian.org>  Sat, 27 Apr 2013 02:26:58 -0700
+ -- Manoj Srivastava <srivasta@debian.org>  Sat, 27 Apr 2013 18:53:26 -0700
 
 wm-icons (0.4.0-5) unstable; urgency=low
 
