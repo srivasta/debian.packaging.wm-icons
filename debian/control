@@ -6,7 +6,8 @@ Standards-Version: 3.9.4
 Maintainer: Manoj Srivastava <srivasta@debian.org>
 Priority: optional
 Homepage: http://wm-icons.sourceforge.net/
-Build-Depends-Indep: debhelper (>= 9.0.0), dh-autoreconf, autoconf, automake | automaken, cvs
+Build-Depends-Indep: debhelper (>= 9.0.0), dh-autoreconf, autoconf,
+ automake | automaken, cvs, libtool
 # depending on cvs sucks, but gettext needs it without depending on it,
 # and autoreconf calls autopoint from gettext, which uses a CVS repo in
 # a tar ball. See Bug#506022 and Bug#508230
