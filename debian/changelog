@@ -1,3 +1,13 @@
+wm-icons (0.4.0-8) unstable; urgency=medium
+
+  * Updated to the new policy version. No actual changes required
+  * Fix the VCS headers in control file to use the new format of URLs
+  * Upload Bug fix to unstable: "wrong code in postrm update-menu hook",
+    thanks to Ian Zimmerman (Closes: #618434).
+  * Use debcherry to minimize the patches being used.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sat, 05 Apr 2014 15:09:50 -0700
+
 wm-icons (0.4.0-7) experimental; urgency=low
 
   * Noticed and belatedly acknowledged the NMU from last year. Added back

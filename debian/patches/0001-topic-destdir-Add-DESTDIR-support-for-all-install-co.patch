@@ -1,16 +1,16 @@
-From 9e63abc9a136ff46991b64ce62aa0e2d70f3c32b Mon Sep 17 00:00:00 2001
+From 1b99e379a7fe070fc683858d8b997454562b5cdd Mon Sep 17 00:00:00 2001
 From: Manoj Srivastava <srivasta@golden-gryphon.com>
 Date: Sat, 27 Apr 2013 17:28:13 -0700
-Subject: [topic--destdir]: Add DESTDIR support for all install commands in
- Makefile.am
+Subject: [PATCH 1/2] [topic--destdir]: Add DESTDIR support for all install
+ commands in Makefile.am
 
 This is useful by itself, but is pretty ctitical for packaging.
 
 (cherry picked from commit aca847f0ae3c384e21eb7e059224394984decf70)
 Signed-off-by: Manoj Srivastava <srivasta@golden-gryphon.com>
 ---
- Makefile.am       |    2 +-
- icons/Makefile.am |   16 ++++++++--------
+ Makefile.am       |  2 +-
+ icons/Makefile.am | 16 ++++++++--------
  2 files changed, 9 insertions(+), 9 deletions(-)
 
 diff --git a/Makefile.am b/Makefile.am
@@ -65,3 +65,6 @@ index 9608529..8e07844 100644
  	done
 -	-rmdir $(icondir)
 +	-rmdir $(DESTDIR)$(icondir)
+-- 
+1.9.1
+

@@ -1,8 +1,8 @@
 Source: wm-icons
-VCS-Git: git://git.debian.org/~srivasta/debian/wm-icons.git
-VCS-Browser: http://git.debian.org/?p=users/srivasta/debian/wm-icons.git
+VCS-Git: git://anonscm.debian.org/users/srivasta/debian/wm-icons.git
+VCS-Browser: http://anonscm.debian.org/gitweb/?p=users/srivasta/debian/wm-icons.git
 Section: misc
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Maintainer: Manoj Srivastava <srivasta@debian.org>
 Priority: optional
 Homepage: http://wm-icons.sourceforge.net/

@@ -1,2 +1,2 @@
 wm-icons source: source-contains-cvs-control-dir devel/template/CVS
-
+wm-icons source: debian-watch-may-check-gpg-signature

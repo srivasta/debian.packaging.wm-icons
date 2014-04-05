@@ -1,7 +1,7 @@
-From 19f2836bb27ca31a54ce15897302cf6a9ba7e14e Mon Sep 17 00:00:00 2001
+From 310777dcc6bec3c86a8a8543b8866141053f75c8 Mon Sep 17 00:00:00 2001
 From: Manoj Srivastava <srivasta@debian.org>
 Date: Mon, 17 Apr 2006 14:33:17 +0000
-Subject: [menu] Tweak the Debian menu files for official packages
+Subject: [PATCH 2/2] [menu] Tweak the Debian menu files for official packages
 
 Defer language translations for now
 
@@ -17,9 +17,9 @@ git-archimport-id: srivasta@debian.org--etch/wm-icons--debian--0.4--patch-4
 git-archimport-id: srivasta@debian.org--etch/wm-icons--debian--0.4--patch-5
 (cherry picked from commit 7aa0bd600186e9d60a76be9b37499499ea6f0cfd)
 ---
- etc/debian-menu-system/README                   |   14 ++++----------
- etc/debian-menu-system/wm-icons-fvwm2rc-menu.in |   16 ++++++++++------
- etc/debian-menu-system/wm-icons.h.in            |   23 +++++++++++++++++------
+ etc/debian-menu-system/README                   | 14 ++++----------
+ etc/debian-menu-system/wm-icons-fvwm2rc-menu.in | 16 ++++++++++------
+ etc/debian-menu-system/wm-icons.h.in            | 23 +++++++++++++++++------
  3 files changed, 31 insertions(+), 22 deletions(-)
 
 diff --git a/etc/debian-menu-system/README b/etc/debian-menu-system/README
@@ -143,3 +143,6 @@ index 8bff428..bf3a177 100644
  	   $t wmIconsGetSectionIcon(parent(parent($s)))),\
  	   $t wmIconsGetSectionIcon(parent($s))),\
  	   $t wmIconsGetSectionIcon($s))
+-- 
+1.9.1
+
