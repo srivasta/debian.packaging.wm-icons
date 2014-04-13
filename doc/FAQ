@@ -1,0 +1,132 @@
+Window Manager Icons FAQ
+========================
+
+Q: Who works on wm-icons?
+Q: Where are all these icons from?
+Q: Are all of these icons free?
+Q: Why XPM format?
+Q: My video card only supports 8bpp. Can I use wm-icons?
+Q: Ok, I installed these icons, how to use them with my window manager?
+Q: How to use wm-icons with the Debian system menu?
+Q: I don't like several icons in some icon sets.
+Q: The standardized icon list is small for my purposes, can I extend it?
+Q: I want to create my own icon set to use with wm-icons. How do I start?
+Q: How can I contribute my icons or complete icon sets?
+
+------------------------------------------------------------------------------
+Q: Who works on wm-icons?
+
+A: The project has been started on (and with the help of) fvwm-workers
+list many years ago. Originally, Mikhael Goikhman and later Olivier Chapuis
+from fvwm-themes-devel did all the work. Currently, Mikko Heiskanen does
+a major part of the work.
+
+We need good ideas for the project and artists to make icon sets better.
+
+Update: fvwm-themes project is now wm-icons compatible. For more info see
+http://fvwm-themes.sourceforge.net/ .
+
+------------------------------------------------------------------------------
+Q: Where are all these icons from?
+
+A: Almost all icons were taken from one or another free icon set. Certain
+icons were slightly modified. Some of the icons were created from stratch
+(often using a text editor to edit icons). Take a look at doc/icons.lst
+for more details about each and every included icon.
+
+------------------------------------------------------------------------------
+Q: Are all of these icons free?
+
+A: Yes, they are all GPL'd. If you need another license for some icons, you
+should try to contact original authors.
+
+------------------------------------------------------------------------------
+Q: Why XPM format?
+
+A: Because XPM historically is better supported and all Window Managers and
+image viewers handle XPM. This can't be said about other color image formats.
+Another reason is that XPM images can be edited without an image editor. :)
+
+Update: we are moving toward the PNG format.
+
+------------------------------------------------------------------------------
+Q: My video card only supports 8bpp. Can I use wm-icons?
+
+A: You can use 14x14/16x16-general, all kde (but not kde2) and all martys
+icon sets. Other included icon sets are not optimized for this resolution
+and most likely require 16bpp.
+
+------------------------------------------------------------------------------
+Q: Ok, I installed these icons, how to use them in my window manager?
+
+A: Take a look at etc/* files with configurations for several popular window
+managers. If your window manager is not supported, sorry, you should figure
+out yourself how to use wm-icons. If you send working config files for other
+window managers, they will be included.
+
+------------------------------------------------------------------------------
+Q: How to use wm-icons with the Debian system menu?
+
+A: Take a look at etc/debian-system-menu/README
+
+------------------------------------------------------------------------------
+Q: I don't like several icons in some icon sets.
+
+A: Is it a question? :) Ok, there are several posibilities. If you dislike
+only several icons and have much better replacements, send them to the project
+maintainer. Anything can be changed and in fact is constantly changed.
+If you dislike most of icons in some icon set, you probably need to switch to
+another one. Consider also the option of creating your own customized icon set.
+
+------------------------------------------------------------------------------
+Q: The standardized icon list is small for my purposes, can I extend it?
+
+A: There is no trivial way to do this for now, but it is possible.
+You can create a directory ~/wm-icons-extension, which has the same structure
+as the base icons directory, i.e. with all icon set subdirectories.
+Start adding new icons (like cd-writer.xpm) to all icon sets that you use,
+link to /path/to/todo.xpm if you have no real icon for some icon set.
+Put symbolic links 'menu', 'mini', 'norm', and optionally 'bar' in
+~/wm-icons-extension to the real icon set directories in the same directory.
+You can create and update these links using:
+	wm-icons-config -u ~/wm-icons-extension mini ./16x16-kde
+
+Finally, add ~/wm-icons-extension to the icon-path in your WM configuration.
+This is it. Now you can use menu/cd-writer.xpm, mini/cd-writer.xpm and
+norm/cd-writer.xpm in your WM config as if they are in the standard list.
+
+Alternatively, you can send a request for certain icon names to be included
+into the standardized icon list. Sending your own working extensions is a plus.
+
+------------------------------------------------------------------------------
+Q: I want to create my own icon set to use with wm-icons. How do I start?
+
+A: First of all, you must have enough icons to start your own icon set.
+But theoretically, you can start with several icons only and many links.
+Please try to keep icons of the same size and probably the same style.
+
+Let suppose you want to create a heavymetal theme of the size 40x50.
+To start, just copy the entire template icon set to 40x50-heavymetal:
+	cp -rd 01x01-template 40x50-heavymetal
+
+Then start replacing existing links (use -f switch to replace a link):
+	cp -f MyHeavyMetalCalc.xpm 40x50-heavymetal/calculator.xpm
+
+You need not to implement all the icons in your set, you can leave them linked
+to other implemented icons. If you think the links in the template icon set
+are not set correctly for your icon set, replace the links, like:
+	ln -sf disk-cd.xpm cd-player.xpm
+
+You are welcome to send your new created set to the project maintainer to be
+included in the next version (if it is considered good).
+
+For wm-icons to be able to find your new icon set, put 40x50-heavymetal to a
+standard system place (like /usr/local/wm-icons/icons) or a personal user place
+(like $HOME/.wm-icons). Use 'cp -rd' to preserve links. Currently, you'll need
+to edit your window manager configuration to add the new icon set to the menu.
+
+------------------------------------------------------------------------------
+Q: How can I contribute my icons or complete icon sets?
+
+A: Please email to the maintainer and you will receive full instructions.
+Thank you for your help!

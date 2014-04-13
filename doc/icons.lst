@@ -1,0 +1,1596 @@
+Icon list
+----------
+amusement         software category
+calculator        software category
+cd-player         software category
+chat              software category
+choice-no         dialog
+choice-yes        dialog
+clock             software category
+colors            internal
+configuration     internal
+development       software category
+disk              hardware
+disk-cd           hardware
+disk-floppy       hardware
+display           ?
+editor            software category
+empty             internal
+file              file system
+file-manager      software category
+folder            file system
+folder-open       file system
+font              software category
+game              software category
+game-action       software category
+game-board        software category
+game-cards        software category
+game-logic        software category
+ghostview         software instance
+gimp              software instance
+gnome             software provider
+gnu               software provider
+graphics          software category
+help              help system / software category
+home              file system ?
+image-processor   software category
+image-viewer      software category
+information       dialog / window
+item              internal
+kde               software provider
+keyboard          hardware
+linux             software category
+lock              internal / software category
+mail              software category
+modules           internal
+monitoring        software category
+mouse             hardware
+multimedia        software category
+music             software category
+netscape          software instance
+network           software category / hardware
+news              software category
+printing          software category
+programs          software category
+quit              internal
+refresh           internal
+restart           internal
+science           software category
+sound             hardware
+system            software category / system
+terminal          software category
+terminal-remote   software category variation
+terminal-special  software category variation
+themes            internal
+todo              internal
+unknown           internal
+utility           software category
+video             software category
+viewer            software category
+window            window
+window-close      window
+window-delete     window
+window-destroy    window
+window-iconify    window
+window-identify   window
+window-lower      window
+window-maximize   window
+window-move       window
+window-raise      window
+window-resize     window
+window-shade      window
+window-stick      window
+windows           window
+word-processor    software category
+www               software category
+xv                software instance
+
+Candidates
+----------
+screensaver
+mathematics
+choice (question)
+choice-apply (?)
+choice-cancel (?)
+calendar
+game-mahgjongg
+game-rpg
+game-simulation
+game-strategy (why is it not added?)
+game-tetris
+cd-writer
+pdf-viewer
+irc
+icq
+eterm
+gimp
+emacs
+emulator
+users
+phone
+dialup
+wm
+fvwm (wm-fvwm?)
+twm (wm-twm?)
+mwm (wm-mwm?)
+scwm (wm-scwm?)
+enlightenment (wm-enlightenment?)
+windowmaker (wm-windowmaker?)
+afterstep (wm-afterstep?)
+sawfish (wm-sawfish?)
+msdos
+mswin
+image
+flag-us (which countries, if any?)
+monitor-linux
+monitor-sgi
+monitor-sun
+monitor-???
+monitor-mswin
+monitor-intel
+
+
+.----------------
+| 16x16-general/ - mainly from fvwm2-icons-rh, icons/mini/
+| Authors: too many to list
+| License: free (originally) or GPL
+`----------------
+amusement        - mini-exp
+calculator       - mini-calc
+cd-player        - [link -> disk-cd]
+chat             - mini-chat (new)
+choice-yes       - mini-exclam (mini-check better?)
+choice-no        - [link -> window-delete]
+clock            - mini-clock
+colors           - mini.colors
+configuration    - mini.desktop
+development      - mini-bug2 (mini-bug1 for 14x14-general)
+disk             - mini-hdisk
+disk-cd          - mini-cd
+disk-floppy      - mini-diskette
+display          - mini-display
+editor           - mini-edit (narrowed)
+empty            - [new]
+file             - mini.doc
+file-manager     - mini.filemgr
+folder           - mini-folder
+folder-open      - mini.ofolder
+font             - mini.abc
+game             - mini-happy
+game-action      - mini.run
+game-board       - mini-slon
+game-cards       - mini-cards (from KDE, redrawn)
+game-logic       - mini.maze
+ghostview        - mini-gv
+gimp             - mini.gimp (reduced 1 color)
+gnome            - [new] (resized from GNOME and reduced)
+gnu              - ? (reduced/edited)
+graphics         - mini.rgb
+help             - mini-manual (mini-book[12]?)
+home             - (from 16x16-kde)
+image-processor  - mini-palette
+image-viewer     - mini.icons
+information      - mini-doc1 (unrelevant, to replace)
+item             - mini.bball
+kde              - from fvwm-themes
+keyboard         - mini-keyboard (shrunk)
+linux            - from fvwm-themes
+lock             - mini-lock
+mail             - jmail (edited)
+modules          - mini.modules
+monitoring       - mini-monitor
+mouse            - mini.mouse
+multimedia       - mini.audiovol (reduced/edited)
+music            - sound_settings (from KDE, redrawn)
+netscape         - mini-nscape (mini.netscape better?)
+network          - mini-telnet (bad)
+news             - mini.news
+printing         - (from 16x16-kde, reduced)
+programs         - mini.util
+quit             - mini-stop (new for 14x14-general)
+refresh          - mini-ray (?)
+restart          - mini-turn
+science          - mini.eye
+sound            - mini-sound
+system           - [new] (actually edited from 16x16-kde)
+terminal         - mini-term
+terminal-remote  - [new] (tranformed from terminal, s/blue/red/)
+terminal-special - [new] (tranformed from terminal, s/blue/green/)
+themes           - [new]
+todo             - [new] (idea from under_construction.gif)
+utility          - mini-hammer (mini.util better?)
+unknown          - mini-start (bad ?)
+video            - mini-camera (grown)
+viewer           - mini-zoom
+window           - [new] (mini-window better?)
+window-close     - [new] (inspired by mini-skull)
+window-delete    - mini-cross
+window-destroy   - mini-bomb (the one from RH, not the old one)
+window-iconify   - [new]
+window-identify  - mini-question
+window-lower     - mini-lower (variant from kde, grown)
+window-maximize  - [new]
+window-move      - mini-move1
+window-raise     - mini-raise (variant from kde, grown)
+window-resize    - mini-resize (variant from kde, grown)
+window-shade     - [new]
+window-stick     - mini-stick (color changed)
+windows          - ?
+word-processor   - mini-pencil (mini.write reduced better?)
+www              - [new]
+xv               - mini-xv
+
+.----------------
+| 14x14-general/
+`----------------
+See 16x16-general, redrawn by Migo and some by olicha (not perfect).
+
+.----------------
+| 48x48-general/ - partially from fvwm2-icons, icons/; from kiwi, jimr etc.
+| Authors: too many to list
+| License: free (originally) or GPL (GNUStep, KDE)
+`----------------
+amusement        - EscherCube 
+calculator       - canon-fs602 (from isiconpack2, tiff)
+cd-player        - CDPlayer (from kiwi)
+chat             - PhonePortable (from jimr) (PhoneTT, PhoneOld?)
+choice-yes       - ?
+choice-no        - Stoplight (from kiwi)
+clock            - time (from vferr, tiff, must be reduced or replaced)
+colors           - Colormap
+configuration    - CylinderWrenchSpreadsheet
+development      - Ladybug (from jimr)
+disk             - DiskHardDrive (from kiwi)
+disk-cd          - cdromplayer2 (must be reduced)
+disk-floppy      - DiskFloppy (from kiwi) (floppydisk better?)
+display          - Monitor
+editor           - logan-edit (modified)
+empty            - [new]
+file             - [link -> item]
+file-manager     - FileManager (xfce)
+folder           - folder
+folder-open      - FolderOpen (xfce)
+font             - fonts (from GNUstep, slightly modified)
+game             - shield (old: logitech-wingman (from isiconpack3, tiff)
+game-action      - Rumi (taken in WM)
+game-board       - ChessKnightBlack (from jimr, grown)
+game-cards       - AceKingCards (from kiwi)
+game-logic       - Brain (taken in WM)
+ghostview        - ghostview (from xfm or/and fvwm2-ade)
+gimp             - gimp (from KDE2 lo)
+gnome            - Gnome-logo (xfce)
+gnu              - emacs
+graphics         - Brush
+help             - Book (from jimr)
+home             - Home2 (from jimr)
+image-processor  - Paint
+image-viewer     - monalisa
+information      - info (redone from 32x32, KDE)
+item             - [link -> todo]
+kde              - [link -> todo]
+keyboard         - keyboard (from vferr, tiff)
+linux            - from 44x52-penguin
+lock             - KeysOnChain
+mail             - Mail3 (from afterstep)
+modules          - ClosedPackageBox (taken in xfce dist.)
+monitoring       - monitor
+mouse            - logitech-mouseman (from isiconpack3, tiff, must be reduced)
+multimedia       - [link -> sound]
+music            - sound (from WindowMaker) (mission-mm7.tif from isiconpack2?)
+netscape         - nscape (netscape4 better?)
+network          - Network (from jimr)
+news             - NewsAgent
+printing         - Printer
+programs         - Install
+quit             - [link -> todo]
+refresh          - Lightning (xfce and edited)
+restart          - Recycler (from jimr)
+science          - spreadsheet (and edted)
+sound            - sound (from GNUstep)
+system           - Gear
+terminal         - display
+terminal-remote  - [new] (tranformed from terminal, s/blue/red/)
+terminal-special - [new] (tranformed from terminal, s/blue/green/)
+themes           - DisketteBoxFull
+todo             - WheelbarrowFull (from jimr) (any under-construction?)
+unknown          - Unknown (from kiwi)
+utility          - interface (from kiwi)
+video            - T2-Film
+viewer           - MagnifyGlas (from kiwi)
+window           - whandling (from GNUstep, not very relevant)
+window-close     - Bomb (from jimr)
+window-delete    - [link -> window-close]
+window-destroy   - [link -> window-close]
+window-iconify   - [link -> window]
+window-identify  - [link -> window]
+window-lower     - [link -> window]
+window-maximize  - [link -> window]
+window-move      - [link -> window]
+window-raise     - [link -> window]
+window-resize    - [link -> window]
+window-shade     - [link -> window]
+window-stick     - [link -> window]
+windows          - [link -> window]
+word-processor   - ClipboardWithPencilAndPaper (from kiwi)
+www              - WWW (from jimr)
+xv               - XV (from kiwi) (xv.color or xv.tif@isiconpack3 better?)
+
+.----------------
+| 56x46-3dpixmaps/ - from 3dpixmaps, normal/
+| Authors: Joerg Mertin <smurphy@dspecialists.de>
+| LSM: http://www.boutell.com/lsm/lsmbyid.cgi/000284
+| License: GPL, see README.3dpixmaps
+`----------------
+amusement        - face_happy_3d
+calculator       - Calculator
+cd-player        - CompactDisc
+chat             - phone2_3d
+choice-yes       - tick_3d
+choice-no        - no_drag_3d
+clock            - clock_3d
+colors           - color_wheel_3d
+configuration    - install_3d
+development      - xdbx_3d
+disk             - disk_HD_3d (bad)
+disk-cd          - cdrom2_3d
+disk-floppy      - disk_3d
+display          - terminal_sound_3d
+editor           - TextEditor
+empty            - Template
+file             - data_3d
+file-manager     - FileManager (folders_3d?)
+folder           - folder2_3d
+folder-open      - open_dir (from another set)
+font             - fonts_3d
+game             - Game
+game-action      - jet_3d (tmnt_3d?)
+game-board       - checkers_3d
+game-cards       - cards_3d
+game-logic       - rubics_cube_3d (tic_tac_toe_3d?)
+ghostview        - ghostbuster
+gimp             - [link -> image-processor]
+gnome            - [link -> gnu]
+gnu              - gnuinfo_3d (bad)
+graphics         - colormap_3d
+help             - manpage_green_3d
+home             - home2_3d
+image-processor  - ImageProcessing (Paint3?)
+image-viewer     - Paint
+information      - info_dot_3d
+item             - balloon_red_3d (?)
+kde              - [link -> todo]
+keyboard         - keys_3d
+linux            - xterm-linux (from another set)
+lock             - lock
+mail             - Mail2
+modules          - balloons_3d (?)
+monitoring       - monitor_3d
+mouse            - mouse_3d
+multimedia       - Multimedia3
+music            - music_inst_3d
+netscape         - netscape_3d
+network          - network_3d
+news             - news4_3d
+printing         - printer2_3d
+programs         - program_3d
+quit             - exit
+refresh          - lightning_3d
+restart          - translate_3d (?)
+science          - rocket_3d
+sound            - sound3_3d
+system           - sysinfo_3d
+terminal         - Terminal
+terminal-remote  - [new] (tranformed from terminal, s/black/red/)
+terminal-special - [new] (tranformed from terminal, s/black/green/)
+themes           - masks_3d
+todo             - Template (bad)
+unknown          - NoName
+utility          - tools2_3d
+video            - film4_3d
+viewer           - Viewer
+window           - window3d
+window-close     - bomb_3d
+window-delete    - [link -> window-close]
+window-destroy   - [link -> window-close]
+window-iconify   - [link -> window]
+window-identify  - [link -> window]
+window-lower     - [link -> window]
+window-maximize  - [link -> window]
+window-move      - [link -> window]
+window-raise     - [link -> window]
+window-resize    - [link -> window]
+window-shade     - [link -> window]
+window-stick     - [link -> window]
+windows          - windows (from another set)
+word-processor   - WordProcessing
+www              - html_3d (bad?)
+xv               - xv.color
+
+.----------------
+| 21x18-3dpixmaps/ - from 3dpixmaps, small/small.
+`----------------
+See 56x46-3dpixmaps.
+
+.----------------
+| 17x14-3dpixmaps/ - from 3dpixmaps, mini/mini.
+`----------------
+See 56x46-3dpixmaps.
+
+.----------------
+| 44x52-penguins/ - from EP-Penguins-2.0.
+| Authors: Enrico Papalini <papalini@biancaneve.ing.unifi.it>
+| License: GPL, see README.penguins
+`----------------
+amusement        - PenguinClown (rearranged)
+calculator       - PenguinWithCalculator
+cd-player        - [link -> disk-cd]
+chat             - PenguinPhone
+choice-yes       - PenguinChecked (rearranged)
+choice-no        - [link -> window-destroy] (?)
+clock            - PenguinWithTimer (rearranged)
+colors           - PenguinWithPaletteAndBrush (rearranged)
+configuration    - [link -> todo]
+development      - PenguinWithBug
+disk             - PenguinUnderHardDisk
+disk-cd          - PenguinUnderCDRom
+disk-floppy      - PenguinUnderDiskFloppy
+display          - PenguinLinux (rearranged)
+editor           - PenguinWithPen (rearranged)
+empty            - Penguin
+file             - PenguinDocument (shrunk)
+file-manager     - [link -> folder]
+folder           - PenguinInFolder
+folder-open      - [link -> folder]
+font             - PenguinBlue (?) (rearranged)
+game             - PenguinWithSmile (PenguinWithBall better?)
+game-action      - PenguinBatman (rearranged)
+game-board       - [link -> game]
+game-cards       - [link -> game]
+game-logic       - PenguinPuzzle (shrunk by Migo)
+ghostview        - PenguingWithGhosts
+gimp             - [link -> image-processor]
+gnome            - [link -> gnu]
+gnu              - [link -> science] (bad)
+graphics         - PenguinWithBrushes
+help             - PenguinWithBook (rearranged)
+home             - PenguinHome (rearranged)
+image-processor  - PenguinWithScissorsAndPens
+image-viewer     - [link -> graphics]
+information      - PenguinInfo
+item             - [link -> empty]
+kde              - [link -> todo]
+keyboard         - [link -> todo]
+linux            - [link -> empty] :)
+lock             - PenguinLocked
+mail             - PenguinInMailBox
+modules          - [link -> item]
+monitoring       - PenguinMonitor
+mouse            - [todo]
+multimedia       - [link -> sound]
+music            - PenguinWithMicrophone (rearranged)
+netscape         - PenguinNetscape
+network          - PenguinWithPlug (?) (rearranged)
+news             - PenguinWithNewspaper (rearranged)
+printing         - PenguinPrinter
+programs         - PenguinWithGear
+quit             - PenguinStop
+refresh          - PenguinWithBroom (?) (rearranged)
+restart          - PenguinRecicled (rearranged)
+science          - PenguinWithCapExpert (badly shrunk by Migo)
+sound            - PenguinWithSpeaker (rearranged)
+system           - [link -> monitoring]
+terminal         - PenguinOnScreen
+terminal-remote  - [new] (tranformed from terminal, s/blue/red/)
+terminal-special - [new] (tranformed from terminal, s/blue/green/)
+themes           - [link -> configuration]
+todo             - PenguinUnderConstruction
+unknown          - PenguinQuestionMark
+utility          - PenguinWithWrench (rearranged)
+video            - [link -> multimedia]
+viewer           - PenguinUnderGlass (rearranged, shrunk by Migo)
+window           - PenguinInWindow (shrunk by Migo)
+window-close     - PenguinInTrashCan
+window-delete    - [link -> window-close]
+window-destroy   - PenguinCrossed
+window-iconify   - PenguinServeUp (shrunk by Migo)
+window-identify  - PenguinDoubting (rearranged)
+window-lower     - [link -> window]
+window-maximize  - [link -> window]
+window-move      - PenguinInBasket (?)
+window-raise     - [link -> window]
+window-resize    - PenguinInBox (?)
+window-shade     - PenguinWithBlackGlasses (?) (shrunk by Migo)
+window-stick     - [link -> choice-yes] (?)
+windows          - [link -> window]
+word-processor   - [link -> editor]
+www              - PenguinWWW (rearranged)
+xv               - PenguinWithRedFish
+
+.----------------
+| 32x32-kde/ - from kde-1.0.0/share/icons/
+| Authors: J. Buzzard, M. Donohoe, N. Shirwing, S. Kanthak
+| Also from KDE2 (transformation done by fvwm-themes, ImageMagick and xemacs)
+| License: GPL
+`----------------
+amusement        - package_toys (KDE2) (ksokoban for 16x16-kde)
+calculator       - kcalc (xcalc from kappfinder better?)
+cd-player        - kscd
+chat             - kuser (KDE2) (new for 16x16-kde by Maciej)
+choice-yes       - [new] (yes (KDE2) for 16x16-kde)
+choice-no        - error (KDE2)
+clock            - xclock (from kappfinder) (karm better?)
+colors           - colors
+configuration    - ?
+development      - configure (KDE2)
+disk             - harddrive_unmount
+disk-cd          - cdrom_unmount
+disk-floppy      - 3floppy_unmount
+display          - kconsole (edited)
+editor           - kedit (edit from kappfinder better?)
+empty            - [new]
+file             - source (KDE2)
+file-manager     - kfm (KDE2)
+folder           - folder
+folder-open      - folder_open
+font             - fonts (font better?)
+game             - ksmiletris
+game-action      - proxy (KDE2) (new for 16x16-kde by Maciej)
+game-board       - kreversi (new for 16x16-kde by Maciej)
+game-cards       - kpoker
+game-logic       - ksirtet (KDE2)
+ghostview        - gv (from kappfinder, grown) (kghostview better?)
+gimp             - gimp
+gnome            - from GNOME
+gnu              - emacs (KDE2)
+graphics         - colorize (KDE2)
+help             - kdehelp
+home             - gohome (KDE2)
+image-processor  - kpaint (KDE2)
+image-viewer     - kviewer(KDE2)
+information      - info (from kde-1.1.2 reduced for 16x16-kde)
+item             - [new]
+kde              - go (KDE2)
+keyboard         - keyboard
+linux            - penguin (KDE2)
+lock             - kscreensaver (mini-key from kpanel better?)
+mail             - kmail (email better?) (new for 16x16-kde by Maciej)
+modules          - blockdevice
+monitoring       - kpm (from kde-1.1.2 for 16x16-kde)
+mouse            - mouse
+multimedia       - multimedia (KDE2)
+music            - sound_settings
+netscape         - netscape (from kappfinder)
+network          - network_settings
+news             - knode (KDE2)
+printing         - kljettool (KDE2)
+programs         - pakcage_applications (KDE2)
+quit             - stop (KDE2)
+refresh          - kfm_refresh (adapted for 16x16-kde)
+restart          - reload (KDE2)
+science          - kfract (new for 16x16-kde by Maciej)
+sound            - kmixdocked (from kmix) (grown, redrawn for 16x16-kde)
+system           - kcmsystem
+terminal         - terminal
+terminal-remote  - [new] (tranformed from terminal, s/black/red/)
+terminal-special - [new] (tranformed from terminal, s/black/green/)
+themes           - kthememanager
+todo             - recycled
+unknown          - unknown (from kde-1.1.2 reduced for 16x16-kde)
+utility          - exec
+video            - pixie
+viewer           - kfind
+window           - from winprops (edited from 16x16-general for 16x16-kde)
+window-close     - error (s/red/black)
+window-delete    - new (exit for 16x16-kde)
+window-destroy   - bomb (colors edited) (from 16x16-general for 16x16-kde)
+window-iconify   - [link -> window] (edited from 16x16-general for 16x16-kde)
+window-identify  - help (KDE2) (new for 16x16-kde by Maciej)
+window-lower     - down (KDE2)
+window-maximize  - [link -> window] (edited from 16x16-general for 16x16-kde)
+window-move      - [link -> window] (edited from 16x16-general for 16x16-kde)
+window-raise     - up (KDE2)
+window-resize    - [link -> window] (edited from 16x16-general for 16x16-kde)
+window-shade     - [link -> window] (edited from 16x16-general for 16x16-kde)
+window-stick     - [link -> window] (new for 16x16-kde)
+windows          - kcmkwm
+word-processor   - kwrite
+www              - konqueror (new for 16x16-kde by Maciej)
+xv               - xv (from kappfinder)
+
+.----------------
+| 16x16-kde/ - from kde-1.0.0/share/icons/mini/
+| Also from KDE2 (transformation done by fvwm-themes and ImageMagick)
+`----------------
+See 32x32-kde.
+
+.----------------
+| 32x32-kde2/ - from kde-1.1.2/share/icons/
+| Authors: KDE Icon Team
+| Also from KDE2 (transformation done by fvwm-themes and ImageMagick)
+| License: GPL
+`----------------
+amusement        - package_toys (KDE2)
+calculator       - kcalc (xcalc from kappfinder better?)
+cd-player        - kscd
+chat             - kuser (KDE2)
+choice-yes       - new ([link -> todo] for 48x48-kde2)
+choice-no        - error ([link -> todo] for 48x48-kde2)
+clock            - karm (xclock from kappfinder better?)
+colors           - colors
+configuration    - desktop (KDE2)
+development      - configure (KDE2)
+disk             - harddrive_unmount (hd_unmount for 48x48-kde2)
+disk-cd          - cdrom_unmount
+disk-floppy      - 3floppy_unmount
+display          - resource (shrunk)
+editor           - kedit (edit from kappfinder better?)
+empty            - [new]
+file             - filenews (KDE2) (source for 48x48-kde2)
+file-manager     - kfm (KDE2)
+folder           - folder
+folder-open      - folder_open
+font             - font (fonts better?)
+game             - ksmiletris
+game-action      - proxy (KDE2)
+game-board       - kreversi (bad)
+game-cards       - kpoker
+game-logic       - ksirtet (KDE2)
+ghostview        - kghostview (srunk)
+gimp             - gimp (KDE2)
+gnome            - from GNOME ([link -> gnu] for 48x48-kde2)
+gnu              - emacs
+graphics         - colorize ([link -> colors] for 48x48-kde2)
+help             - kdehelp
+home             - gohome (KDE2) (kfm_home (?) for 48x48-kde2)
+image-processor  - kpaint (KDE2)
+image-viewer     - kview (KDE2)
+information      - info
+item             - kit (KDE2)
+kde              - UNKNOWN
+keyboard         - keyboard (drawn for 48x48-kde2)
+linux            - penguin ([link -> todo] for 48x48-kde2)
+lock             - kscreensaver
+mail             - kmail
+modules          - blockdevice
+monitoring       - kpm
+mouse            - mouse (shrunk)
+multimedia       - multimedia (KDE2)
+music            - sound_settings ([link -> cd-player] for 48x48-kde2)
+netscape         - netscape (from kappfinder)
+network          - network (kvt for 48x48-kde2)
+news             - knode (KDE2)
+printing         - printer
+programs         - pakcage_applications (KDE2) (package for 48x48-kde2)
+quit             - stop (KDE2) ([link -> todo] for 48x48-kde2)
+refresh          - kfm_refresh ([link -> todo] for 48x48-kde2)
+restart          - reload ([link -> todo] for 48x48-kde2)
+science          - kfract (KDE2)
+sound            - kmix
+system           - kcmsystem (KDE2)
+terminal         - terminal
+terminal-remote  - [new] (tranformed from terminal, s/black/red/)
+terminal-special - [new] (tranformed from terminal, s/black/green/)
+themes           - kthememanager
+todo             - recycled
+unknown          - unknown
+utility          - exec (shrunk)
+video            - video
+viewer           - kfind
+window           - kwm (bad)
+window-close     - error (s/red/black) ([link -> window] for 48x48-kde2)
+window-delete    - new ([link -> window-close] for 48x48-kde2)
+window-destroy   - clanbomber ([link -> window-close] for 48x48-kde2)
+window-iconify   - [link -> window]
+window-identify  - help (KDE2) (help_index for 48x48-kde2)
+window-lower     - down ([link -> window] for 48x48-kde2)
+window-maximize  - [link -> window]
+window-move      - [link -> window]
+window-raise     - up ([link -> window] for 48x48-kde2)
+window-resize    - [link -> window]
+window-shade     - [link -> window]
+window-stick     - [link -> window]
+windows          - kcmkwm (KDE2)
+word-processor   - kwrite
+www              - www
+xv               - xv from kappfinder ([link -> image-viewer] for 48x48-kde2)
+
+.----------------
+| 48x48-kde2/ - from kde-1.1.2/share/icons/large/
+| Also from KDE2 (transformation done by fvwm-themes and ImageMagick)
+`----------------
+See 32x32-kde2.
+
+.----------------
+| 56x56-martys/ - from martys_icons
+| Authors: Martin Cartwright <martycart@yahoo.co.uk>, Jarl Totland (some icons)
+| URL: http://star.pst.qub.ac.uk/~imc/fvwm.html
+| License: free, see README.martys
+`----------------
+amusement        - calv_fac (?)
+calculator       - calc_but
+cd-player        - [link -> multimedia]
+chat             - andy_fac (bad)
+choice-yes       - [link -> todo]
+choice-no        - [link -> todo]
+clock            - cldr_ico
+colors           - colw_ico
+configuration    - reps_ico
+development      - [link -> utility]
+disk             - [link -> todo]
+disk-cd          - [link -> disk]
+disk-floppy      - [link -> disk]
+display          - [link -> todo]
+editor           - off_ico
+empty            - ico
+file             - [link -> item]
+file-manager     - fm_but
+folder           - [link -> folders]
+folder-open      - [link -> folder]
+font             - xs_but
+game             - game_ico (pac_ico better?)
+game-action      - q_ico
+game-board       - ches_ico
+game-cards       - [link -> amusement] (bad)
+game-logic       - tet_ico
+ghostview        - ghos_ico
+gimp             - [link -> image-processor]
+gnome            - [link -> gnu]
+gnu              - [link -> todo]
+graphics         - [link -> colors]
+help             - [link -> window-identify]
+home             - gan_ico (bad)
+image-processor  - imtl_ico
+image-viewer     - imag_ico
+information      - [link -> window-stick] (?)
+item             - [link -> todo]
+kde              - [link -> todo]
+keyboard         - butt_ico
+linux            - [link -> todo]
+lock             - lock_but
+mail             - mail-1 (added transparency)
+modules          - [link -> item]
+monitoring       - gra_ico
+mouse            - [link -> todo]
+multimedia       - mm_ico
+music            - [link -> sound]
+netscape         - net_but
+network          - rlog_but (?)
+news             - news_ico
+printing         - prn_but
+programs         - [link -> utility]
+quit             - exit_but
+refresh          - [link -> todo]
+restart          - recy_but
+science          - com_fac
+sound            - [link -> multimedia]
+system           - mag_ico (?)
+terminal         - term_ico
+terminal-remote  - [new] (tranformed from terminal, s/gray/red/)
+terminal-special - [new] (tranformed from terminal, s/gray/green/)
+themes           - slid_ico
+todo             - star_fac (?)
+unknown          - x_but
+utility          - tool_ico
+video            - [link -> multimedia]
+viewer           - view_ico
+window           - [link -> terminal]
+window-close     - [link -> window-resize]
+window-delete    - [link -> window-close]
+window-destroy   - [link -> window-close]
+window-iconify   - [link -> window-resize]
+window-identify  - ques_ico
+window-lower     - [link -> windows]
+window-maximize  - [link -> window-resize]
+window-move      - [link -> windows]
+window-raise     - [link -> windows]
+window-resize    - gwm_ico (?)
+window-shade     - [link -> window]
+window-stick     - post_ico
+windows          - cas_but
+word-processor   - [link -> editor]
+www              - [link -> network]
+xv               - xv_but
+
+.----------------
+| 20x20-martys/ - from martys_icons
+| see 56x56-martys.
+`----------------
+amusement        - [link -> game]
+calculator       - cal_mico (shrunk)
+cd-player        - [link -> utility]
+chat             - [link -> network]
+choice-yes       - [link -> todo]
+choice-no        - cross_mini
+clock            - [link -> utility]
+colors           - [link -> todo]
+configuration    - [link -> todo]
+development      - [link -> utility]
+disk             - [link -> todo]
+disk-cd          - [link -> disk]
+disk-floppy      - [link -> disk]
+display          - [link -> todo]
+editor           - txt_mico (shrunk)
+empty            - [new]
+file             - [link -> item]
+file-manager     - [link -> folder]
+folder           - [link -> todo]
+folder-open      - [link -> folder]
+font             - x_mico (shrunk) (?)
+game             - smi_mico (grown)
+game-action      - cnq_mico
+game-board       - [link -> game]
+game-cards       - [link -> game]
+game-logic       - [link -> game]
+ghostview        - [link -> utility]
+gimp             - [link -> image-processor]
+gnome            - [link -> gnu]
+gnu              - [link -> todo]
+graphics         - [link -> colors]
+help             - [link -> information]
+home             - [link -> todo]
+image-processor  - [link -> image-viewer]
+image-viewer     - pai_mico (grown)
+information      - [link -> todo]
+item             - [link -> todo]
+kde              - [link -> todo]
+keyboard         - [link -> todo]
+linux            - [link -> todo]
+lock             - loc_mico
+mail             - ltr_mico (shrunk)
+modules          - [link -> item]
+monitoring       - [link -> todo]
+mouse            - [link -> todo]
+multimedia       - [link -> sound]
+music            - [link -> sound]
+netscape         - net_mico (shrunk)
+network          - [link -> todo]
+news             - [link -> chat]
+printing         - printer2_small (grown)
+programs         - [link -> utility]
+quit             - [link -> todo]
+refresh          - li_mico (shrunk*)
+restart          - [link -> todo]
+science          - [link -> utility]
+sound            - [link -> todo]
+system           - [link -> todo]
+terminal         - ter_mico (shrunk)
+terminal-remote  - [new] (tranformed from terminal, s/gray/red/)
+terminal-special - [new] (tranformed from terminal, s/gray/green/)
+themes           - [link -> configuration]
+todo             - sph_mico (shrunk)
+unknown          - x_mini
+utility          - [link -> todo]
+video            - [link -> multimedia]
+viewer           - [link -> utility]
+window           - [new] (modified terminal)
+window-close     - [link -> choice-no]
+window-delete    - [link -> window-close]
+window-destroy   - skull (grown)
+window-iconify   - ify_mico (shrunk)
+window-identify  - qu_mico (shrunk)
+window-lower     - low_mico (shrunk)
+window-maximize  - max_mico (shrunk*)
+window-move      - mov_mico (shrunk)
+window-raise     - rai_mico (shrunk)
+window-resize    - res_mico (shrunk)
+window-shade     - sha_mico (shrunk)
+window-stick     - sti_mico (shrunk)
+windows          - [link -> window]
+word-processor   - [link -> editor]
+www              - [link -> network]
+xv               - [link -> image-viewer]
+
+.----------------
+| 56x56-martys2/ - from martys_new_icons
+| see 56x56-martys.
+`----------------
+amusement        - calvin
+calculator       - calculator
+cd-player        - [link -> utility]
+chat             - talk
+choice-yes       - lump
+choice-no        - cross (reduced)
+clock            - [link -> utility]
+colors           - smaug (?)
+configuration    - graph
+development      - [link -> utility]
+disk             - [link -> todo]
+disk-cd          - [link -> disk]
+disk-floppy      - [link -> disk]
+display          - [link -> terminal]
+editor           - apps (nedit?)
+empty            - blank
+file             - [link -> item]
+file-manager     - files
+folder           - [link -> folders]
+folder-open      - [link -> folder]
+font             - font
+game             - game
+game-action      - quake
+game-board       - centurion (?)
+game-cards       - [link -> game]
+game-logic       - tetris
+ghostview        - ghostview
+gimp             - [link -> image-processor]
+gnome            - [link -> gnu]
+gnu              - [link -> todo]
+graphics         - brush
+help             - [link -> information]
+home             - world (?)
+image-processor  - imagetool
+image-viewer     - image
+information      - [link -> window-stick] (?)
+item             - cube
+kde              - [link -> todo]
+keyboard         - [link -> todo]
+linux            - [link -> todo]
+lock             - lock
+mail             - mail
+modules          - [link -> item]
+monitoring       - [link -> todo]
+mouse            - [link -> todo]
+multimedia       - [link -> sound]
+music            - [link -> sound]
+netscape         - netscape
+network          - network
+news             - [link -> chat]
+printing         - printer
+programs         - [link -> utility]
+quit             - [link -> todo]
+refresh          - [link -> todo]
+restart          - recycle
+science          - [link -> utility]
+sound            - [link -> monitoring] (?)
+system           - connect (?)
+terminal         - term
+terminal-remote  - [new] (tranformed from window, s/gray/red/)
+terminal-special - [new] (tranformed from window, s/gray/green/)
+themes           - [link -> configuration]
+todo             - star (?)
+unknown          - xterm (?)
+utility          - utility
+video            - [link -> multimedia]
+viewer           - eye
+window           - terminal
+window-close     - [link -> choice-no]
+window-delete    - [link -> window-close]
+window-destroy   - bomb
+window-iconify   - [link -> window-resize]
+window-identify  - question
+window-lower     - [link -> windows]
+window-maximize  - [link -> window-resize]
+window-move      - [link -> windows]
+window-raise     - [link -> windows]
+window-resize    - gwm
+window-shade     - [link -> window]
+window-stick     - postit (?)
+windows          - cascade
+word-processor   - [link -> editor]
+www              - world
+xv               - [link -> image-viewer]
+
+.----------------
+| 20x20-martys2/ - from martys_new_icons
+| see 56x56-martys.
+`----------------
+amusement        - [link -> game]
+calculator       - [link -> utility]
+cd-player        - [link -> utility]
+chat             - [link -> network]
+choice-yes       - [link -> todo]
+choice-no        - cross_mini
+clock            - [link -> utility]
+colors           - [link -> todo]
+configuration    - [link -> todo]
+development      - [link -> utility]
+disk             - [link -> todo]
+disk-cd          - [link -> disk]
+disk-floppy      - [link -> disk]
+display          - [link -> todo]
+editor           - nedit_mini (?)
+empty            - blank_mini
+file             - [link -> item]
+file-manager     - [link -> folder]
+folder           - [link -> todo]
+folder-open      - [link -> folder]
+font             - f_mini (?)
+game             - [link -> todo]
+game-action      - [link -> game]
+game-board       - [link -> game]
+game-cards       - [link -> game]
+game-logic       - [link -> game]
+ghostview        - [link -> utility]
+gimp             - [link -> image-processor]
+gnome            - [link -> gnu]
+gnu              - [link -> todo]
+graphics         - [link -> colors]
+help             - [link -> information]
+home             - [link -> todo]
+image-processor  - [link -> image-viewer]
+image-viewer     - [link -> viewer]
+information      - [link -> todo]
+item             - sphere_mini (?)
+kde              - [link -> todo]
+keyboard         - [link -> todo]
+linux            - [link -> todo]
+lock             - [link -> todo]
+mail             - [link -> todo]
+modules          - [link -> item]
+monitoring       - [link -> todo]
+mouse            - [link -> todo]
+multimedia       - [link -> sound]
+music            - [link -> sound]
+netscape         - netscape_mini
+network          - [link -> todo]
+news             - news
+printing         - printer_mini
+programs         - [link -> utility]
+quit             - [link -> todo]
+refresh          - [link -> todo]
+restart          - [link -> todo]
+science          - [link -> utility]
+sound            - [link -> todo]
+system           - [link -> todo]
+terminal         - [link -> monitor]
+terminal-remote  - [link -> terminal]
+terminal-special - [link -> terminal]
+themes           - [link -> configuration]
+todo             - [link -> empty]
+unknown          - x_mini
+utility          - triangle_up_mini (bad)
+video            - [link -> multimedia]
+viewer           - [link -> utility]
+window           - window_mini
+window-close     - [link -> choice-no]
+window-delete    - [link -> window-close]
+window-destroy   - bomb_mini
+window-iconify   - iconify_mini
+window-identify  - question_mini
+window-lower     - lower_mini
+window-maximize  - max_mini
+window-move      - move_mini
+window-raise     - raise_mini
+window-resize    - resize_mini
+window-shade     - shade_mini
+window-stick     - stick_mini
+windows          - [link -> window]
+word-processor   - [link -> editor]
+www              - [link -> network]
+xv               - [link -> image-viewer]
+
+.----------------
+| 16x16-gnome/ - from GNOME via fvwm-themes-images and ImageMagic to
+| get XPM icons, then modified with gimp.
+| Authors: gnome workers, sawmill workers, gtk workers and olivier chapuis 
+| for the modification of the original icons
+| License: GPL
+| 72 icons and 12 symlink, need some works ...
+`----------------
+
+amusement        - gnome-amusements.png
+calculator       - gnome-calc2.png
+cd-player        - [link -> disk-cd]
+chat             - gnome-irc.png
+choice-yes       - yes.xpm
+choice-no        - no.xpm
+clock            - gnome-clock.png
+colors           - gnome-color-browser.png
+configuration    - control-center.png
+development      - gnome-devel.png
+disk             - mc/i-blockdev.png
+disk-cd          - mc/i-cdrom.png
+disk-floppy      - mc/i-floppy.png
+display          - gnome-bacground.png
+editor           - gnome-gedit.png
+empty            - from 16x16-general
+file             - gnome-file.png
+file-manager     - [link -> folder]
+folder           - mc/i-directory.png
+folder-open      - [link -> folder]
+font             - gnome-fontsel.png
+game             - gnome-joystick.png
+game-action      - [link -> game]
+game-board       - gnome-chess.png
+game-cards       - gnome-cardgame.png
+game-logic       - [link -> game-board]
+ghostview        - gnome-file.png
+gimp             - gnome-gimp.png
+gnome            - gnome-logo.png (reduced, from fvwm-themes, could be readded)
+gnu              - gnome-emacs.png
+graphics         - gnome-graphics.png
+help             - gnome-help.png
+home             - home gtk buttons
+image-processor  - [link -> graphics]
+image-viewer     - [link -> graphics]
+information      - gnome-info.png
+item             - gnome-ccscreensaver.png
+kde              - from 16x16-kde
+keyboard         - gnome-cckeyborad.png
+linux            - from 16x16-general
+lock             - gnome-lockscreen.png
+mail             - gnome-mailcheck.png
+modules          - gnome-default-dlg.png
+monitoring       - gnome-monitor.png
+mouse            - gnome-mouse.png
+multimedia       - gnome-mutimedia.png
+music            - gnome-audio2.png
+netscape         - from 16x16-kde
+network          - gnome-networktool.png
+news             - gnome-news.png
+printing         - mc/i-printing.png
+programs         - gnome-applications.png
+quit             - gnome-error.png
+refresh          - gnome-mailcheck.png
+restart          - gnome-session.png
+science          - gnome-stripchart.png
+sound            - [link -> music]
+system           - gnome-launcher.png
+terminal         - gnome-terminal
+terminal-remote  - gnome-terminal + gnome-networktool.png
+terminal-special - gnome-gemvt.xpm
+themes           - gnome-ccthemes.png
+todo             - gnome-setting.png
+unknown          - gnome-unknown.png
+utility          - gnome-util.png
+video            - mc/i-chardev.png :o)
+viewer           - gnome-searchtool.png
+window           - sawmill-minmax.png
+window-close     - gtk like close
+window-delete    - gtk like delete
+window-destroy   - gnome-shutdown.png
+window-iconify   - [link -> window-maximize]
+window-identify  - gnome-question.png
+window-lower     - [link -> window-raise]
+window-maximize  - sawmill-minmax.png
+window-move      - sawmill-moveresize.png
+window-raise     - sawmill-focus.png
+window-resize    - [link -> window-move]
+window-shade     - sawmill-placement.png
+window-stick     - [link -> window-raise]
+windows          - [link -> window-maximize]
+word-processor   - gnome-word.png
+www              - gnome-html.png
+xv               - from 16x16-general
+
+.----------------
+| 48x48-gnome/ - see 16x16-gnome/
+| License: GPL
+| 72 icons and 12 symlinks, needs some works... I am not very happy with
+| the interior size of certains icons
+`----------------
+
+see 16x16-gnome/
+
+.----------------
+| 24x24-infox/ - a completely new icon set made especially for wm-icons.
+| Authors: Maciej Szymanski <ms@asor.com.pl>
+| License: GPL, see README.infox
+| 65 icons and 19 symlinks.
+`----------------
+
+All names and symlinks are preserved from the original submission.
+
+.----------------
+| 48x48-infox/ - a completely new icon set made especially for wm-icons.
+| Authors: Maciej Szymanski <ms@asor.com.pl>
+| License: GPL, see README.infox
+| 65 icons and 19 symlinks.
+`----------------
+
+All names and symlinks are preserved from the original submission.
+
+.----------------
+| 16x16-aquafusion/
+| 22x22-aquafusion/
+| 32x32-aquafusion/
+| 48x48-aquafusion/
+| 64x64-aquafusion/
+| Authors: Daniel Flax (design & artwork) and Markus Mueller (adoptation)
+| License: Design Science License (DSL, compatible with GPL)
+| Format:  PNG
+| 70 icons and 14 symlinks, missing icons needed.
+`----------------
+
+amusement        - amor
+calculator       - xcalc
+cd-player        - kscd
+chat             - ksirc
+choice-no        - [link -> $dir/todo]
+choice-yes       - [link -> $dir/amusement]
+clock            - clock
+colors           - colors
+configuration    - configure
+development      - core
+disk             - kcmdevices
+disk-cd          - ../devices/cd_audio
+disk-floppy      - ../devices/3floppy_mount
+display          - ../devices/screen
+editor           - kwrite
+empty            - fallback
+file             - ../mimetypes/mime
+file-manager     - kfm
+folder           - ../filesystems/folder
+folder-open      - ../filesystems/folder_open
+font             - fonts
+game             - package_games
+game-action      - package_games_arcade
+game-board       - package_games_board
+game-cards       - package_games_card
+game-logic       - package_games_strategy
+ghostview        - kghostview
+gimp             - gimp
+gnome            - gnome-apps
+gnu              - ark
+graphics         - package_graphics
+help             - khelpcenter
+home             - ../filesystems/folder_home
+image-processor  - kpaint
+image-viewer     - kview
+information      - knotify
+item             - fallback
+kde              - go
+keyboard         - keyboard
+linux            - penguin
+lock             - password
+mail             - email
+modules          - kgeo
+monitoring       - kviewshell
+mouse            - mouse
+multimedia       - mplayer
+music            - bell
+netscape         - netscape
+network          - kppp
+news             - kworldclock
+printing         - ../devices/printer
+programs         - package
+quit             - kmoon
+refresh          - energy
+restart          - linuxconfig
+science          - kspread
+sound            - kmix
+system           - package_system
+terminal         - terminal
+terminal-remote  - [new]
+terminal-special - xconsole
+themes           - kthememgr
+todo             - error
+unknown          - xapp
+utility          - misc
+video            - camera
+viewer           - kjobviewer
+window           - kwin
+window-close     - [link -> window]
+window-delete    - [link -> window]
+window-destroy   - [link -> window]
+window-iconify   - [link -> window]
+window-identify  - [link -> window]
+window-lower     - [link -> window]
+window-maximize  - [link -> window]
+window-move      - [link -> window]
+window-raise     - [link -> window]
+window-resize    - [link -> window]
+window-shade     - [link -> window]
+window-stick     - [link -> window]
+windows          - kpager
+word-processor   - kword
+www              - browser
+xv               - xv
+
+.----------------
+| 16x16-crystalclear/
+| Author: Everaldo Coelho http://www.everaldo.com
+| License: LGPL
+| Format: PNG
+| 84 icons
+`----------------
+amusement        - apps/package_toys
+calculator       - apps/calc
+cd-player        - apps/kscd
+chat             - apps/messenger
+choice-no        - actions/button_cancel
+choice-yes       - actions/button_ok
+clock            - apps/clock
+colors           - apps/colors
+configuration    - apps/package_settings
+development      - apps/bug
+disk             - devices/hdd_unmount
+disk-cd          - devices/cdrom_unmount
+disk-floppy      - devices/floppy_unmount
+display          - apps/display
+editor           - apps/xedit
+empty            - [new]
+file             - mimetypes/empty
+file-manager     - apps/file-manager
+folder           - filesystems/folder_grey
+folder-open      - filesystems/folder_open
+font             - apps/fonts
+game             - apps/package_games
+game-action      - apps/package_games_arcade
+game-board       - apps/package_games_board
+game-cards       - apps/package_games_card
+game-logic       - apps/ksirtet
+ghostview        - apps/kdvi
+gimp             - apps/gimp
+gnome            - apps/gnome
+gnu              - [new] (resized from 48x48/apps/xemacs)
+graphics         - apps/kpaint
+help             - apps/khelpcenter
+home             - filesystems/folder_home
+image-processor  - apps/looknfeel
+image-viewer     - apps/demo
+information      - actions/info
+item             - filesystems/favorites
+kde              - apps/go
+keyboard         - apps/keyboard
+linux            - apps/penguin
+lock             - apps/kgpg
+mail             - mimetypes/message2
+modules          - apps/kdf
+monitoring       - apps/ksysguard
+mouse            - devices/mouse
+multimedia       - apps/package_multimedia
+music            - apps/lsongs
+netscape         - apps/netscape
+network          - apps/network
+news             - apps/knewsticker
+printing         - devices/printer1
+programs         - apps/package
+quit             - actions/exit
+refresh          - actions/gg_connecting
+restart          - actions/reload
+science          - apps/katomic
+sound            - apps/kaboodle
+system           - apps/package_utilities
+terminal         - apps/konsole
+terminal-remote  - filesystems/chardevice
+terminal-special - [new] (convert -flop kservices; composite kservices konsole)
+themes           - apps/iconthemes
+todo             - actions/todo
+unknown          - apps/x
+utility          - apps/kded
+video            - apps/aktion
+viewer           - apps/xmag
+window           - apps/kpersonalizer
+window-close     - actions/icq_dnd
+window-delete    - actions/clear_left
+window-destroy   - apps/clanbomber
+window-iconify   - actions/window_nofullscreen
+window-identify  - apps/winprops
+window-lower     - actions/1downarrow
+window-maximize  - actions/window_fullscreen
+window-move      - actions/translate
+window-raise     - actions/1uparrow
+window-resize    - actions/transform (needed to be resized)
+window-shade     - actions/cap_square
+window-stick     - actions/attach
+windows          - apps/windowlist
+word-processor   - apps/package_wordprocessing
+www              - apps/internet
+xv               - actions/14_layer_novisible
+
+.----------------
+| 48x48-crystalclear/ - see 16x16-crystalclear/
+| License: LGPL
+| 83 icons and 1 symlink
+`----------------
+folder-open      - filesystems/folder
+gnu              - apps/xemacs
+lock             - actions/encrypted
+refresh          - apps/cache
+themes           - apps/iconthemes (needed to be resized)
+terminal-special - [new] (convert -flop kservices; composite kservices konsole)
+todo             - apps/cal
+window-close     - actions/agt_stop
+window-delete    - actions/fileclose
+window-move      - actions/desktop_enhancements
+window-resize    - actions/window_new
+window-shade     - actions/2uparrow
+window-stick     - actions/agt_virus
+xv               - [link -> graphics]
+
+.----------------
+| 22x22-gartoon/
+| 48x48-gartoon/
+| Authors: Original Gnome icons: zeussama@yahoo.com http://www.zeusbox.org
+|   KDE conversion & additions: Patrick Yavitz <pyavitz@gmail.com>
+|   Co-designer: La Mula Francis <MULAFRANCIS@terra.com>
+| License: Design Science License
+| Format: PNG
+| 76 icons and 8 symlinks
+`----------------
+amusement           apps/package_toys
+calculator          filesystems/chardevice
+cd-player           apps/gnome-cd
+chat                apps/kopete_all_away
+choice-no           actions/button_cancel
+choice-yes          actions/button_accept
+clock               actions/tool_timer
+colors              apps/looknfeel
+configuration       actions/configure
+development         apps/package_development
+disk-cd             devices/cdrom_mount
+disk-floppy         devices/3floppy_mount
+disk                devices/hdd_mount
+display             apps/display
+editor              apps/gedit
+empty               [new]
+file-manager        apps/file-manager
+file                filesystems/file
+folder-open         apps/package_favourite
+folder              filesystems/folder
+font                mimetypes/font
+game-action         [link -> game]
+game-board          [link -> game]
+game-cards          [link -> game]
+game-logic          [link -> game]
+game                apps/joystick
+ghostview           apps/cbrpager
+gimp                apps/gimp
+gnome               apps/gnome
+gnu                 apps/kfilereplace
+graphics            apps/kpaint
+help                apps/help_index
+home                filesystems/folder_home
+image-processor     apps/kpaint
+image-viewer        apps/gthumb
+information         actions/messagebox_info
+item                filesystems/services
+kde                 apps/go
+keyboard            devices/kxkb
+linux               [link -> unknown]
+lock                apps/lock
+mail                apps/email
+modules             filesystems/blockdevice
+monitoring          apps/ksysv
+mouse               devices/mouse
+multimedia          apps/gxine
+music               apps/juk
+netscape            [link -> www]
+network             apps/kinternet
+news                apps/ftp
+printing            devices/printer1
+programs            apps/package_applications
+quit                actions/exit
+refresh             actions/button_ok
+restart             actions/reset
+science             actions/convert
+sound               apps/arts
+system              apps/kcmsystem
+terminal-remote     apps/fileshare
+terminal-special    apps/gksu-terminal
+terminal            apps/gnome-terminal
+themes              actions/locationbar_erase
+todo                apps/korganizer
+unknown             apps/kuser
+utility             apps/package_utilities
+video               [link -> multimedia]
+viewer              apps/kfind
+window-close        actions/no
+window-delete       actions/messagebox_critical
+window-destroy      apps/clanbomber
+window-iconify      actions/window_nofullscreen
+window-identify     actions/colorpicker
+window-lower        actions/1downarrow
+window-maximize     actions/window_fullscreen
+window-move         apps/ksnapshot
+window-raise        actions/1uparrow
+window-resize       apps/display-capplet
+window-shade        actions/view_remove
+window-stick        actions/attach
+window              actions/tool_normal
+windows             apps/kstyle
+word-processor      apps/package_wordprocessing
+www                 apps/browser
+xv                  apps/lilo
+
+.----------------
+| 32x32-gant/
+| 64x64-gant/
+| Authors: Original Gant icons: Paul Davey http://mattahan.devianart.com
+| Gnome Gant icons conversion (GNANT): Tomislav Markovski
+| License: GPL
+| Format: PNG
+| 32x32: 80 icons, 4 symlinks 64x64: 79 icons, 5 symlinks
+`----------------
+game-logic        - [link -> modules]
+linux             - [new]
+netscape          - [link -> www]
+restart           - [new]
+terminal-special  - [new]
+window-close      - [link -> choice-no] (64x64 only)
+window-lower      - [new] (64x64 only)
+window-raise      - [new] (64x64 only)
+window-stick      - [link -> lock]
+xv                - [link -> image-viewer]
+
+.----------------
+| 01x01-template/
+`----------------
+amusement        - [link -> game]
+calculator       - [link -> utility]
+cd-player        - [link -> utility]
+chat             - [link -> network]
+choice-yes       - [link -> todo]
+choice-no        - [link -> todo]
+clock            - [link -> utility]
+colors           - [link -> todo]
+configuration    - [link -> todo]
+development      - [link -> utility]
+disk             - [link -> todo]
+disk-cd          - [link -> disk]
+disk-floppy      - [link -> disk]
+display          - [link -> todo]
+editor           - [link -> utility]
+empty            - [new]
+file             - [link -> item]
+file-manager     - [link -> folder]
+folder           - [link -> todo]
+folder-open      - [link -> folder]
+font             - [link -> todo]
+game             - [link -> todo]
+game-action      - [link -> game]
+game-board       - [link -> game]
+game-cards       - [link -> game]
+game-logic       - [link -> game]
+ghostview        - [link -> utility]
+gimp             - [link -> image-processor]
+gnome            - [link -> gnu]
+gnu              - [link -> todo]
+graphics         - [link -> colors]
+help             - [link -> information]
+home             - [link -> todo]
+image-processor  - [link -> image-viewer]
+image-viewer     - [link -> viewer]
+information      - [link -> todo]
+item             - [link -> todo]
+kde              - [link -> todo]
+keyboard         - [link -> todo]
+linux            - [link -> todo]
+lock             - [link -> todo]
+mail             - [link -> todo]
+modules          - [link -> item]
+monitoring       - [link -> todo]
+mouse            - [link -> todo]
+multimedia       - [link -> sound]
+music            - [link -> sound]
+netscape         - [link -> www]
+network          - [link -> todo]
+news             - [link -> chat]
+printing         - [link -> utility]
+programs         - [link -> utility]
+quit             - [link -> todo]
+refresh          - [link -> todo]
+restart          - [link -> todo]
+science          - [link -> utility]
+sound            - [link -> todo]
+system           - [link -> todo]
+terminal         - [link -> monitor]
+terminal-remote  - [link -> terminal]
+terminal-special - [link -> terminal]
+themes           - [link -> configuration]
+todo             - [link -> empty]
+unknown          - [link -> todo]
+utility          - [link -> todo]
+video            - [link -> multimedia]
+viewer           - [link -> utility]
+window           - [link -> todo]
+window-close     - [link -> window]
+window-delete    - [link -> window-close]
+window-destroy   - [link -> window-close]
+window-iconify   - [link -> window]
+window-identify  - [link -> window]
+window-lower     - [link -> window]
+window-maximize  - [link -> window]
+window-move      - [link -> window]
+window-raise     - [link -> window]
+window-resize    - [link -> window]
+window-shade     - [link -> window]
+window-stick     - [link -> window]
+windows          - [link -> window]
+word-processor   - [link -> editor]
+www              - [link -> network]
+xv               - [link -> image-viewer]
+
+------------
+
+All icon modifications (if not specified otherwise) by Mikhael Goikhman.

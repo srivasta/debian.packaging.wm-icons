@@ -1,0 +1,33 @@
+#! /bin/sh
+
+# This script removes all symbolic links in icon set directories, while
+# keeping all info about them in the special file. This info can be used by
+# the compliment script unpack-symlinks to restore these symbolic links.
+# The script can be used for developer systems which don't like symlinks.
+#
+# GPL'ed by Mikhael Goikhman.
+
+ICONS_DIR=../../icons
+INFO_FILE=_symlinks.lst
+
+cd $ICONS_DIR
+for iconSet in *; do
+	[ -d "$iconSet" ] || continue
+	[ $iconSet = CVS ] && continue
+	echo -n "Processing $iconSet ... "
+	if ! cd $iconSet; then
+		echo failed; continue
+	fi
+	if [ -f $INFO_FILE ]; then
+		cd ..; echo skipped; continue
+	fi
+	# Note, this will, probably, not work with non-GNU sed.
+	find . -type l -print | cut -c3- | xargs -n 1 -r ls -l | \
+		sed 's/^.* \([^ ]*\) -> \(.*\)$/\2 \1/' | \
+		sed 's/-/ QQ/g' | sort -t. -k2,2 | sed 's/ QQ/-/g' \
+		>$INFO_FILE
+#	cat $INFO_FILE | cut -d" " -f2 | xargs -n 5 -r echo
+	cat $INFO_FILE | cut -d" " -f2 | xargs -n 1 -r rm
+	cd ..
+        echo "done"
+done

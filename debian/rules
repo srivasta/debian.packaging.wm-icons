@@ -1,0 +1,47 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+SRCTOP:= $(shell if [ "$$PWD" != "" ]; then echo $$PWD; else pwd; fi)
+TMPTOP=$(SRCTOP)/debian/wm-icons
+DOCDIR=$(TMPTOP)/usr/share/doc/wm-icons
+INSTALL = install
+ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
+    INSTALL_PROGRAM += -s
+endif
+install_file    = $(INSTALL) -p    -o root -g root  -m  644
+install_program = $(INSTALL) -p    -o root -g root  -m  755
+install_script  = $(INSTALL) -p    -o root -g root  -m  755
+make_directory  = $(INSTALL) -p -d -o root -g root  -m  755
+package:=wm-icons
+METHODSDIR = $(TMPTOP)/etc/menu-methods
+METHODSLOC = $(TMPTOP)/etc/X11/fvwm/wm-icons
+
+%:
+	dh $@  --with autoreconf
+
+override_dh_auto_configure:
+	ac_cv_lib_util_getloadavg=no dh_auto_configure --    \
+	   --sysconfdir=/etc --enable-all-sets
+
+override_dh_install:
+	dh_install
+	(cd $(TMPTOP)/usr/share/icons/wm-icons/;   \
+	 rm -f menu mini norm;                     \
+	 ln -s               16x16-general menu;   \
+	 ln -s               14x14-general mini;   \
+	 ln -s               48x48-general norm;)
+
+override_dh_installdocs:
+	$(make_directory)  $(DOCDIR)
+	$(make_directory)  $(METHODSDIR)
+	mv $(TMPTOP)/usr/share/wm-icons          $(DOCDIR)/examples/
+	$(install_file)    $(DOCDIR)/examples/debian-menu-system/wm-icons.h \
+			   $(METHODSDIR)/
+	$(install_file)    $(DOCDIR)/examples/debian-menu-system/wm-icons-data.h \
+			   $(METHODSDIR)/
+	rm -rf          $(DOCDIR)/examples/debian-menu-system
+	dh_installdocs
+
+#Local variables:
+#mode: makefile
+#End:

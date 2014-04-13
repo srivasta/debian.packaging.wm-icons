@@ -1,0 +1,273 @@
+.----------------------------
+| 09 Mar 2006, wm-icons-0.4.0
+`----------------------------
+
+* New icon sets: 16x16-crystalclear, 48x48-crystalclear, 22x22-gartoon,
+  48x48-gartoon, 32x32-gant, 64x64-gant. These are png icon sets.
+
+* New icon sets: 24x24-infox, 48x48-infox. These are xpm icon sets.
+
+* New icon sets: 16x16-aquafusion, 22x22-aquafusion, 32x32-aquafusion,
+  48x48-aquafusion, 64x64-aquafusion. These are png icon sets.
+
+* Added some Debian menu system configuration files.
+
+* Renamed "developement" icon name to "development" in all icon sets.
+
+.----------------------------
+| 19 Mar 2001, wm-icons-0.3.0
+`----------------------------
+
+* A new icon list (84 names!):
+  deleted:
+    desktop
+    shell
+    xterm
+  renamed:
+    debugger     -> developement
+    folders      -> file-manager
+    game-chess   -> game-board
+    wm-lock      -> lock
+    monitor      -> monitoring
+    wm-quit      -> quit
+    wm-refresh   -> refresh
+    wm-restart   -> restart
+  added:
+    amusement         colors            configuration     file
+    folder-open       game-action       game-logic        gimp
+    gnome             gnu               graphics          image-processor
+    item              kde               linux             modules
+    multimedia        news              printing          programs
+    science           system            terminal-remote   terminal-special
+    themes            video             windows
+
+* New icon sets: 16x16-gnome and 48x48-gnome.
+
+* A much updated application icon style list.
+
+* Added an rpm package.
+
+.----------------------------
+| 31 May 2000, wm-icons-0.2.8
+`----------------------------
+
+* Fixed gawk/nawk problems (now autodetected).
+* Several icon improvements in general icon sets.
+
+.----------------------------
+| 10 May 2000, wm-icons-0.2.7
+`----------------------------
+
+* Fixed instalation problems on Solaris.
+
+* Several new icons for kde and general icon sets.
+
+* New home for the project: http://wm-icons.sourceforge.net/ .
+
+* Changes of 'bar' icon set (from menu) done automatically without Restart.
+
+.----------------------------
+| 10 Dec 1999, wm-icons-0.2.6
+`----------------------------
+
+* Fixed two problems with the previous release: symbolic links are restored
+  (this saves about a 1M of disk space), changes in icons not included by
+  a mistake are included now.
+
+.----------------------------
+| 20 Nov 1999, wm-icons-0.2.5
+`----------------------------
+
+* An interface of wm-icons-config is changed, all configurations updated.
+
+* Some clean up in general icon sets (started).
+
+* New files: ChangeLog and icons/ChangeLog.
+
+.----------------------------
+| 19 Nov 1999, wm-icons-0.2.4
+`----------------------------
+
+* Switched to autoconf.
+  New system-wide defaults:
+    prefix: /usr/local;
+    icon directory: $prefix/share/icons/wm-icons.
+  Documentation is not installed (temporarily?).
+
+* wm-icons-set-links script is merged into wm-icons-config and removed.
+
+.----------------------------
+| 11 Oct 1999, wm-icons-0.2.3
+`----------------------------
+
+* New icon sets (composed from kde-1.1.2 icons):
+    32x32-kde2
+    48x48-kde2
+
+  Icon set 16x16-kde2 is not added, since there are almost no changes
+  from 16x16-kde, instead, 3 icons in 16x16-kde are upgraded.
+
+* All non-ascii symbols in icons replaced to make some viewers happy.
+
+* Neon icons for window operations in {14x14,16x16}-general replaced.
+
+* Many improvements in icon sets and a configuration.
+
+* FAQ updated.
+
+* Home page now contains better previews, icon set scores and a screenshot.
+
+.----------------------------
+| 01 Jun 1999, wm-icons-0.2.2
+`----------------------------
+
+* Some work on kde icon sets (changes, replaces).
+
+* All default installation directories changed. A default personal directory
+  is now ~/.wm-icons, not ~/icons. So attention must be payed when upgrading.
+
+* A personal directory is now created when needed.
+
+.----------------------------
+| 27 May 1999, wm-icons-0.2.1
+`----------------------------
+
+* New devel/bin/ scripts: pack-symlinks, unpack-symlinks.
+
+* Many additions to a configuration (added identifiers for many GNOME apps).
+
+* New files: fvwm2rc-compact-buttons in devel/template/ and etc/ - nice
+  example of theme-able FvwmButtons.
+
+* New options for bin/ scripts: --quiet; and for bin/wm-icons-config: --which.
+
+* A personal icons sub-directory (in user home) is now configurable.
+
+* Several changes to scripts and configuration templates.
+
+.----------------------------
+| 09 May 1999, wm-icons-0.2.0
+`----------------------------
+
+* New icon names:
+    chat             choice-yes       choice-no        debugger
+    disk             help             viewer           wm-lock
+    wm-quit          wm-refresh       wm-restart       www
+
+* New devel/ tree now contains templates for different window managers,
+  wm-agnostic style configuration and create-wm-config perl script to create
+  a configuration for specific window manager.
+  Supported fvwm1, fvwm2, fvwm95 and scwm.
+
+* New files: etc/fvwm1rc-wm-icons, etc/fvwm95rc-wm-icons, etc/scwmrc-wm-icons.
+
+* New logic and API for bin/wm-icons-set-links.
+
+* New standard alias "menu" in addition to "mini" and "norm" icons.
+  It is for menu-icons, which is now independent from mini-icons.
+
+* Renamed bin/wm-icons-fix-fvwm2rc to bin/wm-icons-fix-old-rc, still void.
+
+* configure script now produces uninstall part and installs configurations
+  and a documentation.
+
+* FAQ is updated.
+
+* Many corrections to icons and a configuration.
+
+.----------------------------
+| 23 Apr 1999, wm-icons-0.1.4
+`----------------------------
+
+* New icon sets:
+    20x20-martys
+    56x56-martys
+    20x20-martys2
+    56x56-martys2
+
+* New file: README.martys.
+
+* Several corrections to icons, some additions to a configuration.
+
+.----------------------------
+| 18 Apr 1999, wm-icons-0.1.3
+`----------------------------
+
+* New icon set:
+    14x14-general
+
+* Icon sets 16x16-general and 14x14-general now use only icons with a reduced
+  number of colors (still need be optimized, probably).
+
+* Many corrections to icons, some changes to a configuration.
+
+* Renamed .fvwm2rc-wm-icons to fvwm2rc-wm-icons to not hide it.
+
+.----------------------------
+| 11 Apr 1999, wm-icons-0.1.2
+`----------------------------
+
+* Several fixes to configure, FAQ and a configuration.
+
+.----------------------------
+| 09 Apr 1999, wm-icons-0.1.1
+`----------------------------
+
+* Many corrections to icons, some changes to a configuration and configure.
+
+.----------------------------
+| 08 Apr 1999, wm-icons-0.1.0
+`----------------------------
+
+* New icon sets:
+    01x01-template
+    16x16-kde
+    17x14-3dpixmaps
+    32x32-kde
+    44x52-penguins
+
+* New icon names:
+    home             mail             image-viewer     utility
+    window-close     window-delete    window-destroy   window-iconify
+    window-identify  window-lower     window-maximize  window-move
+    window-resize    window-raise     window-shade     window-stick
+
+* Existing icon names renamed:
+    abc    -> font
+    cards  -> game-cards
+    cd     -> disk-cd
+    chess  -> game-chess
+    floppy -> disk-floppy
+
+* Verified that all icons are free or GPL'd, the project is now GPL'd.
+
+* New files: AUTHORS, COPYING, NEWS, README.3dpixmaps, README.penguins.
+
+* Implemented initial perl scripts: configure, wm-icons-config.in,
+  wm-icons-set-links.in.
+
+* Sample configuration file for fvwm .fvwm2rc-wm-icons.
+
+* New home for the project: http://wm-icons.dhs.org/ .
+
+.----------------------------
+| 01 Apr 1999, wm-icons-0.0.1
+`----------------------------
+
+* Icon sets:
+    16x16-general
+    21x18-3dpixmaps
+    48x48-general
+    56x46-3dpixmaps
+
+* Icon names:
+    abc              calculator       cards            cd-player
+    cd               chess            clock            desktop
+    display          editor           empty            floppy
+    folder           folders          game             ghostview
+    information      keyboard         monitor          mouse
+    music            netscape         network          shell
+    sound            terminal         todo             unknown
+    window           word-processor   xterm            xv
+
+* Files: README, icons.lst.

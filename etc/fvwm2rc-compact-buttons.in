@@ -1,0 +1,162 @@
+###
+#  FvwmCompactButtons, a nice theme-able example to use with wm-icons.
+#  Optimized for the default fvwm-2.4.x configuration.
+#
+#  Copy this file to ~/.fvwm and put:
+#    Read fvwm2rc-compact-buttons
+#  as the last line of your fvwm config, after 'Read fvwm2rc-wm-icons'.
+#
+#  You can customize this file by editing Action's, specifying diferent
+#  colors etc. You can also play with or remove the string "Size 80x80".
+#  Action (with no Mouse) can be invoked by pressing Enter on focused buttons.
+###
+
+
+# You can comment the following out or in.
+AddToMenu MenuFvwmModules "Compact Buttons%menu/utility.xpm%" FuncRestartFvwmCompactButtons
+
+AddToFunc StartFunction I Module FvwmButtons FvwmCompactButtons
+
+Mouse 3 R SCM Menu "MenuBarIconSet" Nop
+
+# Create alias 'bar' if it does not exist yet (actually needed only once).
+Exec wm-icons-config -q -p -w bar || wm-icons-config -q -p -f bar 16x16-general
+
+###
+#  Change Bar Icon Set submenu
+###
+
+DestroyFunc FuncRestartFvwmCompactButtons
+AddToFunc   FuncRestartFvwmCompactButtons
++ I Next (FvwmCompactButtons) Close
++ I Module FvwmButtons FvwmCompactButtons
+
+DestroyFunc FuncSwitchBarIconSet
+AddToFunc   FuncSwitchBarIconSet
++ I PipeRead 'wm-icons-config -q -p -f bar $0'
++ I FuncRestartFvwmCompactButtons
+
+DestroyMenu MenuBarIconSet
+AddToMenu   MenuBarIconSet "Change Icon Set" Title
++ "%menu/item.xpm%bar	14x14-general"      FuncSwitchBarIconSet 14x14-general
++ "%menu/item.xpm%bar	16x16-aquafusion"   FuncSwitchBarIconSet 16x16-aquafusion
++ "%menu/item.xpm%bar	16x16-crystalclear" FuncSwitchBarIconSet 16x16-crystalclear
++ "%menu/item.xpm%bar	16x16-general"      FuncSwitchBarIconSet 16x16-general
++ "%menu/item.xpm%bar	16x16-gnome"        FuncSwitchBarIconSet 16x16-gnome
++ "%menu/item.xpm%bar	16x16-kde"          FuncSwitchBarIconSet 16x16-kde
++ "%menu/item.xpm%bar	17x14-3dpixmaps"    FuncSwitchBarIconSet 17x14-3dpixmaps
++ "%menu/item.xpm%bar	20x20-martys"       FuncSwitchBarIconSet 20x20-martys
++ "%menu/item.xpm%bar	20x20-martys2"      FuncSwitchBarIconSet 20x20-martys2
++ "%menu/item.xpm%bar	21x18-3dpixmaps"    FuncSwitchBarIconSet 21x18-3dpixmaps
++ "%menu/item.xpm%bar	22x22-aquafusion"   FuncSwitchBarIconSet 22x22-aquafusion
++ "%menu/item.xpm%bar	22x22-gartoon"      FuncSwitchBarIconSet 22x22-gartoon
++ "%menu/item.xpm%bar	24x24-infox"        FuncSwitchBarIconSet 24x24-infox
++ "%menu/item.xpm%bar	32x32-aquafusion"   FuncSwitchBarIconSet 32x32-aquafusion
++ "%menu/item.xpm%bar	32x32-gant"         FuncSwitchBarIconSet 32x32-gant
++ "%menu/item.xpm%bar	32x32-kde"          FuncSwitchBarIconSet 32x32-kde
++ "%menu/item.xpm%bar	32x32-kde2"         FuncSwitchBarIconSet 32x32-kde2
++ "%menu/item.xpm%bar	44x52-penguins"     FuncSwitchBarIconSet 44x52-penguins
++ "%menu/item.xpm%bar	48x48-aquafusion"   FuncSwitchBarIconSet 48x48-aquafusion
++ "%menu/item.xpm%bar	48x48-crystalclear" FuncSwitchBarIconSet 48x48-crystalclear
++ "%menu/item.xpm%bar	48x48-gartoon"      FuncSwitchBarIconSet 48x48-gartoon
++ "%menu/item.xpm%bar	48x48-general"      FuncSwitchBarIconSet 48x48-general
++ "%menu/item.xpm%bar	48x48-gnome"        FuncSwitchBarIconSet 48x48-gnome
++ "%menu/item.xpm%bar	48x48-infox"        FuncSwitchBarIconSet 48x48-infox
++ "%menu/item.xpm%bar	48x48-kde2"         FuncSwitchBarIconSet 48x48-kde2
++ "%menu/item.xpm%bar	56x46-3dpixmaps"    FuncSwitchBarIconSet 56x46-3dpixmaps
++ "%menu/item.xpm%bar	56x56-martys"       FuncSwitchBarIconSet 56x56-martys
++ "%menu/item.xpm%bar	56x56-martys2"      FuncSwitchBarIconSet 56x56-martys2
++ "%menu/item.xpm%bar	64x64-aquafusion"   FuncSwitchBarIconSet 64x64-aquafusion
++ "%menu/item.xpm%bar	64x64-gant"         FuncSwitchBarIconSet 64x64-gant
+
+# You can comment one of the following in.
+AddToMenu "Window-Ops" "&Bar Icon Set%menu/themes.xpm" Popup MenuBarIconSet item +97 c
+#Exec wm-icons-config -q -p -f bar ./mini         # synchronize with mini
+#Exec wm-icons-config -q -p -f bar 16x16-kde      # static icon set
+
+
+###
+#  FvwmButtons FvwmCompactButtons
+###
+
+Style "FvwmCompactButtons" NoTitle, NoHandles, Sticky, WindowListSkip, NeverFocus
+
+*FvwmCompactButtons: Back rgb:E4/D2/C0
+# Geometry - really likes to pick its own size, but giving a position is OK
+*FvwmCompactButtons: Geometry -0+0
+# Layout: specify rows or columns, not both
+*FvwmCompactButtons: Columns 2
+
+# Define the buttons to use. Customize this for your taste.
+
+#*FvwmCompactButtons: (2x2, Padding 0 0, Swallow(UseOld,NoClose) "Desktop" 'FvwmPager 0 0')
+*FvwmCompactButtons: (2x2, Padding 0 0, Size 80 80, Swallow(UseOld,NoClose) "xclock" `Exec xclock -bg rgb:E4/D2/C0 -padding 2 -geometry 86x86-0+0`)
+*FvwmCompactButtons: (2x1, Padding 0 0, Swallow(UseOld,NoClose) "xload" `Exec xload -nolabel -bg rgb:E4/D2/C0 -update 3 -geometry 86x43-0+99`)
+*FvwmCompactButtons: (2x2, Padding 0 0, Container(Padding 0 0, Columns 4))
+*FvwmCompactButtons: (Icon bar/terminal.xpm, Action `Exec xterm`, \
+	Action(Mouse 1) `Exec xterm -g 80x40 -sb +sk -si -sl 500 -j -ls -fn 7x14 -fb 7x14bold`, \
+	Action(Mouse 2) `Exec xterm -g 80x40 -sb +sk -si -sl 500 -j -ls -fn 7x14 -fb 7x14bold -n root -T root -e su -l`, \
+	Action(Mouse 3) `Exec Eterm -n dream -e rlogin -l dream $HOST`, \
+)
+*FvwmCompactButtons: (Icon bar/file-manager.xpm, Action `Exec xfm -title "File Manager"`, \
+	Action(Mouse 1) `Exec xterm-color -g 80x40 -sb +sk -si -sl 500 -j -ls -fn 7x14 -fb 7x14bold -n Midnight-Commander -T Midnight-Commander -e mc -x`, \
+	Action(Mouse 2) `Exec gmc`, \
+	Action(Mouse 3) `Exec fr`, \
+)
+*FvwmCompactButtons: (Icon bar/monitoring.xpm, Action `Exec xterm -e top`, \
+	Action(Mouse 1) `Exec xterm -fn 7x14 -fb 7x14bold +sb -ut -name xxterm -T Top -n Top -e top`, \
+)
+*FvwmCompactButtons: (Icon bar/calculator.xpm, Action `Exec xcalc`, \
+	Action(Mouse 1) `Exec gcalc`, \
+	Action(Mouse 2) `Exec kcalc`, \
+)
+*FvwmCompactButtons: (Icon bar/chat.xpm, Action `Exec xterm -e irc`, \
+	Action(Mouse 1) `Exec xterm -g 80x40 -sb +sk -si -sl 500 -j -ls -fn 7x14 -fb 7x14bold -n irc -T irc -e irc`, \
+	Action(Mouse 2) `Exec tkirc`, \
+	Action(Mouse 3) `Exec licq`, \
+)
+*FvwmCompactButtons: (Icon bar/game.xpm, Action `Exec xbill`, \
+	Action(Mouse 1) `Exec gnomine`, \
+	Action(Mouse 2) `Exec xmahjongg`, \
+	Action(Mouse 3) `Exec xpat2`, \
+)
+*FvwmCompactButtons: (Icon bar/cd-player.xpm, Action `Exec workman`, \
+	Action(Mouse 1) `Exec gtcd`, \
+	Action(Mouse 2) `Exec kscd`, \
+	Action(Mouse 3) `Exec kmid`, \
+)
+*FvwmCompactButtons: (Icon bar/sound.xpm, Action `Exec xmixer`, \
+	Action(Mouse 1) `Exec gmix`, \
+	Action(Mouse 2) `Exec freeamp`, \
+	Action(Mouse 3) `Exec x11amp`, \
+)
+*FvwmCompactButtons: (Icon bar/editor.xpm, Action `Exec xterm -e jpico`, \
+	Action(Mouse 1) `Exec emacs`, \
+	Action(Mouse 2) `Exec gvim`, \
+	Action(Mouse 3) `Exec xwp`, \
+)
+*FvwmCompactButtons: (Icon bar/keyboard.xpm, Action `Exec xkeycaps`, \
+	Action(Mouse 2) `Exec xrus`, \
+)
+*FvwmCompactButtons: (Icon bar/xv.xpm, Action `Exec xv`, \
+	Action(Mouse 2) `Exec gimp`, \
+	Action(Mouse 3) `Exec ee`, \
+)
+*FvwmCompactButtons: (Icon bar/ghostview.xpm, Action `Exec ghostview`, \
+	Action(Mouse 2) `Exec xpdf`, \
+)
+*FvwmCompactButtons: (Icon bar/netscape.xpm, Action `Exec netscape -geometry 654x742`, \
+	Action(Mouse 2) `Exec arena`, \
+)
+*FvwmCompactButtons: (Icon bar/lock.xpm, Action `Exec xlock -nice 20 -mode random`, \
+	Action(Mouse 2) `Exec xlock -nolock -nice 20 -mode random`, \
+)
+*FvwmCompactButtons: (Icon bar/window-close.xpm, Action Close, \
+	Action(Mouse 2) Iconify, \
+	Action(Mouse 3) Destroy, \
+)
+*FvwmCompactButtons: (Icon bar/restart.xpm, Action `Restart`, \
+	Action(Mouse 2) Refresh, \
+	Action(Mouse 3) Quit, \
+)
+*FvwmCompactButtons: (End)

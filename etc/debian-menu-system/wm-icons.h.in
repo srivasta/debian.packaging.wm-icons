@@ -1,0 +1,100 @@
+# the folowing file contains wmIconsGetSectionIcon($s) and
+# wmIconsFindIconByList($p) functions used below
+!include wm-icons-data.h
+
+# the following function try to find the "system" icons in a "standar place".
+# where debian and others distrib put the icons? the system-menu doc say
+# in /usr/X11R6/include/X11/{pixmaps,bitmaps} but we can find icons of
+# any size in these diectory (e.g., 32x32)?
+# mandrake: /usr/share/icons/mini is ok!
+# debian: ?
+# other distro. based on debian ?
+# fvwm-themes-images translated support:
+# need to replace /urs/local/share/fvwm by "fvwm-themes @datadir@"/fvwm
+function systemFindIcon($filename)= \
+    ifeqelse($filename, "", "", \
+    ifelsefile("/usr/share/icons/wm-icons/mini/" $filename, \
+        "/usr/share/icons/wm-icons/mini/" $filename, \
+    ifelsefile("/usr/share/icons/mini/" $filename, \
+        "/usr/share/icons/mini/" $filename, \
+    ifelsefile("/usr/share/icons/wm-icons/16x16-general/" $filename, \
+        "/usr/share/icons/wm-icons/16x16-general/" $filename, \
+    ifelsefile("/usr/share/icons/wm-icons/16x16-gnome/" $filename, \
+        "/usr/share/icons/wm-icons/16x16-gnome/" $filename, \
+    ifelsefile("/usr/share/icons/wm-icons/16x16-kde/" $filename, \
+        "/usr/share/icons/wm-icons/16x16-kde/" $filename, \
+    ifelsefile("/usr/share/fvwm-crystal/fvwm/icons/Default/" $filename, \
+        "/usr/share/fvwm-crystal/fvwm/icons/Default/" $filename, \
+    ifelsefile("/usr/local/share/fvwm/tr-images/16x16-gnome/" $filename, \
+        "/usr/local/share/fvwm/tr-images/16x16-gnome/" $filename, \
+    ifelsefile("/usr/local/share/fvwm/tr-images/16x16-kde2/" $filename, \
+        "/usr/local/share/fvwm/tr-images/16x16-kde2/" $filename, \
+    "")))))))))
+
+
+# return the wm-icons associated to a standard section. If the section is
+# not standard return the "system/user" icons for this section and if not
+# found a wm-icons if the section is a subsection of a standard one.
+# If nothing is found return the menu/folder.xpm
+function wmIconsFindSectionIcon($s,$i,$t)= \
+  ifeqelse(wmIconsGetSectionIcon($s),"",\
+  ifeqelse(systemFindIcon($i),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent($s)),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent(parent($s))),"",\
+	   $t "folder.xpm",\
+	   $t wmIconsGetSectionIcon(parent(parent($s)))),\
+	   $t wmIconsGetSectionIcon(parent($s))),\
+	   systemFindIcon($i)),\
+	   $t wmIconsGetSectionIcon($s))
+
+# as above but do not try a system icons
+function wmIconsFindSectionIconWmOnly($s,$i,$t)= \
+  ifeqelse(wmIconsGetSectionIcon($s),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent($s)),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent(parent($s))),"",\
+	   $t "folder.xpm",\
+	   $t wmIconsGetSectionIcon(parent(parent($s)))),\
+	   $t wmIconsGetSectionIcon(parent($s))),\
+	   $t wmIconsGetSectionIcon($s))
+
+# try to find:
+#   1 - the "system/user" icon; 2 - the wm-icons "package" icons;
+#   3 - the wm-icons section icons; 4 - unknown.xpm
+function wmIconsSystemeFindIcon($i,$p,$s,$t)= \
+  ifeqelse(systemFindIcon($i),"",\
+  ifeqelse(wmIconsFindIconByList($p),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent($s)),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent(parent($s))),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent(parent(parent($s)))),"",\
+	   $t "unknown.xpm",\
+	   $t wmIconsGetSectionIcon(parent(parent(parent($s))))),\
+	   $t wmIconsGetSectionIcon(parent(parent($s)))),\
+	   $t wmIconsGetSectionIcon(parent($s))),\
+	   $t wmIconsFindIconByList($p)),\
+	   systemFindIcon($i))
+
+# as above but 1 & 2 reverted
+function wmIconsFindIcon($i,$p,$s,$t)= \
+  ifeqelse(wmIconsFindIconByList($p),"",\
+  ifeqelse(systemFindIcon($i),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent($s)),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent(parent($s))),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent(parent(parent($s)))),"",\
+	   $t "unknown.xpm",\
+	   $t wmIconsGetSectionIcon(parent(parent(parent($s))))),\
+	   $t wmIconsGetSectionIcon(parent(parent($s)))),\
+	   $t wmIconsGetSectionIcon(parent($s))),\
+	   systemFindIcon($i)),\
+	   $t wmIconsFindIconByList($p))
+
+# as above but no "system/user" icons
+function wmIconsFindIconWmIconsOnly($i,$p,$s,$t)= \
+  ifeqelse(wmIconsFindIconByList($p),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent($s)),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent(parent($s))),"",\
+  ifeqelse(wmIconsGetSectionIcon(parent(parent(parent($s)))),"",\
+	   $t "unknown.xpm",\
+	   $t wmIconsGetSectionIcon(parent(parent(parent($s))))),\
+	   $t wmIconsGetSectionIcon(parent(parent($s)))),\
+	   $t wmIconsGetSectionIcon(parent($s))),\
+	   $t wmIconsFindIconByList($p))
