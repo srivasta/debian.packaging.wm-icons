@@ -1,3 +1,16 @@
+wm-icons (0.4.0-9) unstable; urgency=low
+
+  * Bug fix: "/etc/menu-methods/wm-icons returned error status 1.", thanks
+    to Andreas Metzler. As Andreas points out, the content of
+    debian/$package.menu-method is not parsed as a list of files that will
+    be installed in /etc/menu-methods/ but it *is* the file being
+    installed. In this case, the file is not a static menu methods file,
+    but is generated at build time. I have now replaced the file as a
+    link, which will no longer be dangling after the package is built.
+    (Closes: #744341).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 13 Apr 2014 01:55:53 -0700
+
 wm-icons (0.4.0-8) unstable; urgency=medium
 
   * Updated to the new policy version. No actual changes required
