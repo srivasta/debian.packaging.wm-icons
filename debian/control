@@ -1,17 +1,13 @@
 Source: wm-icons
-VCS-Git: git://anonscm.debian.org/users/srivasta/debian/wm-icons.git
-VCS-Browser: http://anonscm.debian.org/gitweb/?p=users/srivasta/debian/wm-icons.git
+VCS-Git: https://anonscm.debian.org/git/users/srivasta/debian/wm-icons.git
+VCS-Browser: https://anonscm.debian.org/gitweb/?p=users/srivasta/debian/wm-icons.git
 Section: misc
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Maintainer: Manoj Srivastava <srivasta@debian.org>
 Priority: optional
 Homepage: http://wm-icons.sourceforge.net/
 Build-Depends-Indep: debhelper (>= 9.0.0), dh-autoreconf, autoconf,
- automake | automaken, cvs, libtool
-# depending on cvs sucks, but gettext needs it without depending on it,
-# and autoreconf calls autopoint from gettext, which uses a CVS repo in
-# a tar ball. See Bug#506022 and Bug#508230
-
+ automake | automaken, libtool, gettext (>= 0.18)
 
 Package: wm-icons
 Architecture: all

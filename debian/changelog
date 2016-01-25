@@ -1,3 +1,11 @@
+wm-icons (0.4.0-10) unstable; urgency=low
+
+  * Updated to standards version 3.9.6 (no changes required)
+  * Updated the VCS fields in control to use https
+  * Moved to source format 1.0 and dgit
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 25 Jan 2016 09:59:59 -0800
+
 wm-icons (0.4.0-9) unstable; urgency=low
 
   * Bug fix: "/etc/menu-methods/wm-icons returned error status 1.", thanks

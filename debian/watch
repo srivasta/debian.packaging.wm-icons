@@ -1,4 +1,4 @@
 # format version number, currently 2; this line is compulsory!
 version=3
 
-http://sf.net/wm-icons/wm-icons-(.+)\.tar\.bz2
+opts="pgpmode=none" http://sf.net/wm-icons/wm-icons-(.+)\.tar\.bz2
