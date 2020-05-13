@@ -1,3 +1,15 @@
+wm-icons (0.4.0-11) unstable; urgency=medium
+
+  * Updated to standards version 4.3.0 (no changes required)
+  * Updated the VCS fields to point to salsa
+  * Bug fix: "Please drop olwm and olvwm from Enhances: list", thanks to
+    byang@debian.org</a>; (Closes: #912903). Those packages are no longer
+    in Debian.
+  * Bug fix: "Vcs-* fields now invalid", thanks to Boyuan Yang (Closes:
+    #958799). Point them to Salsa
+
+ -- Manoj Srivastava <srivasta@debian.org>  Tue, 12 May 2020 23:40:47 -0700
+
 wm-icons (0.4.0-10) unstable; urgency=low
 
   * Updated to standards version 3.9.6 (no changes required)

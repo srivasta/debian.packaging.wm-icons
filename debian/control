@@ -1,12 +1,13 @@
 Source: wm-icons
-VCS-Git: https://anonscm.debian.org/git/users/srivasta/debian/wm-icons.git
-VCS-Browser: https://anonscm.debian.org/gitweb/?p=users/srivasta/debian/wm-icons.git
+VCS-Git: https://salsa.debian.org/srivasta/wm-icons.git
+VCS-Browser: https://salsa.debian.org/srivasta/wm-icons.git
 Section: misc
-Standards-Version: 3.9.6
+Standards-Version: 4.3.0
 Maintainer: Manoj Srivastava <srivasta@debian.org>
 Priority: optional
 Homepage: http://wm-icons.sourceforge.net/
-Build-Depends-Indep: debhelper (>= 9.0.0), dh-autoreconf, autoconf,
+Build-Depends: debhelper-compat (=12)
+Build-Depends-Indep: dh-autoreconf, autoconf,
  automake | automaken, libtool, gettext (>= 0.18)
 
 Package: wm-icons
@@ -14,8 +15,8 @@ Architecture: all
 Depends: ${misc:Depends}
 Enhances: fvwm1, fvwm2, fvwm95, scwm, enlightenment, twm, flwm,
   wmaker, sawfish-gnome, aewm, 9wm, blackbox, fluxbox, gwm, icewm,
-  larswm, ion, lwm, ratpoison, vtwm, w9wm, sawfish, sapphire, olwm,
-  olvwm, ctwm, amiwm, pwm
+  larswm, ion, lwm, ratpoison, vtwm, w9wm, sawfish, sapphire, ctwm,
+  amiwm, pwm
 Description: Themed icon set that is Window Manager agnostic
  The Window Manager Icons is a set of generic icons for use by window
  managers in a graphical environment.  It is an efficient icon
